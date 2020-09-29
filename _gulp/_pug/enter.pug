@@ -1,0 +1,110 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Вход' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Вход' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    include ./_include/_header
+
+    // Content
+    .content
+      .container
+
+        .row.justify-content-center
+          .col-lg-8
+            +breadcrumbs()
+              +breadcrumbs-item('Главная', './index.html')
+
+            .content__head
+              h1 Вход
+
+            form(action="#")
+              .form-group
+                +field-text({
+                  title: 'Фамилия Имя Отчество',
+                  hasJs: false,
+                  isTextarea: false,
+                  hasError: false,
+                  helpText: '',
+                  mods: 'md',
+                  val: '',
+                  attrs: {
+                    name: 'text',
+                    placeholder: 'Введите ваше имя'
+                  }
+                })
+              .form-group
+                +field-text({
+                  title: 'Логин или электронная почта',
+                  hasJs: false,
+                  isTextarea: false,
+                  hasError: false,
+                  helpText: '',
+                  mods: 'md',
+                  val: '',
+                  attrs: {
+                    name: 'text',
+                    placeholder: '+380 ХХ ХХХ ХХХ'
+                  }
+                })
+              .form-group
+                +field-text({
+                  title: 'Электронная почта',
+                  hasJs: false,
+                  isTextarea: false,
+                  hasError: false,
+                  helpText: '',
+                  mods: 'md',
+                  val: '',
+                  attrs: {
+                    name: 'text',
+                    placeholder: 'Прмер@gmail.com'
+                  }
+                })
+              .form-group
+                +field-text({
+                  title: 'Город',
+                  hasJs: false,
+                  isTextarea: false,
+                  hasError: false,
+                  helpText: '',
+                  mods: 'md',
+                  val: '',
+                  attrs: {
+                    name: 'text',
+                    placeholder: 'Пример@gmail.com'
+                  }
+                })
+              .form-group
+                +field-text({
+                  title: 'Название компании',
+                  hasJs: false,
+                  isTextarea: false,
+                  hasError: false,
+                  helpText: '',
+                  mods: 'md',
+                  val: '',
+                  attrs: {
+                    name: 'text',
+                    placeholder: 'Введите название компании'
+                  }
+                })
+              .clear10
+              +btn('Войти').--block.--xl
+
+
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

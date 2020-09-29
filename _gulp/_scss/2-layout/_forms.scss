@@ -31,10 +31,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 
 .form-group {
-  margin-bottom: 18px;
-  @media only screen and (max-width: 479px) {
-    margin-bottom: 15px;
-  }
+  margin-bottom: 16px;
 }
 
 .errormsg {
@@ -108,13 +105,13 @@ legend {
   display: block;
   $this: &;
   &__name {
-    color: $primary-color;
+    color: $color-dark;
     font-size: rem(14px);
-    line-height: 18px;
+    line-height: 1.6;
     cursor: text;
     display: block;
-    margin-bottom: 11px;
-    font-weight: 400;
+    margin-bottom: 0px;
+    font-weight: 600;
     sup {
       color: $color-red;
       top: -3px;
@@ -137,22 +134,22 @@ legend {
     display: block;
     width: 100%;
     height: 50px;
-    padding: 6px 10px;
+    padding: 6px 16px;
     font-size: rem(24px);
     line-height: 1.42857143;
     color: $primary-color;
     background: {
-      color: $color-white;
+      color: $color-gray-light;
       repeat: no-repeat;
       position: calc(100% - 10px) center;
       size: 20px 20px;
     }
-    border: 1px solid $color-black;
+    border: 1px solid $color-gray-light;
     border-radius: 4px;
     box-shadow: none;
     transition: color 0.35s, border 0.35s, background 0.35s;
-    &:hover {
-      border-color: $primary-color;
+    &:focus {
+      border-color: $color-gray;
     }
     &.css-input {
       padding-top: 20px;
@@ -186,11 +183,11 @@ legend {
     color: $primary-color;
   }
 
-  &--xl {
+  &.--xl {
     #{$this} {
       &__name {
         font-size: rem(21px);
-        margin-bottom: 11px;
+        // margin-bottom: 11px;
         &.css-label {
           top: 26px;
           font-size: rem(15px);
@@ -206,11 +203,11 @@ legend {
       }
     }
   }
-  &--md {
+  &.--md {
     #{$this} {
       &__name {
         font-size: rem(14px);
-        margin-bottom: 9px;
+        // margin-bottom: 9px;
         &.css-label {
           top: 10px;
           left: 10px;
@@ -228,11 +225,11 @@ legend {
       }
     }
   }
-  &--sm {
+  &.--sm {
     #{$this} {
       &__name {
         font-size: rem(12px);
-        margin-bottom: 6px;
+        // margin-bottom: 6px;
         &.css-label {
           left: 10px;
           top: 6px;
@@ -249,7 +246,7 @@ legend {
       }
     }
   }
-  &--has-icon {
+  &.--has-icon {
     #{$this} {
       &__input {
         padding-right: 40px;
@@ -265,7 +262,7 @@ legend {
       }
     }
   }
-  &--code {
+  &.--code {
     max-width: 155px;
   }
 
@@ -710,7 +707,7 @@ textarea.field-text__input {
     }
   }
 
-  &--md {
+  &.--md {
     #{$this} {
       &__name {
         font-size: rem(14px);
@@ -742,7 +739,7 @@ textarea.field-text__input {
       }
     }
   }
-  &--sm {
+  &.--sm {
     #{$this} {
       &__name {
         font-size: rem(12px);

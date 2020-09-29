@@ -1,4 +1,149 @@
 /* header */
 .header {
-  background-color: $color-gray;
+  $this: &;
+  background-color: $color-white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0px 8px 33px rgba(0, 0, 0, 0.1);
+  &__top {
+    position: relative;
+    &-wrapper {
+      display: flex;
+      height: 56px;
+      align-items: center;
+    }
+    &-container {
+      position: relative;
+    }
+  }
+  &__logo {
+    flex-grow: 1;
+  }
+  &__cart, &__menu {
+    flex-shrink: 0;
+  }
+  &-holder {
+    height: 56px;
+  }
+  &__bottom {
+    border-top: 1px solid rgba(#071739,.2);
+    font-size: 14px;
+    background: $color-white;
+    display: none;
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 34px;
+    }
+  }
+  &__course {
+    b {
+      font-weight: 500;
+    }
+  }
+  &__profile {
+    [class*="icon-"] {
+      font-size: 18px;
+      margin-right: 5px;
+      vertical-align: -3px;
+    }
+    a {
+      color: $color-dark;
+      text-decoration: none;
+      display: flex;
+      span {
+        text-decoration: underline;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+        max-width: 100px;
+      }
+    }
+  }
+  &.--logged {
+    #{$this} {
+      &__bottom {
+        display: block;
+      }
+    }
+    &+.header-holder {
+      height: 91px;
+    }
+    nav.navigation {
+      top: 91px;
+      max-height: calc(100vh - 101px);
+    }
+  }
+}
+
+.logo {
+  text-align: center;
+  img {
+    width: 71px;
+    display: block;
+    margin: 0 auto;
+  }
+  &>a {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.btn-cart {
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  top: 3px;
+  margin-right: 25px;
+  background: transparent;
+  border: 0;
+  span {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 24px;
+    height: 24px;
+    color: $color-white;
+    text-align: center;
+    line-height: 24px;
+    font-size: rem(12px);
+    border-radius: 50%;
+    background: $color-red;
+  }
+  &::before {
+    content: '\e902';
+    font-family: $font-icomoon;
+    font-size: 32px;
+    line-height: 1;
+  }
+}
+
+.btn-menu {
+  width: 56px;
+  height: 56px;
+  text-decoration: none;
+  display: block;
+  background: transparent;
+  border: 0;
+  position: relative;
+  margin-right: -10px;
+  &::before {
+    content: '\e90b';
+    font-family: $font-icomoon;
+    font-size: 24px;
+    // background: red;
+  }
+  &.is-active {
+    &::before {
+      content: '\e903';
+      font-size: 20px;
+    }
+  }
 }

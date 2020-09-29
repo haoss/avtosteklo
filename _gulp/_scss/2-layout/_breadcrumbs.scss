@@ -2,19 +2,22 @@
 .breadcrumbs {
   $this: &;
   margin: 0;
-  padding: 0 0 15px 0;
-  font-size: rem(13px);
+  padding: 0 0 8px 0;
+  font-size: rem(16px);
   display: flex;
   flex-wrap: wrap;
   color: $color-gray;
+  font-weight: 500;
   &__item {
     list-style: none;
-    margin: 0 0 5px 0;
+    margin: 0;
     &+#{$this}__item {
-      margin-left: 15px;
+      margin-left: 10px;
       &::before {
-        content: '›';
-        margin-right: 15px;
+        content: '\e901';
+        margin-right: 10px;
+        font-family: $font-icomoon;
+        color: #000;
       }
     }
     &>a,&>span {
@@ -23,11 +26,11 @@
       text-decoration: none;
     }
     &>a {
-      color: $color-black;
-      &:hover {
-        color: $link-color;
-        text-decoration: underline;
-      }
+      font-weight: 700;
+      color: $color-gray;
+      // &:hover {
+      //   color: $link-color;
+      // }
     }
   }
 }

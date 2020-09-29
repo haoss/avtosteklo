@@ -1,15 +1,81 @@
 // Header
-header.header
-  .container
-    
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
-    
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
+
+if loggined == true
+  header.header.--logged
+    .header__top
+      .container.header__top-container
+        .header__top-wrapper
+          button(type="button").btn-cart.header__cart
+            span 20
+          .logo.header__logo
+            a(href="#!")
+              img(src="./img/logo-xs.png", alt="")
+          button(type="button").btn-menu.header__menu
+        nav(role="navigation").navigation
+          ul
             li
-              a(href=val, title=key)= key
+              a(href="#!")
+                b История заказов
+            li
+              a(href="#!") 
+                b Избранное
+            li
+              a(href="#!") 
+                b Связаться с менеджером
+            li: a(href="#!") Поиск по коду
+            li: a(href="#!") Поиск по каталогу
+            li: a(href="#!") О компании
+            li: a(href="#!") О доставке и оплате
+            li: a(href="#!") Контакты
+            li: a(href="#!") Полезная информация
+            li: a(href="#!") Новости
+    .header__bottom
+      .container
+        .header__bottom-wrapper
+          .header__course
+            b Курс: 
+            | 1$ = 24.69 грн
+          .header__profile
+            a(href="#!")
+              i.icon-user
+              span Константин
+else
+  header.header
+    .header__top
+      .container.header__top-container
+        .header__top-wrapper
+          button(type="button").btn-cart.header__cart
+            span 20
+          .logo.header__logo
+            a(href="#!")
+              img(src="./img/logo-xs.png", alt="")
+          button(type="button").btn-menu.header__menu
+        nav(role="navigation").navigation
+          ul
+            li
+              a(href="#!")
+                b Стать дилером
+            li
+              a(href="#!") 
+                b Войти
+            li
+              a(href="#!") 
+                b Связаться с менеджером
+            li: a(href="#!") Поиск по каталогу
+            li: a(href="#!") О компании
+            li: a(href="#!") О доставке и оплате
+            li: a(href="#!") Контакты
+            li: a(href="#!") Полезная информация
+            li: a(href="#!") Новости
+    .header__bottom
+      .container
+        .header__bottom-wrapper
+          .header__course
+            b Курс: 
+            | 1$ = 24.69 грн
+          .header__profile
+            a(href="#!")
+              i.icon-user
+              span Константин
+
+.header-holder
