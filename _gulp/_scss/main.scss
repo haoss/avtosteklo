@@ -71,6 +71,7 @@ $container-max-widths: (
 @import "2-layout/_header.scss";
 @import "2-layout/_footer.scss";
 
+@import "../dist/js/libs/selectize/selectize.scss";
 @import "3-modules/_modules.scss";
 
 @import "4-utils/_clear.scss";

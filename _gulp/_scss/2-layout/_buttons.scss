@@ -53,6 +53,38 @@
       transition: background 0s;
     }
   }
+  &.--white {
+    background: $color-white;
+    color: $primary-color;
+    border-color: $color-white;
+    &:hover, &:active, &:focus {
+      background: $color-white;
+      color: $primary-color;
+      border-color: $color-white;
+    }
+    @media (hover: none) and (pointer: coarse) {
+      transition: background 0.5s;
+      &:hover {
+        background:  $color-white radial-gradient(circle, transparent 1%,  $color-white 0%) center/15000%;
+      } 
+      &:active {
+        background-color: $color-blue-light;
+        background-size: 100%;
+        transition: background 0s;
+      }
+    }
+  }
+  @media (hover: none) and (pointer: coarse) {
+    transition: background 0.5s;
+    &:hover {
+      background:  $color-blue-light radial-gradient(circle, transparent 1%,  $color-blue-light 0%) center/15000%;
+    } 
+    &:active {
+      background-color: $color-blue;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
   &.--block {
     display: block;
     width: 100%;

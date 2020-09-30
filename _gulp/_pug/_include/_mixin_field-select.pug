@@ -110,7 +110,7 @@ mixin field-select(props, attrs, options)
     if(typeof(props.mods) !== 'undefined' && props.mods) {
       var modsList = props.mods.split(',');
       for (var i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' field-select--' + modsList[i].trim();
+        allMods = allMods + '--' + modsList[i].trim();
       }
     }
   label.field-select(class=allMods, class=(typeof(props.hasError) !== 'undefined' && props.hasError) ? 'has-error' : '', class=(typeof(props.hasJs) !== 'undefined' && props.hasJs) ? 'j-field-text' : '')&attributes(attributes)

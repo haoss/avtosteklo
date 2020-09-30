@@ -48,7 +48,6 @@ body {
 .h1, h1 {
   font-size: rem(32px);
   line-height: 1.17;
-  letter-spacing: -1px;
   margin-bottom: 16px;
   font-family: $font-gilroy;
   font-weight: 800;
@@ -80,8 +79,8 @@ small, .small {
 }
 
 p {
-  line-height: 22px;
-  margin: 0 0 20px 0;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
 }
 
 em, i, .em, .i {
@@ -89,7 +88,7 @@ em, i, .em, .i {
 }
 
 strong, b, .strong, .b {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 hr {
@@ -130,19 +129,9 @@ img, .img {
   // width: 1280px;
   width: 100%;
   min-width: 320px;
-  padding: 0 15px;
-}
-
-/* text align */
-.text {
-  &-center, &--center {
-    text-align: center !important;
-  }
-  &-left, &--left {
-    text-align: left !important;
-  }
-  &-right, &--right {
-    text-align: right !important;
+  padding: 0 16px;
+  &-fluid {
+    padding: 0 16px;
   }
 }
 
@@ -200,7 +189,7 @@ img, .img {
 
 /* section */
 .section {
-  padding: 50px 0;
+  padding: 0 0 40px 0;
   min-width: 320px;
 }
 
@@ -219,13 +208,13 @@ ol li {
 
 /* bg */
 .bg {
-  &--pink {
+  &.--pink {
     background-color: pink !important;
   }
-  &--white {
+  &.--white {
     background-color: $color-white !important;
   }
-  &--black {
+  &.--black {
     background-color: $color-black !important;
   }
 }
@@ -281,11 +270,14 @@ ol li {
 }
 
 /* color */
-.color {
-  &--black {
+.text {
+  &.--black {
     color: $color-black !important;
   }
-  &--white {
+  &.--white {
     color: $color-white !important;
+  }
+  &.--blue {
+    color: $color-blue !important;
   }
 }

@@ -1,5 +1,72 @@
-//- .loader
-//-   .bouncing-loader
-//-     div
-//-     div
-//-     div
+#modal1.modal.mfp-hide
+  .modal__wrapper
+    .modal__close.hidden
+    .modal__title Связаться с менеджером
+    .modal__wrapper-content
+      form(action="#!")
+        .form-group
+          +field-text({
+            title: 'Имя',
+            hasJs: false,
+            isTextarea: false,
+            hasError: false,
+            helpText: '',
+            mods: 'md',
+            val: '',
+            attrs: {
+              name: 'text',
+              placeholder: 'Введите ваше имя'
+            }
+          })
+        .form-group
+          +field-text({
+            title: 'Номер телефона',
+            hasJs: false,
+            isTextarea: false,
+            hasError: false,
+            helpText: '',
+            mods: 'md',
+            val: '',
+            attrs: {
+              name: 'text',
+              placeholder: 'Введите ваш номер телефона'
+            }
+          })
+        .clear8
+        +btn('Связаться').--block.--xl
+
+#modal2.modal.mfp-hide
+  .modal__wrapper
+    .modal__close.hidden
+    .modal__title Заявка на регистрацию принята
+    .modal__wrapper-content
+      .text-center
+        p Ваш менеджер вскоре перезвонит вам
+      +btn('Связаться').--block.--xl
+
+#modal3.modal.mfp-hide
+  .modal__wrapper
+    .modal__close.hidden
+    .modal__title Узнать цену
+    .modal__wrapper-content
+      .text-center
+        p Ваш менеджер вскоре перезвонит вам
+      +btn('Связаться').--block.--xl
+
+#modal4.modal.mfp-hide
+  .modal__wrapper
+    .modal__close.hidden
+    .modal__title Заказ оформлен
+    .modal__wrapper-content
+      .text-center
+        p Свободный менеджер свяжется с вами в ближайшее время
+      +btn('На главную')(href='#!').--block.--xl
+
+#modal5.modal.mfp-hide
+  .modal__wrapper
+    .modal__close.hidden
+    .modal__title Заявка принята
+    .modal__wrapper-content
+      .text-center
+        p Ваш менеджер свяжется с вами в ближайшее время
+      +btn('На главную')(href='#!').--block.--xl

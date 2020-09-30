@@ -16,9 +16,80 @@
     </head>
     <body>
         <!-- Preloader-->
+        <div class="modal mfp-hide" id="modal1">
+            <div class="modal__wrapper">
+                <div class="modal__close hidden"></div>
+                <div class="modal__title">Связаться с менеджером</div>
+                <div class="modal__wrapper-content">
+                    <form action="#!">
+                        <div class="form-group">
+                                <label class="field-text --md"><span class="field-text__name">Имя</span><span class="field-text__input-wrap">
+                                        <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите ваше имя"></span>
+                                </label>
+                        </div>
+                        <div class="form-group">
+                                <label class="field-text --md"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
+                                        <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите ваш номер телефона"></span>
+                                </label>
+                        </div>
+                        <div class="clear8"></div>
+                            <button class="btn --block --xl" type="button">Связаться
+                            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal mfp-hide" id="modal2">
+            <div class="modal__wrapper">
+                <div class="modal__close hidden"></div>
+                <div class="modal__title">Заявка на регистрацию принята</div>
+                <div class="modal__wrapper-content">
+                    <div class="text-center">
+                        <p>Ваш менеджер вскоре перезвонит вам</p>
+                    </div>
+                        <button class="btn --block --xl" type="button">Связаться
+                        </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal mfp-hide" id="modal3">
+            <div class="modal__wrapper">
+                <div class="modal__close hidden"></div>
+                <div class="modal__title">Узнать цену</div>
+                <div class="modal__wrapper-content">
+                    <div class="text-center">
+                        <p>Ваш менеджер вскоре перезвонит вам</p>
+                    </div>
+                        <button class="btn --block --xl" type="button">Связаться
+                        </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal mfp-hide" id="modal4">
+            <div class="modal__wrapper">
+                <div class="modal__close hidden"></div>
+                <div class="modal__title">Заказ оформлен</div>
+                <div class="modal__wrapper-content">
+                    <div class="text-center">
+                        <p>Свободный менеджер свяжется с вами в ближайшее время</p>
+                    </div><a class="btn --block --xl" href="#!">На главную</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal mfp-hide" id="modal5">
+            <div class="modal__wrapper">
+                <div class="modal__close hidden"></div>
+                <div class="modal__title">Заявка принята</div>
+                <div class="modal__wrapper-content">
+                    <div class="text-center">
+                        <p>Ваш менеджер свяжется с вами в ближайшее время</p>
+                    </div><a class="btn --block --xl" href="#!">На главную</a>
+                </div>
+            </div>
+        </div>
         <div class="base">
             <!-- Header-->
-            <header class="header --logged">
+            <header class="header">
                 <div class="header__top">
                     <div class="container header__top-container">
                         <div class="header__top-wrapper">
@@ -28,10 +99,9 @@
                         </div>
                         <nav class="navigation" role="navigation">
                             <ul>
-                                <li><a href="#!"><b>История заказов</b></a></li>
-                                <li><a href="#!"> <b>Избранное</b></a></li>
-                                <li><a href="#!"> <b>Связаться с менеджером</b></a></li>
-                                <li><a href="#!">Поиск по коду</a></li>
+                                <li><a href="#!"><b>Стать дилером</b></a></li>
+                                <li><a href="#!"> <b>Войти</b></a></li>
+                                <li><a class="open-popup-link" href="#call-manager"><b>Связаться с менеджером</b></a></li>
                                 <li><a href="#!">Поиск по каталогу</a></li>
                                 <li><a href="#!">О компании</a></li>
                                 <li><a href="#!">О доставке и оплате</a></li>
@@ -54,34 +124,163 @@
             <div class="header-holder"></div>
             <!-- Content-->
             <main class="content">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                                <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
-                                        <li class="breadcrumbs__item"><a href="./index.html">Главная</a>
-                                        </li>
-                                </ol>
-                            <div class="content__head">
-                                <h1>Восстановление пароля</h1>
+                <!-- Top-->
+                <section class="section s-top">
+                    <div class="s-top__wrapper">
+                        <div class="container">
+                            <div class="s-top__title">Акция на стекла Mercedes</div>
+                        </div><img class="s-top__img" src="./tmp/s-top-img.png" alt="">
+                    </div><a class="btn --block --xl" href="#!">В каталог</a>
+                </section>
+                <!-- About-->
+                <section class="section s-about">
+                    <div class="container">
+                        <div class="content__head">
+                            <h1>О компании</h1>
+                        </div>
+                        <p><strong>Стекольная компания <span class="text --blue">"Трейдсистем"</span> давно и успешно занимается реализацией автомобильного стекла.</strong></p>
+                        <p>"Трейдсистем" производитель высококачественного автомобильного стекла на импортные и отечественные автомобили. Автостекло, комплекс услуг по продаже и установке автомобильного стекла - то, с чего мы начали свою работу. Все годы мы динамично развивались, и результатом этого стало возрастающее с каждым годом количество клиентов, высокое качество обслуживания.</p>
+                        <div class="row s-about__row justify-content-center">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-about__block">
+                                    <div class="s-about__block-number">20</div>
+                                    <p>лет на рынке автостекол</p>
+                                </div>
                             </div>
-                            <form action="#">
-                                <div class="form-group">
-                                        <label class="field-text --md"><span class="field-text__name">Логин или электронная почта</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Пример@gmail.com"></span>
-                                        </label>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-about__block">
+                                    <div class="s-about__block-number">14 000</div>
+                                    <p>товаров в нашем каталоге</p>
                                 </div>
-                                <div class="form-group">
-                                        <label class="field-text --md"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="+380 ХХ ХХХ ХХХ"></span>
-                                        </label>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-about__block">
+                                    <div class="s-about__block-number">550 000</div>
+                                    <p>автомобильных стекол продано</p>
                                 </div>
-                                <div class="clear10"></div>
-                                    <button class="btn --block --xl" type="button">Восстановить пароль
-                                    </button>
-                            </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
+                <!-- Products-->
+                <section class="section s-products">
+                    <div class="container">
+                        <div class="content__head">
+                            <div class="h1">Продукция</div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row s-products__row">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="s-products__block" style="background-image: url('./tmp/s-products-1.png');"><a class="s-products__block-title" href="#!"><span>Автостекла</span></a></div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="s-products__block" style="background-image: url('./tmp/s-products-2.png');"><a class="s-products__block-title" href="#!"><span>Автохимия</span></a></div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="s-products__block" style="background-image: url('./tmp/s-products-3.png');"><a class="s-products__block-title" href="#!"><span>Инструменты</span></a></div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="s-products__block" style="background-image: url('./tmp/s-products-4.png');"><a class="s-products__block-title" href="#!"><span>Молдинги</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-products__dealer">
+                        <div class="container">
+                            <div class="s-products__dealer-title">Станьте партнером одной из известнейших компаний Украины</div><a class="btn --white --block --xl" href="#!">Стать Дилером</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- Сertificates-->
+                <section class="section s-certificates">
+                    <div class="container">
+                        <div class="content__head">
+                            <div class="h1">Сертификаты и награды</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-certificates__block">
+                                    <div class="s-certificates__block-thumb"><a href="#!"><img src="./tmp/s-certificates-1.png" alt=""></a></div>
+                                    <div class="s-certificates__block-title">Свідоцтво</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-certificates__block">
+                                    <div class="s-certificates__block-thumb"><a href="#!"><img src="./tmp/s-certificates-2.png" alt=""></a></div>
+                                    <div class="s-certificates__block-title">Сертифікат "Імпортер року 2012"</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-certificates__block">
+                                    <div class="s-certificates__block-thumb"><a href="#!"><img src="./tmp/s-certificates-3.png" alt=""></a></div>
+                                    <div class="s-certificates__block-title">Орден "За заслуги перед Вітчизною"</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-certificates__block">
+                                    <div class="s-certificates__block-thumb"><a href="#!"><img src="./tmp/s-certificates-4.png" alt=""></a></div>
+                                    <div class="s-certificates__block-title">Нагорода "Еталон Якості"</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Useful information-->
+                <section class="section s-information">
+                    <div class="container">
+                        <div class="content__head">
+                            <div class="h1">Полезная информация</div>
+                        </div>
+                        <div class="row s-information__row justify-content-center">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-information__block"><a class="s-information__block-title" href="#!">Маркировка <br>автостекла</a></div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-information__block"><a class="s-information__block-title" href="#!">Расшифровка <br>еврокода</a></div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-information__block"><a class="s-information__block-title" href="#!">Типы <br>кузовов</a></div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="s-information__block"><a class="s-information__block-title" href="#!">Список <br>взаимозаменяемых <br>автостекол</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- News-->
+                <section class="section s-news">
+                    <div class="container">
+                        <div class="content__head">
+                            <div class="h1">Новости</div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="s-news__block">
+                                    <div class="s-news__block-thumb" style="background-image: url('./tmp/s-news-1.png');">
+                                        <div class="s-news__block-time">07 ОКТЯБРЯ 2016, 18:26</div>
+                                    </div>
+                                    <p>Стекло Украины</p><a class="s-news__block-link" href="#!">Читать</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="s-news__block">
+                                    <div class="s-news__block-thumb" style="background-image: url('./tmp/s-news-2.png');">
+                                        <div class="s-news__block-time">07 ОКТЯБРЯ 2016, 18:26</div>
+                                    </div>
+                                    <p>Стекло Украины</p><a class="s-news__block-link" href="#!">Читать</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="s-news__block">
+                                    <div class="s-news__block-thumb" style="background-image: url('./tmp/s-news-3.png');">
+                                        <div class="s-news__block-time">07 ОКТЯБРЯ 2016, 18:26</div>
+                                    </div>
+                                    <p>Стекольная компания ООО "Трейдсистем" / производство автомобильного стекла</p><a class="s-news__block-link" href="#!">Читать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
             <!-- Footer-->
             <footer class="footer">
@@ -113,6 +312,7 @@
         <script src="./js/libs/jquery/jquery-3.3.1.min.js"></script>
         <script src="./js/libs/jquery/jquery-migrate-3.0.1.min.js"></script>
         <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="./js/libs/selectize/selectize.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

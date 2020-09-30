@@ -72,19 +72,14 @@ html(lang="ru")
                       }
                     })
                   .form-group
-                    +field-text({
-                      title: 'Город',
-                      hasJs: false,
-                      isTextarea: false,
-                      hasError: false,
-                      helpText: '',
-                      mods: 'md',
-                      val: '',
-                      attrs: {
-                        name: 'text',
-                        placeholder: 'Пример@gmail.com'
-                      }
-                    })
+                    .field-text
+                      span.field-text__name Город
+                      select(placeholder='Выберете ваш город').selectize
+                        option(value) Выберете ваш город
+                        option(value='1') Киев
+                        option(value='2') Харьков
+                        option(value='3') Днепр
+                        option(value='4') Кировоград
                   .form-group
                     +field-text({
                       title: 'Название компании',
@@ -99,6 +94,7 @@ html(lang="ru")
                         placeholder: 'Введите название компании'
                       }
                     })
+                  
                   .clear10
                   +btn('Войти').--block.--xl
 
