@@ -18,6 +18,8 @@
         margin-right: 10px;
         font-family: $font-icomoon;
         color: #000;
+        display: inline-block;
+        font-weight: 400;
       }
     }
     &>a,&>span {
@@ -26,11 +28,13 @@
       text-decoration: none;
     }
     &>a {
-      font-weight: 700;
       color: $color-gray;
-      // &:hover {
-      //   color: $link-color;
-      // }
+    }
+    &:first-child {
+      font-weight: 700;
+    }
+    &::before {
+      display: none;
     }
   }
 }

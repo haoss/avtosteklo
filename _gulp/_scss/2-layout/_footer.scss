@@ -83,6 +83,10 @@
       list-style: none;
       margin: 0;
       line-height: 1;
+      padding: 0;
+      &::before {
+        display: none;
+      }
       a {
         color: #A8A8A8;
         text-decoration: none;

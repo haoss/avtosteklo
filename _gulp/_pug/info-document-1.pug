@@ -1,0 +1,49 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Полезная информация' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Полезная информация' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Полезная информация
+
+          .row
+            .col-12.col-lg-4
+              nav.sub-navigation(role="navigation")
+                ul
+                  li.active: span Расшифровка еврокода
+                  li: a(href="#!") Список взаимозаменяемых автостекол
+                  li: a(href="#!") Типы кузовов
+                  li: a(href="#!") Маркировка автостекла
+
+            .col-12.col-lg-8
+              h2.text.--blue-light Расшифровка еврокода
+              h3 ЕВРОКОД 
+              p Представляет собой универсальную комбинацию цифр и букв, которая применяется в Европе, для кодировки автомобильных стекол. 
+              p К закодированным позициям относятся: марка/модель автомобиля, тип стекла (ветровое, боковое, заднее), цвет тонировки, цвет солнцезащитной полосы (для ветровых стекол), наличие датчиков дождя/света, отверстий, обогрева, дополнительных крепежей и прочих опций.
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

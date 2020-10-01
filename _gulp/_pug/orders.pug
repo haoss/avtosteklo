@@ -1,0 +1,100 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Мои заказы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Мои заказы' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Мои заказы
+
+          .orders
+            .row.orders__row
+              .col-12.col-md-6.col-lg-4
+                .orders__block
+                  .orders__block-title
+                    b Дата заказа
+                    span 10.09.2019
+                  .orders__block-row
+                    .first
+                      b Номер заказа
+                    .last
+                      span 5445
+                  .orders__block-row
+                    .first
+                      b Сумма заказа
+                    .last
+                      span 15558,45 грн
+                  .orders__block-row
+                    .first
+                      b Статус заказа
+                    .last
+                      span В обработке
+                  +btn('Полная информация')(href='#!').--white.orders__block-btn
+              .col-12.col-md-6.col-lg-4
+                .orders__block.--even
+                  .orders__block-title
+                    b Дата заказа
+                    span 10.09.2019
+                  .orders__block-row
+                    .first
+                      b Номер заказа
+                    .last
+                      span 5445
+                  .orders__block-row
+                    .first
+                      b Сумма заказа
+                    .last
+                      span 15558,45 грн
+                  .orders__block-row
+                    .first
+                      b Статус заказа
+                    .last
+                      span В обработке
+                  +btn('Полная информация')(href='#!').--white.orders__block-btn
+              .col-12.col-md-6.col-lg-4
+                .orders__block
+                  .orders__block-title
+                    b Дата заказа
+                    span 10.09.2019
+                  .orders__block-row
+                    .first
+                      b Номер заказа
+                    .last
+                      span 5445
+                  .orders__block-row
+                    .first
+                      b Сумма заказа
+                    .last
+                      span 15558,45 грн
+                  .orders__block-row
+                    .first
+                      b Статус заказа
+                    .last
+                      span В обработке
+                  +btn('Полная информация')(href='#!').--white.orders__block-btn
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

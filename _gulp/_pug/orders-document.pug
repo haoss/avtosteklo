@@ -1,0 +1,120 @@
+doctype
+
+html(lang="ru")
+
+  -var active = '1 заказ' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 заказ' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            .h1 Заказ номер 5445
+
+          p
+            b Дата заказа 
+            | 10.09.2019
+            br
+            b Сумма заказа 
+            | 15558,45 грн
+            br
+            b Статус заказа 
+            | В обработке
+          
+          .orders
+            .row.orders__row
+              .col-12.col-lg-6
+                .orders__block
+                  .orders__block-number
+                    div.first 1
+                    div.last Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)
+                  .orders__block-row
+                    .first
+                      b Еврокод
+                    .last
+                      span 4003/ 39B2AGNBLMV1P
+                  .orders__block-row
+                    .first
+                      b Размер
+                    .last
+                      span 1317*690
+                  .orders__block-row
+                    .first
+                      b Производитель
+                    .last
+                      span BENSON
+                  .orders__block-row
+                    .first
+                      b Код
+                    .last
+                      span 000001177
+                  .orders__block-row
+                    .first
+                      b Цена
+                    .last
+                      b.text.--blue 900 грн
+                  .orders__block-row
+                    .first
+                      b Сумма
+                    .last
+                      b.text.--blue 5шт = 4500 грн
+              .col-12.col-lg-6
+                .orders__block
+                  .orders__block-number
+                    div.first 2
+                    div.last Acura MDX (Внедорожник) (2000-2006)
+                  .orders__block-row
+                    .first
+                      b Еврокод
+                    .last
+                      span 4003/ 39B2AGNBLMV1P
+                  .orders__block-row
+                    .first
+                      b Размер
+                    .last
+                      span 1317*690
+                  .orders__block-row
+                    .first
+                      b Производитель
+                    .last
+                      span BENSON
+                  .orders__block-row
+                    .first
+                      b Код
+                    .last
+                      span 000001177
+                  .orders__block-row
+                    .first
+                      b Цена
+                    .last
+                      b.text.--blue 900 грн
+                  .orders__block-row
+                    .first
+                      b Сумма
+                    .last
+                      b.text.--blue 5шт = 4500 грн
+
+          p
+            a(href="#!") Вернуться ко всем заказам
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

@@ -1,0 +1,107 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Регистрация' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Регистрация' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+
+    .base
+        include ./_include/_header
+
+        // Content
+        main.content
+          .container
+
+            .row.justify-content-center
+              .col-lg-8
+                +breadcrumbs()
+                  +breadcrumbs-item('Главная', './index.html')
+
+                .content__head
+                  h1 Регистрация
+
+                form(action="#")
+                  .form-group
+                    +field-text({
+                      title: 'Фамилия Имя Отчество',
+                      hasJs: false,
+                      isTextarea: false,
+                      hasError: false,
+                      helpText: '',
+                      mods: 'md',
+                      val: '',
+                      attrs: {
+                        name: 'text',
+                        placeholder: 'Введите ваше имя'
+                      }
+                    })
+                  .form-group
+                    +field-text({
+                      title: 'Логин или электронная почта',
+                      hasJs: false,
+                      isTextarea: false,
+                      hasError: false,
+                      helpText: '',
+                      mods: 'md',
+                      val: '',
+                      attrs: {
+                        name: 'text',
+                        placeholder: '+380 ХХ ХХХ ХХХ'
+                      }
+                    })
+                  .form-group
+                    +field-text({
+                      title: 'Электронная почта',
+                      hasJs: false,
+                      isTextarea: false,
+                      hasError: false,
+                      helpText: '',
+                      mods: 'md',
+                      val: '',
+                      attrs: {
+                        name: 'text',
+                        placeholder: 'Прмер@gmail.com'
+                      }
+                    })
+                  .form-group
+                    .field-text
+                      span.field-text__name Город
+                      select(placeholder='Выберете ваш город').selectize
+                        option(value) Выберете ваш город
+                        option(value='1') Киев
+                        option(value='2') Харьков
+                        option(value='3') Днепр
+                        option(value='4') Кировоград
+                  .form-group
+                    +field-text({
+                      title: 'Название компании',
+                      hasJs: false,
+                      isTextarea: false,
+                      hasError: false,
+                      helpText: '',
+                      mods: 'md',
+                      val: '',
+                      attrs: {
+                        name: 'text',
+                        placeholder: 'Введите название компании'
+                      }
+                    })
+                  
+                  .clear10
+                  +btn('Зарегистрироваться').--block.--xl
+
+        include ./_include/_footer
+        //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

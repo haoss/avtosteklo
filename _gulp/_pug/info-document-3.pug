@@ -1,0 +1,79 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Полезная информация' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Полезная информация' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Типы кузовов
+
+          .row
+            .col-12.col-lg-4
+              nav.sub-navigation(role="navigation")
+                ul
+                  li: a(href="#!") Расшифровка еврокода
+                  li: a(href="#!") Список взаимозаменяемых автостекол
+                  li.active: span Типы кузовов
+                  li: a(href="#!") Маркировка автостекла
+
+            .col-12.col-lg-8
+              h2.text.--blue-light Типы кузовов
+
+              table(width="100%").table
+                thead
+                  tr
+                    th НАЗВАНИЕ
+                    th ОБОЗНАЧЕНИЕ
+                    th.text-right ФОТО
+                tbody
+                  tr
+                    td Кабриолет
+                    td Сabrio
+                    td.text-right
+                      img(src="./tmp/type-td-img-1.png", alt="").img-fluid
+                  tr
+                    td Купе
+                    td Coupe
+                    td.text-right
+                      img(src="./tmp/type-td-img-2.png", alt="").img-fluid
+                  tr
+                    td Хэчбэк
+                    td 3D, 5D HB
+                    td.text-right
+                      img(src="./tmp/type-td-img-3.png", alt="").img-fluid
+                  tr
+                    td Джип	
+                    td 3/5D Ranger
+                    td.text-right
+                      img(src="./tmp/type-td-img-4.png", alt="").img-fluid
+                  tr
+                    td Минивэн (вэн)
+                    td Van
+                    td.text-right
+                      img(src="./tmp/type-td-img-5.png", alt="").img-fluid
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

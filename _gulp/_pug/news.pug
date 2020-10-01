@@ -1,0 +1,54 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Новости' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Новости' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            .h1 Новости
+
+          .row.justify-content-center
+            .col-12.col-sm-6.col-lg-4
+              .s-news__block
+                .s-news__block-thumb(style="background-image: url('./tmp/s-news-1.png');")
+                  .s-news__block-time 07 ОКТЯБРЯ 2016, 18:26
+                p Стекло Украины
+                a(href="#!").s-news__block-link Читать
+            .col-12.col-sm-6.col-lg-4
+              .s-news__block
+                .s-news__block-thumb(style="background-image: url('./tmp/s-news-2.png');")
+                  .s-news__block-time 07 ОКТЯБРЯ 2016, 18:26
+                p Стекло Украины
+                a(href="#!").s-news__block-link Читать
+            .col-12.col-sm-6.col-lg-4
+              .s-news__block
+                .s-news__block-thumb(style="background-image: url('./tmp/s-news-3.png');")
+                  .s-news__block-time 07 ОКТЯБРЯ 2016, 18:26
+                p Стекольная компания ООО "Трейдсистем" / производство автомобильного стекла
+                a(href="#!").s-news__block-link Читать
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

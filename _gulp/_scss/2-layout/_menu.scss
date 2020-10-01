@@ -27,8 +27,15 @@
   transition: all 0.35s;
   transform: translateY(10px);
   ul {
+    margin: 0;
+    padding: 0;
     &>li {
       border-bottom: 1px solid #D1D1D1;
+      padding: 0;
+      font-weight: 400;
+      &::before {
+        display: none;
+      }
       &:last-child {
         border: 0;
       }
@@ -50,5 +57,38 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+}
+
+.sub-navigation {
+  background: #FFFFFF;
+  box-shadow: 0px 8px 33px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  ul {
+    margin: 0;
+    padding: 0;
+    &>li {
+      padding: 0;
+      font-weight: 400;
+      &::before {
+        display: none;
+      }
+      &>span, &>a {
+        display: block;
+        min-height: 48px;
+        text-decoration: none;
+        color: $color-black;
+        padding: 14px 5px 13px 10px;
+      }
+      &.active {
+        &>span, &>a {
+          font-weight: bold;
+          color: $color-white;
+          background: $color-blue-light;
+        }
+      }
+    }
   }
 }
