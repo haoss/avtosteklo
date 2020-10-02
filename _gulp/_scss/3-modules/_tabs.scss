@@ -1,0 +1,140 @@
+/* nav */
+.nav {
+  $this: &;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: rem(14px);
+  &__wrapper {
+    border-bottom: 1px solid #E2E3FF;
+    margin-bottom: 24px;
+    #{$this} {
+      &__tabs {
+        margin-bottom: -1px;
+      }
+    }
+  }
+  &__tabs {
+    border-bottom: 1px solid #E2E3FF;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    background: $color-white;
+    &.j-tab-mobile {
+      #{$this} {
+        &__link {
+          display: none;
+          &.active {
+            display: block;
+          }
+        }
+        &__button {
+          display: block;
+        }
+      }
+      &.is-show {
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-right: -16px;
+        margin-left: -16px;
+        padding-left: 16px;
+        #{$this} {
+          &__link {
+            display: block;
+          }
+          &__button {
+            margin-left: -17px !important;
+            button {
+              &::before {
+                content: '\e90a';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__item {
+    list-style: none;
+    margin: 0 0 -1px 0;
+    white-space: nowrap;
+    padding: 0;
+    &::before {
+      display: none;
+    }
+  }
+  &__link {
+    border: 1px solid transparent;
+    height: 40px;
+    line-height: 39px;
+    display: block;
+    background: $color-blue-light;
+    text-align: center;
+    padding: 0 10px;
+    text-decoration: none;
+    color: $color-white;
+    border-radius: 15px 15px 0 0;
+    font-weight: 400;
+    min-width: 120px;
+    position: relative;
+    z-index: 5;
+    margin-right: 4px;
+    &:hover {
+      color: $color-white !important;
+    }
+    &.active {
+      background: $color-white;
+      border-color: #E2E3FF #E2E3FF $color-white;
+      color: $color-blue;
+      font-weight: 700;
+      z-index: 10;
+      &:hover {
+        color: $color-blue !important;
+      }
+    }
+  }
+  &__button {
+    margin: 0 0 -1px -20px !important;
+    padding: 0;
+    display: none;
+    &::before {
+      display: none;
+    }
+    button {
+      width: 48px;
+      height: 40px;
+      border-radius: 0 15px 0 0;
+      background: linear-gradient(270deg, #6C9BD7 24.18%, #325B8F 100%);
+      color: $color-white;
+      padding: 0 5px 0 0;
+      text-align: right;
+      border: 0;
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      &::before {
+        font-family: $font-icomoon;
+        content: '\e904';
+        line-height: 1;
+        vertical-align: -2px;
+      }
+    }
+  }
+}
+
+/* tab */
+.tab {
+  &__pane {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s;
+    &.active {
+      height: auto;
+      overflow: visible;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

@@ -30,15 +30,15 @@ html(lang="ru")
             .row
               .col-12.col-lg-4
                 .product__gallery
-                  ul.j-product-gallery
-                    li
-                      a(href="#!")
+                  .j-product-gallery.j-gallery
+                    .product__gallery-block
+                      a(href="./tmp/product-img-288-288.png").j-gallery-item
                         img(src="./tmp/product-img-288-288.png", alt="")
-                    li
-                      a(href="#!")
+                    .product__gallery-block
+                      a(href="./tmp/product-img-288-288.png").j-gallery-item
                         img(src="./tmp/product-img-288-288.png", alt="")
-                    li
-                      a(href="#!")
+                    .product__gallery-block
+                      a(href="./tmp/product-img-288-288.png").j-gallery-item
                         img(src="./tmp/product-img-288-288.png", alt="")
               .col-12.col-lg-8
                 .product__description
@@ -75,6 +75,38 @@ html(lang="ru")
                       input.cart-count__input(type='text' value='1')
                     .product__price 939.2 грн
                   +btn('Купить').--block
+
+        .nav__wrapper
+          .container
+            ul.nav.nav__tabs#tabContent(role='tablist').j-tab-mobile
+              li.nav__item(role='presentation')
+                a.nav__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true') Описание
+              li.nav__item(role='presentation')
+                a.nav__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false') Видеообзоры
+              li.nav__button
+                button(type="button")
+
+        .container
+          .tab-content
+            .tab__pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
+              p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. 
+              p Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам
+            .tab__pane#tab2(role='tabpanel' aria-labelledby='tab2-tab')
+              .video
+                .row.video__row
+                  .col-12.col-sm-6.col-lg-4
+                    .video__block
+                      .video__block-thumb
+                        a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8").video__block-link.j-popup-youtube
+                          img(src="./tmp/video-img-1.png", alt="")
+                      .video__block-title Видеообзор 1 
+                  .col-12.col-sm-6.col-lg-4
+                    .video__block
+                      .video__block-thumb
+                        a(href="https://www.youtube.com/watch?v=0-7IHOXkiV8").video__block-link.j-popup-youtube
+                          img(src="./tmp/video-img-2.png", alt="")
+                      .video__block-title Видеообзор 2 
+
 
       include ./_include/_footer
       //- div(style="height: 1000px; background-color: #000")

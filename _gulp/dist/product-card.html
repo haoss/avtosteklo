@@ -135,7 +135,7 @@
                             <ul>
                                 <li><a href="#!"><b>История заказов</b></a></li>
                                 <li><a href="#!"> <b>Избранное</b></a></li>
-                                <li><a class="open-popup-link" href="#call-manager"><b>Связаться с менеджером</b></a></li>
+                                <li><a class="j-open-popup-link" href="#call-manager"><b>Связаться с менеджером</b></a></li>
                                 <li><a href="#!">Поиск по коду</a></li>
                                 <li><a href="#!">Поиск по каталогу</a></li>
                                 <li><a href="#!">О компании</a></li>
@@ -173,11 +173,11 @@
                         <div class="row">
                             <div class="col-12 col-lg-4">
                                 <div class="product__gallery">
-                                    <ul class="j-product-gallery">
-                                        <li><a href="#!"><img src="./tmp/product-img-288-288.png" alt=""></a></li>
-                                        <li><a href="#!"><img src="./tmp/product-img-288-288.png" alt=""></a></li>
-                                        <li><a href="#!"><img src="./tmp/product-img-288-288.png" alt=""></a></li>
-                                    </ul>
+                                    <div class="j-product-gallery j-gallery">
+                                        <div class="product__gallery-block"><a class="j-gallery-item" href="./tmp/product-img-288-288.png"><img src="./tmp/product-img-288-288.png" alt=""></a></div>
+                                        <div class="product__gallery-block"><a class="j-gallery-item" href="./tmp/product-img-288-288.png"><img src="./tmp/product-img-288-288.png" alt=""></a></div>
+                                        <div class="product__gallery-block"><a class="j-gallery-item" href="./tmp/product-img-288-288.png"><img src="./tmp/product-img-288-288.png" alt=""></a></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-8">
@@ -219,6 +219,43 @@
                         </div>
                     </div>
                 </div>
+                <div class="nav__wrapper">
+                    <div class="container">
+                        <ul class="nav nav__tabs j-tab-mobile" id="tabContent" role="tablist">
+                            <li class="nav__item" role="presentation"><a class="nav__link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Описание</a></li>
+                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Видеообзоры</a></li>
+                            <li class="nav__button">
+                                <button type="button"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="tab-content">
+                        <div class="tab__pane active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                            <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. </p>
+                            <p>Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам</p>
+                        </div>
+                        <div class="tab__pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                            <div class="video">
+                                <div class="row video__row">
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="video__block">
+                                            <div class="video__block-thumb"><a class="video__block-link j-popup-youtube" href="https://www.youtube.com/watch?v=0-7IHOXkiV8"><img src="./tmp/video-img-1.png" alt=""></a></div>
+                                            <div class="video__block-title">Видеообзор 1 </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-lg-4">
+                                        <div class="video__block">
+                                            <div class="video__block-thumb"><a class="video__block-link j-popup-youtube" href="https://www.youtube.com/watch?v=0-7IHOXkiV8"><img src="./tmp/video-img-2.png" alt=""></a></div>
+                                            <div class="video__block-title">Видеообзор 2 </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
             <!-- Footer-->
             <footer class="footer">
@@ -252,6 +289,7 @@
         <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
         <script src="./js/libs/selectize/selectize.min.js"></script>
         <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

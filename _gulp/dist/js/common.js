@@ -4,12 +4,13 @@
 $(document).on('ready', function(){
 
   // Magnific popup gallery
-  $('.gallery').each(function() {
+  $('.j-gallery').each(function() {
     $(this).magnificPopup({
-      delegate: '.gallery-item',
+      delegate: '.j-gallery-item',
       type: 'image',
       gallery:{
-        enabled:true
+        enabled: true,
+        tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
       },
       zoom: {
         enabled: true, // By default it's false, so don't forget to enable it
@@ -40,8 +41,8 @@ $(document).on('ready', function(){
   });
 
   // Magnific popup video
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
+  $('.j-popup-youtube, .j-popup-vimeo, .j-popup-gmaps').magnificPopup({
+    // disableOn: 700,
     type: 'iframe',
     mainClass: 'mfp-fade',
     removalDelay: 160,
@@ -49,7 +50,7 @@ $(document).on('ready', function(){
     fixedContentPos: false
   });
 
-  $('.open-popup-link').magnificPopup({
+  $('.j-open-popup-link').magnificPopup({
     type: 'inline',
     midClick: true,
     showCloseBtn: false
@@ -71,6 +72,7 @@ $(document).on('ready', function(){
   });
 
   mobileNavigation();
+  tabMobile();
 
   // тестовые функции
   cartCountTest();
@@ -134,4 +136,26 @@ function cartCountTest() {
       input.val(value);
     });
   })
+}
+
+function tabMobile() {
+  var tab = $('.j-tab-mobile');
+  tab.each(function(){
+    var _this = $(this);
+    var btn = _this.find('.nav__button button');
+    var item = _this.find('.nav__item');
+
+    btn.on('click', function(){
+      if (_this.hasClass('is-show')) {
+        _this.removeClass('is-show');
+      } else {
+        _this.addClass('is-show');
+      }
+    });
+    item.on('click', function(){
+      if (_this.hasClass('is-show')) {
+        _this.removeClass('is-show');
+      }
+    });
+  });
 }

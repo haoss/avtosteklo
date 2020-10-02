@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('./fonts/icomoon/fonts/icomoon.eot?o7mxo9');
-  src:  url('./fonts/icomoon/fonts/icomoon.eot?o7mxo9#iefix') format('embedded-opentype'),
-    url('./fonts/icomoon/fonts/icomoon.woff2?o7mxo9') format('woff2'),
-    url('./fonts/icomoon/fonts/icomoon.ttf?o7mxo9') format('truetype'),
-    url('./fonts/icomoon/fonts/icomoon.woff?o7mxo9') format('woff'),
-    url('./fonts/icomoon/fonts/icomoon.svg?o7mxo9#icomoon') format('svg');
+  src:  url('./fonts/icomoon/fonts/icomoon.eot?smxp9o');
+  src:  url('./fonts/icomoon/fonts/icomoon.eot?smxp9o#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon/fonts/icomoon.woff2?smxp9o') format('woff2'),
+    url('./fonts/icomoon/fonts/icomoon.ttf?smxp9o') format('truetype'),
+    url('./fonts/icomoon/fonts/icomoon.woff?smxp9o') format('woff'),
+    url('./fonts/icomoon/fonts/icomoon.svg?smxp9o#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-play:before {
+  content: "\e911";
+}
 .icon-arrow-down:before {
   content: "\e900";
 }
