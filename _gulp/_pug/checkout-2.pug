@@ -1,0 +1,119 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Оформление заказа' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Оформление заказа' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          
+          .row.justify-content-center
+            .col-lg-8
+              +breadcrumbs()
+                +breadcrumbs-item('Главная', './index.html')
+
+              .content__head
+                h1 Оформление заказа
+
+              h2.text.--blue Доставка
+
+              form(action="#")
+                .form-group
+                  .field-text
+                    span.field-text__name Тип доставки
+                    select(placeholder='Выберерте тип доставки').selectize
+                      option(value) Выберерте тип доставки
+                      option(value='1') Самовывоз
+                      option(value='2') Курьерская доставка
+                      option(value='3') Доставка Новой почтой
+                      option(value='4') Доставка Укрпочтой
+                .form-group
+                  .field-text
+                    span.field-text__name Город
+                    select(placeholder='Выберете ваш город').selectize
+                      option(value) Выберете ваш город
+                      option(value='1') Киев
+                      option(value='2') Харьков
+                      option(value='3') Днепр
+                      option(value='4') Кировоград
+                .form-group
+                  .field-text
+                    span.field-text__name Отделение
+                    select(placeholder='Выберете отделение').selectize
+                      option(value) Выберете отделение
+                      option(value='1') Отделение 1
+                      option(value='2') Отделение 2
+                      option(value='3') Отделение 3
+                      option(value='4') Отделение 4
+                .form-group
+                  .field-text
+                    span.field-text__name Способ доставки
+                    select(placeholder='Выберете способ доставки').selectize
+                      option(value) Выберете способ доставки
+                      option(value='1') Отделение 1
+                      option(value='2') Отделение 2
+                      option(value='3') Отделение 3
+                      option(value='4') Отделение 4
+                .form-group
+                  +field-text({
+                    title: 'Комментарий к заказу',
+                    hasJs: false,
+                    isTextarea: true,
+                    hasError: false,
+                    helpText: '',
+                    mods: 'md',
+                    val: '',
+                    attrs: {
+                      name: 'comments',
+                      placeholder: 'Введите ваш комментарий',
+                      rows: '5'
+                    }
+                  })
+                
+                .clear8
+                .checkout-sum
+                  .checkout-sum__row
+                    .first 
+                      i.icon-info
+                      b Сумма заказа
+                    .last
+                      span.text.--blue 5500.48 грн
+                  .checkout-sum__row
+                    .first 
+                      b Цена за доставку до почты
+                    .last
+                      span.text.--blue 100 грн
+                  .checkout-sum__row
+                    .first 
+                      b Цена доставки почтой
+                    .last
+                      span.text.--blue 75 грн
+
+                .checkout-total
+                  .first 
+                    b Итого
+                  .last
+                    b.text.--blue 5600.48 грн
+
+                +btn('Оформить заказ').--block.--xl
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

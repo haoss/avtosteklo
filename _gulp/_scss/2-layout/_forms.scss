@@ -237,12 +237,33 @@ legend {
         }
       }
       &__input {
-        height: 30px;
+        height: 32px;
         font-size: rem(14px);
+        padding-left: 10px;
+        padding-right: 10px;
         &.css-input {
           font-size: rem(14px);
           padding-top: 18px;
         }
+      }
+    }
+  }
+  &.--custom {
+    #{$this} {
+      &__name {
+        font-size: rem(24px);
+        font-weight: 800;
+        font-family: $font-gilroy;
+        color: $color-blue;
+      }
+      &__input {
+        font-weight: 500;
+        border-radius: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-color: #FBFBFB;
+        border-bottom-color: $color-blue-light;
+        background-color: #FBFBFB;
       }
     }
   }
@@ -315,7 +336,7 @@ legend {
 }
 
 textarea.field-text__input {
-  height: auto;
+  height: auto !important;
   resize: vertical;
   padding: 9px 10px;
   background-position: calc(100% - 10px) 12px;

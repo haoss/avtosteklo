@@ -1,0 +1,85 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Карточка товара' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Карточка товара' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+            +breadcrumbs-item('Товары и услуги', '#!')
+
+          .content__head.--product-card
+            h1 Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)
+
+          .product
+            .row
+              .col-12.col-lg-4
+                .product__gallery
+                  ul.j-product-gallery
+                    li
+                      a(href="#!")
+                        img(src="./tmp/product-img-288-288.png", alt="")
+                    li
+                      a(href="#!")
+                        img(src="./tmp/product-img-288-288.png", alt="")
+                    li
+                      a(href="#!")
+                        img(src="./tmp/product-img-288-288.png", alt="")
+              .col-12.col-lg-8
+                .product__description
+                  .product__th
+                    .product__th-row
+                      .first
+                        b Производитель:
+                      .last
+                        span SafeGlass
+                    .product__th-row
+                      .first
+                        b Еврокод:
+                      .last
+                        span 000016037
+                    .product__th-row
+                      .first
+                        b Код:
+                      .last
+                        span 000016037
+                    .product__th-row
+                      .first
+                        b Размер:
+                      .last
+                        span 1475*908
+                    .product__th-row
+                      .first
+                        b Цена:
+                      .last
+                        span 469.6 грн
+                  .product__number
+                    .cart-count.--mb0.j-cart-count
+                      button.cart-count__minus(type='button')
+                      button.cart-count__plus(type='button')
+                      input.cart-count__input(type='text' value='1')
+                    .product__price 939.2 грн
+                  +btn('Купить').--block
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

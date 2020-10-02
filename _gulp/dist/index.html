@@ -11,7 +11,6 @@
         <meta name="format-detection" content="address=no">
         <meta name="format-detection" content="email=no">
         <meta content="notranslate" name="google">
-        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
     <body>
@@ -19,16 +18,16 @@
         <div class="modal mfp-hide" id="modal1">
             <div class="modal__wrapper">
                 <div class="modal__close hidden"></div>
-                <div class="modal__title">Связаться с менеджером</div>
-                <div class="modal__wrapper-content">
+                <div class="modal__header">Связаться с менеджером</div>
+                <div class="modal__content">
                     <form action="#!">
                         <div class="form-group">
-                                <label class="field-text --md"><span class="field-text__name">Имя</span><span class="field-text__input-wrap">
+                                <label class="field-text  --md"><span class="field-text__name">Имя</span><span class="field-text__input-wrap">
                                         <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите ваше имя"></span>
                                 </label>
                         </div>
                         <div class="form-group">
-                                <label class="field-text --md"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
+                                <label class="field-text  --md"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
                                         <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите ваш номер телефона"></span>
                                 </label>
                         </div>
@@ -42,10 +41,10 @@
         <div class="modal mfp-hide" id="modal2">
             <div class="modal__wrapper">
                 <div class="modal__close hidden"></div>
-                <div class="modal__title">Заявка на регистрацию принята</div>
-                <div class="modal__wrapper-content">
+                <div class="modal__header">Заявка на регистрацию принята</div>
+                <div class="modal__content">
                     <div class="text-center">
-                        <p>Ваш менеджер вскоре перезвонит вам</p>
+                        <p class="--fs16">Ваш менеджер вскоре перезвонит вам</p>
                     </div>
                         <button class="btn --block --xl" type="button">Связаться
                         </button>
@@ -55,10 +54,10 @@
         <div class="modal mfp-hide" id="modal3">
             <div class="modal__wrapper">
                 <div class="modal__close hidden"></div>
-                <div class="modal__title">Узнать цену</div>
-                <div class="modal__wrapper-content">
+                <div class="modal__header">Узнать цену</div>
+                <div class="modal__content">
                     <div class="text-center">
-                        <p>Ваш менеджер вскоре перезвонит вам</p>
+                        <p class="--fs16">Ваш менеджер вскоре перезвонит вам</p>
                     </div>
                         <button class="btn --block --xl" type="button">Связаться
                         </button>
@@ -68,10 +67,10 @@
         <div class="modal mfp-hide" id="modal4">
             <div class="modal__wrapper">
                 <div class="modal__close hidden"></div>
-                <div class="modal__title">Заказ оформлен</div>
-                <div class="modal__wrapper-content">
+                <div class="modal__header">Заказ оформлен</div>
+                <div class="modal__content">
                     <div class="text-center">
-                        <p>Свободный менеджер свяжется с вами в ближайшее время</p>
+                        <p class="--fs16">Свободный менеджер свяжется с вами в ближайшее время</p>
                     </div><a class="btn --block --xl" href="#!">На главную</a>
                 </div>
             </div>
@@ -79,11 +78,46 @@
         <div class="modal mfp-hide" id="modal5">
             <div class="modal__wrapper">
                 <div class="modal__close hidden"></div>
-                <div class="modal__title">Заявка принята</div>
-                <div class="modal__wrapper-content">
+                <div class="modal__header">Заявка принята</div>
+                <div class="modal__content">
                     <div class="text-center">
-                        <p>Ваш менеджер свяжется с вами в ближайшее время</p>
+                        <p class="--fs16">Ваш менеджер свяжется с вами в ближайшее время</p>
                     </div><a class="btn --block --xl" href="#!">На главную</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal mfp-hide" id="modal6">
+            <div class="modal__wrapper">
+                <div class="modal__close hidden"></div>
+                <div class="modal__header">Корзина</div>
+                <div class="modal__content">
+                    <div class="text-center">
+                        <p class="--fs16">Ваш менеджер вскоре перезвонит вам</p>
+                    </div><a class="btn --block --xl" href="#!">Продолжить оформление</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal --toCart mfp-hide" id="modal7">
+            <div class="modal__wrapper">
+                <div class="modal__close hidden"></div>
+                <div class="modal__header">Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)</div>
+                <div class="modal__content">
+                    <div class="modal__product">
+                        <div class="modal__product-thumb"><img src="./tmp/product-img-118-118.png" alt=""></div>
+                        <div class="last">
+                            <div class="modal__product-cost">
+                                <div class="first"> <b>Цена:</b></div>
+                                <div class="last"><span>469.6 грн</span></div>
+                            </div>
+                            <div class="cart-count j-cart-count">
+                                <button class="cart-count__minus" type="button"></button>
+                                <button class="cart-count__plus" type="button"></button>
+                                <input class="cart-count__input" type="text" value="1">
+                            </div>
+                            <div class="modal__product-price">939.2 грн</div>
+                        </div>
+                    </div><a class="btn --block" href="#!">Оформить заказ</a>
+                    <button class="modal__btn-to-cart" type="button"> <span>Добавить в корзину<br>и продолжить покупки</span><i class="icon-arrow-right-2"></i></button>
                 </div>
             </div>
         </div>
@@ -313,6 +347,7 @@
         <script src="./js/libs/jquery/jquery-migrate-3.0.1.min.js"></script>
         <script src="./js/libs/magnific-popup/jquery.magnific-popup.min.js"></script>
         <script src="./js/libs/selectize/selectize.min.js"></script>
+        <script src="./js/libs/slick/slick.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>
