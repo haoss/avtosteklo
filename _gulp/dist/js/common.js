@@ -31,7 +31,7 @@ $(document).on('ready', function(){
   });
 
   // Magnific popup one image
-  $('.image-popup').magnificPopup({
+  $('.j-image-popup').magnificPopup({
     type: 'image',
     closeOnContentClick: true,
     mainClass: 'mfp-img-mobile',
@@ -60,6 +60,11 @@ $(document).on('ready', function(){
   });
 
   $('select.selectize').selectize();
+  $('select.--sorting').selectize({
+    onInitialize: function() {
+      this.$control_input.attr('readonly', true);
+    }
+  });
 
   $('.j-product-gallery').slick({
     dots: true,
@@ -76,6 +81,8 @@ $(document).on('ready', function(){
 
   // тестовые функции
   cartCountTest();
+  filterBtnTest();
+  favouritesTest();
 
   // Chrome Smooth Scroll
   try {
@@ -157,5 +164,26 @@ function tabMobile() {
         _this.removeClass('is-show');
       }
     });
+  });
+}
+
+function filterBtnTest() {
+  var block = $('.j-filter-btns');
+  var btn = block.find('button');
+  btn.on('click', function(){
+    btn.removeClass('active');
+    $(this).addClass('active');
+  });
+}
+
+function favouritesTest() {
+  var btn = $('.j-favourites');
+  btn.on('click', function(){
+    var _this = $(this);
+    if (_this.hasClass('is-favourites')) {
+      _this.removeClass('is-favourites');
+    } else {
+      _this.addClass('is-favourites');
+    }
   });
 }

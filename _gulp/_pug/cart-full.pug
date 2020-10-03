@@ -1,0 +1,174 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Корзина' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Корзина' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+
+          .row.justify-content-center
+            .col-lg-8
+              +breadcrumbs()
+                +breadcrumbs-item('Главная', './index.html')
+
+              .content__head
+                h1 Корзина
+
+              .cart-body
+                .cart-body__wrapper
+                  .cart-block
+                    .cart-block__head
+                      a(href="./tmp/product-img-288-288.png").cart-block__link.j-image-popup
+                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                    .cart-block__row
+                      .first
+                        b Еврокод
+                      .last
+                        span.--fs12 4003/ 39B2AGNBLMV1P
+                    .cart-block__row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .cart-block__row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .cart-block__row
+                      .first
+                        b Цена
+                      .last
+                        a(href="#!") цена
+                    .cart-block__row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .cart-block__description
+                      .first
+                        b Описание
+                      .last
+                        p зеленое, крепление зеркало
+                    .cart-block__number
+                      .cart-count.--mb0.j-cart-count
+                        button.cart-count__minus(type='button')
+                        button.cart-count__plus(type='button')
+                        input.cart-count__input(type='text' value='2')
+                    .cart-block__footer
+                      +btn('Убрать из корзины').--border
+                      
+                  .cart-block.--even
+                    .cart-block__head
+                      a(href="./tmp/product-img-288-288.png").cart-block__link.j-image-popup
+                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                    .cart-block__row
+                      .first
+                        b Еврокод
+                      .last
+                        span.--fs12 4003/ 39B2AGNBLMV1P
+                    .cart-block__row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .cart-block__row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .cart-block__row
+                      .first
+                        b Цена
+                      .last
+                        a(href="#!") цена
+                    .cart-block__row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .cart-block__description
+                      .first
+                        b Описание
+                      .last
+                        p зеленое, крепление зеркалозеленое, крепление зеркалокрепление ркалозеленое
+                    .cart-block__number
+                      .cart-count.--mb0.j-cart-count
+                        button.cart-count__minus(type='button')
+                        button.cart-count__plus(type='button')
+                        input.cart-count__input(type='text' value='2')
+                    .cart-block__footer
+                      +btn('Убрать из корзины').--border
+                      
+                  .cart-block
+                    .cart-block__head
+                      a(href="./tmp/product-img-288-288.png").cart-block__link.j-image-popup
+                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                    .cart-block__row
+                      .first
+                        b Еврокод
+                      .last
+                        span.--fs12 4003/ 39B2AGNBLMV1P
+                    .cart-block__row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .cart-block__row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .cart-block__row
+                      .first
+                        b Цена
+                      .last
+                        a(href="#!") цена
+                    .cart-block__row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .cart-block__description
+                      .first
+                        b Описание
+                      .last
+                        p зеленое, крепление зеркало
+                    .cart-block__number
+                      .cart-count.--mb0.j-cart-count
+                        button.cart-count__minus(type='button')
+                        button.cart-count__plus(type='button')
+                        input.cart-count__input(type='text' value='2')
+                    .cart-block__footer
+                      +btn('Убрать из корзины').--border
+
+        .cart-footer
+          .container
+            .cart-footer__total
+              .first
+                b Итого
+              .last
+                span 5600.48 грн
+            +btn('Оформить заказ').--block.--xl
+
+      //- include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

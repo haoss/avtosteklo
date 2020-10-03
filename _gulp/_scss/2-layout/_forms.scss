@@ -32,6 +32,15 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 .form-group {
   margin-bottom: 16px;
+  &__name {
+    color: $color-dark;
+    font-size: .875rem;
+    line-height: 1.6;
+    cursor: text;
+    display: block;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
 }
 
 .errormsg {
