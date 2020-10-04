@@ -4,7 +4,7 @@
   padding-bottom: 80px;
   flex-grow: 1;
   &__document {
-    font-size: 16px;
+    font-size: rem(16px);
     img {
       display: block;
       margin: 0 auto;
@@ -31,7 +31,7 @@
       top: 8px;
       left: 24px;
       line-height: 24px;
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 400;
       position: absolute;
     }
@@ -70,10 +70,10 @@
 }
 
 .table {
-  font-size: 16px;
+  font-size: rem(16px);
   thead {
     th {
-      font-size: 14px;
+      font-size: rem(14px);
       text-transform: uppercase;
       font-weight: 700;
       padding: 5px 0 25px 0;
@@ -95,7 +95,7 @@
 .selectize-control.single {
   .selectize {
     &-dropdown, &-input, &-input input {
-      font-size: 14px;
+      font-size: rem(14px);
       color: $color-dark;
     }
     &-input {
@@ -200,7 +200,7 @@
   &__header {
     font-family: $font-gilroy;
     font-weight: 800;
-    font-size: 24px;
+    font-size: rem(24px);
     line-height: 1.3;
     margin-bottom: 16px;
     text-align: center;
@@ -230,7 +230,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 16px;
-      font-size: 14px;
+      font-size: rem(14px);
       border-bottom: 1px dashed #8F8F8F;
       .first {
         color: $color-dark;
@@ -240,7 +240,7 @@
       }
     }
     &-price {
-      font-size: 24px;
+      font-size: rem(24px);
       font-weight: 800;
       font-family: $font-gilroy;
       letter-spacing: 0.01em;
@@ -256,7 +256,7 @@
     height: 76px;
     text-align: left;
     padding: 5px 15px 5px 15px;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $color-gray;
     display: flex;
     align-items: center;
@@ -265,7 +265,7 @@
     }
     [class*="icon-"] {
       margin-left: 18px;
-      font-size: 24px;
+      font-size: rem(24px);
     }
   }
   &.--toCart {
@@ -306,11 +306,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: bold;
       margin-bottom: 10px;
       .last {
-        font-size: 16px;
+        font-size: rem(16px);
         color: $color-blue;
       }
     }
@@ -344,7 +344,7 @@
   &__block {
     background: $color-white;
     box-shadow: 0px 8px 33px rgba($color-black,.1);
-    font-size: 16px;
+    font-size: rem(16px);
     color: #525252;
     font-weight: bold;
     padding: 16px 24px;
@@ -370,7 +370,7 @@
     min-height: 320px;
     background: $color-gray;
     margin: 0 -10px;
-    font-size: 24px;
+    font-size: rem(24px);
     font-weight: 800;
     font-family: $font-gilroy;
     padding-bottom: 100%;
@@ -412,7 +412,7 @@
       margin-bottom: 24px;
       font-weight: 800;
       font-family: $font-gilroy;
-      font-size: 24px;
+      font-size: rem(24px);
       line-height: 1.3;
     }
     .btn {
@@ -449,7 +449,7 @@
     }
     &-title {
       text-align: center;
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 500;
       padding: 0 10px;
     }
@@ -461,7 +461,7 @@
   &__block {
     background: $color-white;
     box-shadow: 0px 8px 33px rgba($color-black,.1);
-    font-size: 16px;
+    font-size: rem(16px);
     color: #525252;
     font-weight: bold;
     padding: 10px 24px;
@@ -560,7 +560,7 @@
 
 .contacts {
   &__title {
-    font-size: 24px;
+    font-size: rem(24px);
     font-weight: 800;
     font-family: $font-gilroy;
     color: $color-blue;
@@ -569,7 +569,7 @@
   &__list {
     margin: 0 -10px;
     padding: 0;
-    font-size: 16px;
+    font-size: rem(16px);
     display: flex;
     flex-wrap: wrap;
     &>li {
@@ -611,7 +611,7 @@
     background: #FAFAFA;
     margin-bottom: 16px;
     padding: 8px 16px;
-    font-size: 14px;
+    font-size: rem(14px);
     &-title {
       display: flex;
       align-items: center;
@@ -619,7 +619,7 @@
       margin-bottom: 8px;
       font-weight: 700;
       b {
-        font-size: 24px;
+        font-size: rem(24px);
         font-weight: 800;
         font-family: $font-gilroy;
         color: $color-blue-light;
@@ -667,13 +667,13 @@
       border-color: $color-blue-light !important;
       width: calc(100% + 32px);
       font-weight: 600;
-      font-size: 12px;
+      font-size: rem(12px);
     }
     &-number {
       display: flex;
       align-items: center;
       color: $color-black;
-      font-size: 14px;
+      font-size: rem(14px);
       margin-left: -16px;
       margin-bottom: 16px;
       .last {
@@ -684,7 +684,7 @@
         width: 42px;
         text-align: center;
         color: $color-blue-light;
-        font-size: 24px;
+        font-size: rem(24px);
         font-weight: 800;
         font-family: $font-gilroy;
       }
@@ -711,7 +711,7 @@
   box-shadow: 0px 8px 33px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
   padding: 16px 8px;
-  font-size: 14px;
+  font-size: rem(14px);
   &__row {
     display: flex;
     align-items: center;
@@ -724,7 +724,7 @@
       color: $color-white;
       background: $color-blue-light;
       border-radius: 50%;
-      font-size: 12px;
+      font-size: rem(12px);
       width: 20px;
       height: 20px;
       display: inline-block;
@@ -739,7 +739,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: rem(16px);
   margin-bottom: 24px;
 }
 
@@ -748,7 +748,7 @@
   margin-bottom: 32px;
   text-align: center;
   background: #FFE8ED;
-  font-size: 24px;
+  font-size: rem(24px);
   font-weight: 800;
   font-family: $font-gilroy;
   color: $color-blue;
@@ -843,7 +843,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 12px;
-      font-size: 14px;
+      font-size: rem(14px);
       border-bottom: 1px dashed #8F8F8F;
       .first {
         color: $color-dark;
@@ -863,7 +863,7 @@
     color: $primary-color;
     font-weight: 800;
     font-family: $font-gilroy;
-    font-size: 24px;
+    font-size: rem(24px);
   }
   &__gallery {
     position: relative;
@@ -936,7 +936,7 @@
       &::before {
         font-family: $font-icomoon;
         opacity: 1;
-        font-size: 16px;
+        font-size: rem(16px);
         font-weight: 400;
       }
     }
@@ -974,7 +974,7 @@
       }
     }
     &-title {
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 600;
     }
     &-link {
@@ -997,7 +997,7 @@
         color: $color-white;
         font-family: $font-icomoon;
         content: '\e911';
-        font-size: 24px;
+        font-size: rem(24px);
         margin-left: 2px;
       }
     }
@@ -1020,7 +1020,7 @@
       background: $color-blue-light;
       border: 1px solid $color-blue-light;
       min-width: 144px;
-      font-size: 14px;
+      font-size: rem(14px);
       font-weight: 400;
       text-decoration: none;
       display: block;
@@ -1047,7 +1047,7 @@
   margin-bottom: 46px;
   &__label {
     color: $color-dark;
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1.6;
     cursor: text;
     display: block;
@@ -1088,7 +1088,7 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 24px;
-    font-size: 14px;
+    font-size: rem(14px);
     z-index: 5;
     &-thumb {
       overflow: hidden;
@@ -1116,7 +1116,7 @@
     }
     &-price {
       padding-left: 10px;
-      font-size: 16px;
+      font-size: rem(16px);
       color: $color-dark;
       font-weight: 700;
       white-space: nowrap;
@@ -1127,7 +1127,7 @@
       margin-bottom: 4px;
       align-items: center;
       justify-content: space-between;
-      font-size: 14px;
+      font-size: rem(14px);
       font-weight: 400;
       .first {
         b {
@@ -1259,7 +1259,7 @@
       }
       .btn {
         border-radius: 0;
-        font-size: 12px;
+        font-size: rem(12px);
         margin: 0 !important;
         font-weight: 600;
         min-width: auto;
@@ -1304,7 +1304,7 @@
       margin-right: 9px;
       text-decoration: none;
       color: $color-blue-light;
-      font-size: 24px;
+      font-size: rem(24px);
       &::before {
         content: '\e910';
         font-family: $font-icomoon;
@@ -1335,7 +1335,7 @@
   background: $color-white;
   text-align: center;
   line-height: 32px;
-  font-size: 16px;
+  font-size: rem(16px);
   border: 0;
   padding: 0;
   color: $color-blue-light;
@@ -1363,10 +1363,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: bold;
     .last {
-      font-size: 16px;
+      font-size: rem(16px);
       color: $color-blue;
     }
   }
@@ -1469,7 +1469,7 @@
     display: flex;
     .btn {
       border-radius: 0;
-      font-size: 12px;
+      font-size: rem(12px);
       margin: 0 !important;
       font-weight: 600;
       min-width: auto;
@@ -1510,7 +1510,7 @@
     margin-right: 9px;
     text-decoration: none;
     color: $color-blue-light;
-    font-size: 24px;
+    font-size: rem(24px);
     &::before {
       content: '\e910';
       font-family: $font-icomoon;
@@ -1538,14 +1538,14 @@
   text-align: center;
   color: $color-dark;
   h1 {
-    font-size: 24px;
+    font-size: rem(24px);
     margin-bottom: 16px;
   }
   &__b {
     line-height: 1;
     font-weight: 800;
     font-family: $font-gilroy;
-    font-size: 80px;
+    font-size: rem(80px);
     margin-bottom: 16px;
   }
 }

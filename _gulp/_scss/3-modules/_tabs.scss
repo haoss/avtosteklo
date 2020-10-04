@@ -110,7 +110,7 @@
       text-align: right;
       border: 0;
       display: block;
-      font-size: 20px;
+      font-size: rem(20px);
       font-weight: 400;
       &::before {
         font-family: $font-icomoon;
