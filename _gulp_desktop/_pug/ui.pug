@@ -1,0 +1,40 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'UI' //активный пункт меню, список в header.jade
+  -var pageTitle = 'UI' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      //- include ./_include/_header
+
+      // Content
+      main.content
+        .container
+
+          h1 Примеры модальных окон
+          ol
+            li: a(href="#modal1").j-open-popup-link Связаться с менеджером
+            li: a(href="#modal2").j-open-popup-link Заявка на регистрацию принята
+            li: a(href="#modal3").j-open-popup-link Узнать цену
+            li: a(href="#modal4").j-open-popup-link Заказ оформлен
+            li: a(href="#modal5").j-open-popup-link Заявка принята
+            li: a(href="#modal6").j-open-popup-link Корзина
+            li: a(href="#modal7").j-open-popup-link Товар добавлен в корзину
+          
+
+      //- include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

@@ -1,0 +1,26 @@
+// :root {
+//   @include defineColorHSL(--color-primary, 0, 89%, 56%);
+// }
+// [data-theme="dark"] {
+//   @include defineColorHSL(--color-primary, 0, 100%, 56%);
+// }
+
+$primary-color: #222;
+
+$link-color: #6C9BD7;
+
+$color-white: #ffffff;
+$color-gray: #8F8F8F;
+$color-gray-light: #F3F3F3;
+$color-black: #000;
+$color-dark: #071739;
+$color-red: #A90000;
+$color-pink: pink;
+$color-blue: #274684;
+$color-blue-light: #6C9BD7;
+
+$primary-font: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+$font-ibm: 'IBM Plex Sans', $primary-font;
+$font-gilroy: 'Gilroy', $primary-font;
+$font-icomoon: 'icomoon';
