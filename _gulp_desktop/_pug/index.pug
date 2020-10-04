@@ -4,7 +4,7 @@ html(lang="ru")
 
   -var active = 'Главная' //активный пункт меню, список в header.jade
   -var pageTitle = 'Главная' + ' - Avtosteklo' //title страницы для генерации верстки
-  -var loggined = false;
+  -var loggined = true;
 
   include ./_include/_head
 
@@ -30,24 +30,28 @@ html(lang="ru")
         // About
         section.section.s-about
           .container
-            .content__head
+            .content__head.--center
               h1 О компании
-            p
-              strong Стекольная компания 
-                span.text.--blue "Трейдсистем"
-                |  давно и успешно занимается реализацией автомобильного стекла.
-            p "Трейдсистем" производитель высококачественного автомобильного стекла на импортные и отечественные автомобили. Автостекло, комплекс услуг по продаже и установке автомобильного стекла - то, с чего мы начали свою работу. Все годы мы динамично развивались, и результатом этого стало возрастающее с каждым годом количество клиентов, высокое качество обслуживания.
+            
+            .row.justify-content-center
+              .col-8
+                .s-about__description
+                  p
+                    strong Стекольная компания 
+                      span.text.--blue "Трейдсистем"
+                      |  давно и успешно занимается реализацией автомобильного стекла.
+                  p "Трейдсистем" производитель высококачественного автомобильного стекла на импортные и отечественные автомобили. Автостекло, комплекс услуг по продаже и установке автомобильного стекла - то, с чего мы начали свою работу. Все годы мы динамично развивались, и результатом этого стало возрастающее с каждым годом количество клиентов, высокое качество обслуживания.
 
             .row.s-about__row.justify-content-center
-              .col-xl-3
+              .col-3
                 .s-about__block
                   .s-about__block-number 20
                   p лет на рынке автостекол
-              .col-xl-3
+              .col-3
                 .s-about__block
                   .s-about__block-number 14 000
                   p товаров в нашем каталоге
-              .col-xl-3
+              .col-3
                 .s-about__block
                   .s-about__block-number 550 000
                   p автомобильных стекол продано
@@ -59,19 +63,19 @@ html(lang="ru")
               .h1 Продукция
           .container-fluid
             .row.s-products__row
-              .col-xl-3
+              .col-3
                 .s-products__block(style="background-image: url('./tmp/s-products-1.png');")
                   a(href="#!").s-products__block-title
                     span Автостекла
-              .col-xl-3
+              .col-3
                 .s-products__block(style="background-image: url('./tmp/s-products-2.png');")
                   a(href="#!").s-products__block-title
                     span Автохимия
-              .col-xl-3
+              .col-3
                 .s-products__block(style="background-image: url('./tmp/s-products-3.png');")
                   a(href="#!").s-products__block-title
                     span Инструменты
-              .col-xl-3
+              .col-3
                 .s-products__block(style="background-image: url('./tmp/s-products-4.png');")
                   a(href="#!").s-products__block-title
                     span Молдинги
@@ -87,27 +91,27 @@ html(lang="ru")
               .h1 Сертификаты и награды
 
             .row.justify-content-center
-              .col-xl-3
+              .col-3
                 .s-certificates__block
                   .s-certificates__block-thumb
                     a(href="#!")
                       img(src="./tmp/s-certificates-1.png", alt="")
                   .s-certificates__block-title Свідоцтво
-              .col-xl-3
+              .col-3
                 .s-certificates__block
                   .s-certificates__block-thumb
                     a(href="#!")
                       img(src="./tmp/s-certificates-2.png", alt="")
                   .s-certificates__block-title Сертифікат "Імпортер року 2012"
 
-              .col-xl-3
+              .col-3
                 .s-certificates__block
                   .s-certificates__block-thumb
                     a(href="#!")
                       img(src="./tmp/s-certificates-3.png", alt="")
                   .s-certificates__block-title Орден "За заслуги перед Вітчизною"
 
-              .col-xl-3
+              .col-3
                 .s-certificates__block
                   .s-certificates__block-thumb
                     a(href="#!")
@@ -121,22 +125,22 @@ html(lang="ru")
               .h1 Полезная информация
 
             .row.s-information__row.justify-content-center
-              .col-xl-3
+              .col-3
                 .s-information__block
                   a(href="#!").s-information__block-title Маркировка 
                     br
                     | автостекла
-              .col-xl-3
+              .col-3
                 .s-information__block
                   a(href="#!").s-information__block-title Расшифровка 
                     br
                     | еврокода
-              .col-xl-3
+              .col-3
                 .s-information__block
                   a(href="#!").s-information__block-title Типы 
                     br
                     | кузовов
-              .col-xl-3
+              .col-3
                 .s-information__block
                   a(href="#!").s-information__block-title Список 
                     br
@@ -151,21 +155,21 @@ html(lang="ru")
               .h1 Новости
 
             .row.justify-content-center
-              .col-xl-4
+              .col-4
                 .s-news__block
                   .s-news__block-thumb
                     .s-news__block-time 07 ОКТЯБРЯ 2016, 18:26
                     img(src="./tmp/s-news-1.png", alt="")
                   p Стекло Украины
                   a(href="#!").s-news__block-link Читать
-              .col-xl-4
+              .col-4
                 .s-news__block
                   .s-news__block-thumb
                     .s-news__block-time 07 ОКТЯБРЯ 2016, 18:26
                     img(src="./tmp/s-news-2.png", alt="")
                   p Стекло Украины
                   a(href="#!").s-news__block-link Читать
-              .col-xl-4
+              .col-4
                 .s-news__block
                   .s-news__block-thumb
                     .s-news__block-time 07 ОКТЯБРЯ 2016, 18:26

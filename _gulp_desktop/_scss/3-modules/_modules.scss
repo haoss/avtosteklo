@@ -200,7 +200,7 @@
     pointer-events: auto;
     position: relative;
     &-content {
-      font-size: rem(16px);
+      font-size: 16px;
     }
   }
   &__header {
@@ -342,8 +342,7 @@
 }
 
 .s-about {
-  padding-bottom: 12px;
-  padding-top: 40px;
+  padding-bottom: 56px;
   &__row {
     padding-top: 10px;
   }
@@ -354,7 +353,7 @@
     color: #525252;
     font-weight: bold;
     padding: 16px 24px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     p {
       margin-bottom: 0;
       max-width: 140px;
@@ -366,6 +365,20 @@
       line-height: 1;
       margin-bottom: 8px;
       font-size: 32px;
+    }
+  }
+  &__description {
+    text-align: center;
+    margin-bottom: 68px;
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:first-child {
+        max-width: 475px;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
@@ -531,6 +544,7 @@
 }
 
 .s-news {
+  $this: &;
   padding-bottom: 0;
   padding-top: 0;
   &__block {
@@ -538,6 +552,7 @@
     &-thumb {
       position: relative;
       margin-bottom: 16px;
+      overflow: hidden;
       background: {
         color: $color-black;;
         position: top center;
@@ -549,6 +564,18 @@
         width: 100%;
         height: 260px;
         object-fit: cover;
+        transition: transform 0.35s;
+        transform: scale(1);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        background: linear-gradient(to bottom, rgba($color-black,.4), rgba($color-black,0));
       }
     }
     &-time {
@@ -571,11 +598,23 @@
       color: $color-blue;
       font-size: 14px;
     }
+    &:hover {
+      #{$this} {
+        &__block {
+          &-thumb {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 .s-top {
   margin-top: -16px;
+  padding-top: 0;
   padding-bottom: 0;
   overflow: hidden;
   &__wrapper {
@@ -586,7 +625,7 @@
   }
   &__title {
     max-width: 190px;
-    font-size: rem(32px);
+    font-size: 32px;
     line-height: 1.17;
     font-family: $font-gilroy;
     font-weight: 800;
@@ -819,7 +858,7 @@
     width: 100%;
     padding: 0 36px;
     text-align: center;
-    font-size: rem(16px);
+    font-size: 16px;
     color: $color-dark;
     background: #F5F6F8;
     border: 1px solid #f5f6f8;
@@ -837,7 +876,7 @@
     color: $color-white;
     text-align: center;
     line-height: 36px;
-    font-size: rem(12px);
+    font-size: 12px;
     border: 1px solid $color-blue-light;
     cursor: pointer;
     padding: 0;
@@ -873,7 +912,7 @@
       height: 40px;
       line-height: 40px;
       width: 40px;
-      font-size: rem(18px);
+      font-size: 18px;
     }
     #{$this} {
       &__input {

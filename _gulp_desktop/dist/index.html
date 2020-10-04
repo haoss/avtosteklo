@@ -249,34 +249,38 @@
         </div>
         <div class="base">
             <!-- Header-->
-            <header class="header">
+            <header class="header --logged">
                 <div class="header__top">
                     <div class="container header__top-container">
                         <div class="header__top-wrapper">
-                            <button class="btn-cart header__cart" type="button"><span>20</span></button>
-                            <div class="logo header__logo"><a href="#!"><img src="./img/logo-xs.png" alt=""></a></div>
-                            <button class="btn-menu header__menu" type="button"></button>
+                            <div class="header__course"><b>Курс: </b>1$ = 24.69 грн</div>
+                            <nav class="header__links" role="navigation">
+                                <ul>
+                                    <li><a href="#!">Связаться с менеджером</a></li>
+                                    <li><a href="#!">История заказов</a></li>
+                                    <li><a href="#!">Избранное</a></li>
+                                </ul>
+                            </nav>
+                            <div class="header__profile"><a href="#!"><i class="icon-user"></i><span>Константин</span></a></div>
                         </div>
-                        <nav class="navigation" role="navigation">
-                            <ul>
-                                <li><a href="#!"><b>Стать дилером</b></a></li>
-                                <li><a href="#!"> <b>Войти</b></a></li>
-                                <li><a class="j-open-popup-link" href="#call-manager"><b>Связаться с менеджером</b></a></li>
-                                <li><a href="#!">Поиск по каталогу</a></li>
-                                <li><a href="#!">О компании</a></li>
-                                <li><a href="#!">О доставке и оплате</a></li>
-                                <li><a href="#!">Контакты</a></li>
-                                <li><a href="#!">Полезная информация</a></li>
-                                <li><a href="#!">Новости</a></li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
                 <div class="header__bottom">
                     <div class="container">
                         <div class="header__bottom-wrapper">
-                            <div class="header__course"><b>Курс: </b>1$ = 24.69 грн</div>
-                            <div class="header__profile"><a href="#!"><i class="icon-user"></i><span>Константин</span></a></div>
+                            <div class="logo header__logo"><a href="#!"><img src="./img/logo.png" alt=""></a></div>
+                            <nav class="navigation" role="navigation">
+                                <ul>
+                                    <li><a href="#!">О компании</a></li>
+                                    <li><a href="#!">Поиск по каталогу</a></li>
+                                    <li><a href="#!">Поиск по коду</a></li>
+                                    <li><a href="#!">Полезная информация</a></li>
+                                    <li><a href="#!">Контакты</a></li>
+                                    <li><a href="#!">Новости</a></li>
+                                    <li><a href="#!">О доставке и оплате</a></li>
+                                </ul>
+                            </nav>
+                            <button class="btn-cart header__cart" type="button"><span>20</span></button>
                         </div>
                     </div>
                 </div>
@@ -295,25 +299,31 @@
                 <!-- About-->
                 <section class="section s-about">
                     <div class="container">
-                        <div class="content__head">
+                        <div class="content__head --center">
                             <h1>О компании</h1>
                         </div>
-                        <p><strong>Стекольная компания <span class="text --blue">"Трейдсистем"</span> давно и успешно занимается реализацией автомобильного стекла.</strong></p>
-                        <p>"Трейдсистем" производитель высококачественного автомобильного стекла на импортные и отечественные автомобили. Автостекло, комплекс услуг по продаже и установке автомобильного стекла - то, с чего мы начали свою работу. Все годы мы динамично развивались, и результатом этого стало возрастающее с каждым годом количество клиентов, высокое качество обслуживания.</p>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <div class="s-about__description">
+                                    <p><strong>Стекольная компания <span class="text --blue">"Трейдсистем"</span> давно и успешно занимается реализацией автомобильного стекла.</strong></p>
+                                    <p>"Трейдсистем" производитель высококачественного автомобильного стекла на импортные и отечественные автомобили. Автостекло, комплекс услуг по продаже и установке автомобильного стекла - то, с чего мы начали свою работу. Все годы мы динамично развивались, и результатом этого стало возрастающее с каждым годом количество клиентов, высокое качество обслуживания.</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row s-about__row justify-content-center">
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-about__block">
                                     <div class="s-about__block-number">20</div>
                                     <p>лет на рынке автостекол</p>
                                 </div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-about__block">
                                     <div class="s-about__block-number">14 000</div>
                                     <p>товаров в нашем каталоге</p>
                                 </div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-about__block">
                                     <div class="s-about__block-number">550 000</div>
                                     <p>автомобильных стекол продано</p>
@@ -331,16 +341,16 @@
                     </div>
                     <div class="container-fluid">
                         <div class="row s-products__row">
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-products__block" style="background-image: url('./tmp/s-products-1.png');"><a class="s-products__block-title" href="#!"><span>Автостекла</span></a></div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-products__block" style="background-image: url('./tmp/s-products-2.png');"><a class="s-products__block-title" href="#!"><span>Автохимия</span></a></div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-products__block" style="background-image: url('./tmp/s-products-3.png');"><a class="s-products__block-title" href="#!"><span>Инструменты</span></a></div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-products__block" style="background-image: url('./tmp/s-products-4.png');"><a class="s-products__block-title" href="#!"><span>Молдинги</span></a></div>
                             </div>
                         </div>
@@ -358,25 +368,25 @@
                             <div class="h1">Сертификаты и награды</div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-certificates__block">
                                     <div class="s-certificates__block-thumb"><a href="#!"><img src="./tmp/s-certificates-1.png" alt=""></a></div>
                                     <div class="s-certificates__block-title">Свідоцтво</div>
                                 </div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-certificates__block">
                                     <div class="s-certificates__block-thumb"><a href="#!"><img src="./tmp/s-certificates-2.png" alt=""></a></div>
                                     <div class="s-certificates__block-title">Сертифікат "Імпортер року 2012"</div>
                                 </div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-certificates__block">
                                     <div class="s-certificates__block-thumb"><a href="#!"><img src="./tmp/s-certificates-3.png" alt=""></a></div>
                                     <div class="s-certificates__block-title">Орден "За заслуги перед Вітчизною"</div>
                                 </div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-certificates__block">
                                     <div class="s-certificates__block-thumb"><a href="#!"><img src="./tmp/s-certificates-4.png" alt=""></a></div>
                                     <div class="s-certificates__block-title">Нагорода "Еталон Якості"</div>
@@ -392,16 +402,16 @@
                             <div class="h1">Полезная информация</div>
                         </div>
                         <div class="row s-information__row justify-content-center">
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-information__block"><a class="s-information__block-title" href="#!">Маркировка <br>автостекла</a></div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-information__block"><a class="s-information__block-title" href="#!">Расшифровка <br>еврокода</a></div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-information__block"><a class="s-information__block-title" href="#!">Типы <br>кузовов</a></div>
                             </div>
-                            <div class="col-xl-3">
+                            <div class="col-3">
                                 <div class="s-information__block"><a class="s-information__block-title" href="#!">Список <br>взаимозаменяемых <br>автостекол</a></div>
                             </div>
                         </div>
@@ -414,7 +424,7 @@
                             <div class="h1">Новости</div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col-xl-4">
+                            <div class="col-4">
                                 <div class="s-news__block">
                                     <div class="s-news__block-thumb">
                                         <div class="s-news__block-time">07 ОКТЯБРЯ 2016, 18:26</div><img src="./tmp/s-news-1.png" alt="">
@@ -422,7 +432,7 @@
                                     <p>Стекло Украины</p><a class="s-news__block-link" href="#!">Читать</a>
                                 </div>
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-4">
                                 <div class="s-news__block">
                                     <div class="s-news__block-thumb">
                                         <div class="s-news__block-time">07 ОКТЯБРЯ 2016, 18:26</div><img src="./tmp/s-news-2.png" alt="">
@@ -430,7 +440,7 @@
                                     <p>Стекло Украины</p><a class="s-news__block-link" href="#!">Читать</a>
                                 </div>
                             </div>
-                            <div class="col-xl-4">
+                            <div class="col-4">
                                 <div class="s-news__block">
                                     <div class="s-news__block-thumb">
                                         <div class="s-news__block-time">07 ОКТЯБРЯ 2016, 18:26</div><img src="./tmp/s-news-3.png" alt="">
@@ -445,20 +455,33 @@
             <!-- Footer-->
             <footer class="footer">
                 <div class="container">
-                    <div class="footer__logo"><img src="./img/logo.png" alt=""></div>
-                    <div class="footer__title">Контакты</div>
-                    <div class="footer__contacts">
-                        <div><a href="tel:">+38(095)760-04-70</a></div>
-                        <div><a href="mailto:">sales1@avtosteklo.com</a></div>
-                        <div><a href="#!">Все контакты</a></div>
-                    </div>
-                    <div class="footer__title">Мы в соц сетях</div>
-                    <div class="footer__social"><a href="#!" target="_blank"><i class="icon-facebook"></i><span>Facebook</span></a><a href="#!" target="_blank"><i class="icon-instagram"></i><span>Instagram</span></a></div>
-                    <div class="footer__title">График работы</div>
-                    <div class="footer__schedule">
-                        <div><b>ПН-ПТ</b><span>09:00 - 18:00</span></div>
-                        <div><b>СБ</b><span>09:00 - 15:00</span></div>
-                        <div><b>ВС</b><span>Выходной</span></div>
+                    <div class="footer__wrapper">
+                        <div>
+                            <div class="footer__logo"><img src="./img/logo.png" alt=""></div>
+                        </div>
+                        <div>
+                            <div class="footer__title">График работы</div>
+                            <div class="footer__schedule">
+                                <div><b>ПН-ПТ</b><span>09:00 - 18:00</span></div>
+                                <div><b>СБ</b><span>09:00 - 15:00</span></div>
+                                <div><b>ВС</b><span>Выходной</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="footer__title">Контакты</div>
+                            <div class="footer__contacts">
+                                <div><a href="tel:">+38(095)760-04-70</a></div>
+                                <div><a href="mailto:">sales1@avtosteklo.com</a></div>
+                                <div><a href="#!">Все контакты</a></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="footer__title">Мы в соц сетях</div>
+                            <div class="footer__social">
+                                <div><a href="#!" target="_blank"><i class="icon-facebook"></i><span>Facebook</span></a></div>
+                                <div><a href="#!" target="_blank"><i class="icon-instagram"></i><span>Instagram</span></a></div>
+                            </div>
+                        </div>
                     </div>
                     <ul class="footer__links">
                         <li><a href="#!">Политика приватности</a></li>

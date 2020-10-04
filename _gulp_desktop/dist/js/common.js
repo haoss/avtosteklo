@@ -76,8 +76,8 @@ $(document).on('ready', function(){
     arrow: true
   });
 
-  mobileNavigation();
   tabMobile();
+  headerScroll();
 
   // тестовые функции
   cartCountTest();
@@ -99,28 +99,10 @@ $(window).on('load', function() {
   
 });
 
-$(window).on('scroll', function() { });
+$(window).on('scroll', function() {
+  headerScroll();
+});
 $(window).on('resize', function() { });
-
-function mobileNavigation() {
-  var btn = $('.btn-menu');
-  var body = $('body');
-  var nav = $('.navigation');
-
-  btn.on('click', function() {
-    var _this = $(this);
-
-    if (_this.hasClass('is-active')) {
-      _this.removeClass('is-active');
-      nav.removeClass('is-active');
-      body.removeClass('is-fixed');
-    } else {
-      _this.addClass('is-active');
-      nav.addClass('is-active');
-      body.addClass('is-fixed');
-    }
-  });
-}
 
 function cartCountTest() {
   var block = $('.j-cart-count');
@@ -186,4 +168,15 @@ function favouritesTest() {
       _this.addClass('is-favourites');
     }
   });
+}
+
+function headerScroll() {
+  var header = $('.header');
+  var width = $(window).width();
+
+  if ($(window).scrollTop() > header.height() + 100) {
+    header.addClass('is-scroll');
+  } else {
+    header.removeClass('is-scroll');
+  }
 }

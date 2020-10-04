@@ -4,6 +4,11 @@ $root-font-size: 16px;
 $grid-columns: 12;
 $grid-gutter-width: 30px;
 
+$grid-breakpoints: (
+  xs: 0,
+  xl: 1140px
+);
+
 $container-max-widths: (
   xl: 1140px
 );

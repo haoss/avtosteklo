@@ -1,39 +1,43 @@
 // Footer
 footer.footer
   .container
-    
-    .footer__logo
-      img(src="./img/logo.png", alt="")
-  
-    .footer__title Контакты
-    .footer__contacts
+    .footer__wrapper
       div
-        a(href="tel:") +38(095)760-04-70
+        .footer__logo
+          img(src="./img/logo.png", alt="")
       div
-        a(href="mailto:") sales1@avtosteklo.com
+        .footer__title График работы
+        .footer__schedule
+          div
+            b ПН-ПТ
+            span 09:00 - 18:00
+          div
+            b СБ
+            span 09:00 - 15:00
+          div
+            b ВС
+            span Выходной
       div
-        a(href="#!") Все контакты
+        .footer__title Контакты
+        .footer__contacts
+          div
+            a(href="tel:") +38(095)760-04-70
+          div
+            a(href="mailto:") sales1@avtosteklo.com
+          div
+            a(href="#!") Все контакты
 
-    .footer__title Мы в соц сетях
-    .footer__social
-      a(href="#!" target="_blank")
-        i.icon-facebook
-        span Facebook
-      a(href="#!" target="_blank")
-        i.icon-instagram
-        span Instagram
-
-    .footer__title График работы
-    .footer__schedule
       div
-        b ПН-ПТ
-        span 09:00 - 18:00
-      div
-        b СБ
-        span 09:00 - 15:00
-      div
-        b ВС
-        span Выходной
+        .footer__title Мы в соц сетях
+        .footer__social
+          div
+            a(href="#!" target="_blank")
+              i.icon-facebook
+              span Facebook
+          div
+            a(href="#!" target="_blank")
+              i.icon-instagram
+              span Instagram
     
     ul.footer__links
       li
