@@ -1,0 +1,169 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Полезная информация' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Полезная информация' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Полезная информация
+
+          .row
+            .col-4
+              nav.sub-navigation(role="navigation")
+                ul
+                  li: a(href="#!") Расшифровка еврокода
+                  li.active: span Список взаимозаменяемых автостекол
+                  li: a(href="#!") Типы кузовов
+                  li: a(href="#!") Маркировка автостекла
+
+            .col-7
+              h2.text.--blue-light Список взаимозаменяемых автостекол
+              p Alfa Romeo 155 – FIAT Tipo
+                br
+                | GEO metro – Suzuki Swift
+                br
+                | GEO tracker – Suzuki Vitara
+                br
+                | Daewoo Damas – Suzuki Carry
+                br
+                | Daewoo Leganza – Daewoo Condor
+                br
+                | Dodge Steаlth – Mitsubishi 3000
+                br
+                | Cadillac Eldorado (старый) – Ford Contour
+                br
+                | Cadillac Fleetwood – Cadillac Deville
+                br
+                | Cadillac Seville – Cadillac Eldorado (старый)
+                br
+                | Chevrolet Lumina apv – Pontiac Transport
+                br
+                | Chrysler Concorde – Eagle Vision
+                br
+                | Chrysler Cirrus – Dodge Stratos
+                br
+                | Chrysler Newyorker (старый) – Chrysler Imperial
+                br
+                | Chrysler Saratoga (старый) – Dodge Spirit, Chrysler le Baron
+                br
+                | Citroen Berlingo – Peugeot Partner
+                br
+                | FIAT Brava – FIAT Marea
+                br
+                | FIAT Ulysse – Citroen Evasion, Lancia Z, Peugeot 806
+                br
+                | FIAT Croma – SAAB 9000
+                br
+                | FIAT Regata – FIAT Retro
+                br
+                | FIAT Tipo – FIAT Tempra
+                br
+                | Ford Econolite (старый) – Ford Mark II
+                br
+                | Ford Escort (старый) – Ford orion
+                br
+                | Ford Expеidition – Lincoln Navigator
+                br
+                | Ford Crown Victoria – Mercury Grand Marcuis
+                br
+                | Ford Laser – Mazda 323 (1998)
+                br
+                | Ford Mondeo – Ford Contour
+                br
+                | Ford Mustang – Mercury Capri
+                br
+                | GMC Jimmi – Chevrolet Suburban, Chevrolet Tahoe
+                br
+                | GMC Safari – Chevrolet Astra
+                br
+                | Honda Inspire (старый) – Honda Shuttle
+                br
+                | Honda Legend – Rover 825
+                br
+                | Hyundai Grace – Hyundai H100
+                br
+                | Isuzu Trooper – Opel Monterrey
+                br
+                | Lancia Delta – Lancia Prisma
+                br
+                | Mazda Bongo – Ford Econovan, Asia Topic
+                br
+                | Mitsubishi L 300 – Mitsubishi Delica, Hyundai Galopper (в резиновом уплотнителе)
+                br
+                | Mitsubishi Pajero – Hyundai Galopper (в резиновом уплотнителе)
+                br
+                | Mitsubishi Terrano – Nissan Pathfinder
+                br
+                | Mitsubishi Terrano2 – Ford Maverik
+                br
+                | Mitsubishi Montero Sport (старый) – Mitsubishi Pajero
+                br
+                | Mitsubishi Space Vagon – Eagle Summit
+                br
+                | Mitsubishi Space Gear – Mitsubishi L400
+                br
+                | Nissan Ultima – Nissan Bluebird
+                br
+                | Nissan Gloria – Nissan Cedric
+                br
+                | Nissan Infiniti – Isuzu Rodeo
+                br
+                | Nissan Primera (91) – Nissan Cedra
+                br
+                | Nissan Pulsar – Nissan Langly
+                br
+                | Nissan Terrano – Nissan Pathfinder
+                br
+                | Nissan Terrano II – Ford Maverik
+                br
+                | Opel Kadett E – Daewoo Racer, Pontiac le Mans
+                br
+                | Opel Frontera – Isuzu Rodeo
+                br
+                | Pontiac Firebird – Chevrolet Camaro
+                br
+                | Rover 416 – Honda Accord
+                br
+                | Seat Ibiza – Seat Cordoba, Volkswagen Caddy, Volkswagen Polo
+                br
+                | Skoda Favorit (старый) — Skoda Felicia/Favorit,
+                br
+                | Toyota Corolla – Toyota Prisma (1988 – 1992)
+                br
+                | Toyota Cresta – Toyota Mark II (971 842)
+                br
+                | Volkswagen Golf 1 – Volkswagen Jetta
+                br
+                | Volkswagen Golf 2 – Volkswagen Jetta
+                br
+                | Volkswagen Golf 3 – Volkswagen Vento
+                br
+                | Volkswagen Sharan – Ford Galaxy
+                br
+                | Volkswagen Transporter – Volkswagen Caravelle
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

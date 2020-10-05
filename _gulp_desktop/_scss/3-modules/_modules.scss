@@ -74,6 +74,9 @@
 .--column-2 {
   column-count: 2;
 }
+.--column-4 {
+  column-count: 4;
+}
 
 .table {
   font-size: 16px;
@@ -101,7 +104,7 @@
 .selectize-control.single {
   .selectize {
     &-dropdown, &-input, &-input input {
-      font-size: 14px;
+      font-size: 16px;
       color: $color-dark;
     }
     &-input {
@@ -109,8 +112,8 @@
       border-color: #F3F3F3;
       box-shadow: none;
       border-radius: 4px;
-      height: 40px;
-      padding: 10px 45px 10px 16px;
+      height: 46px;
+      padding: 13px 45px 10px 16px;
       background: {
         color: #F3F3F3;
         repeat: no-repeat;
@@ -654,15 +657,16 @@
     margin-bottom: 16px;
   }
   &__list {
-    margin: 0 -10px;
+    margin: 0 -15px;
     padding: 0;
     font-size: 16px;
     display: flex;
     flex-wrap: wrap;
     &>li {
       list-style: none;
-      padding: 0 10px;
-      width: 100%;
+      padding: 0 15px;
+      width: 50%;
+      margin-bottom: 24px;
       &::before {
         display: none;
       }
@@ -676,17 +680,16 @@
         text-align: center;
         overflow: hidden;
         box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.08);
-        padding: 0 10px;
+        padding: 0 15px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
       }
-    }
-  }
-  @include media-breakpoint-up(md) {
-    &__list {
-      li {
-        width: 50%;
+      &>a {
+        &:hover {
+          color: $color-white;
+          background: $color-blue;
+        }
       }
     }
   }
@@ -1635,4 +1638,8 @@
     font-size: 80px;
     margin-bottom: 16px;
   }
+}
+
+.--mt-88 {
+  margin-top: -88px;
 }

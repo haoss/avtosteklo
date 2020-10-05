@@ -1,0 +1,86 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Оформление заказа' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Оформление заказа' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+            +breadcrumbs-item('Товары и услуги', '#!')
+
+          .content__head
+            h1 Оформление заказа
+
+          h2.text.--blue Контактная информация
+
+          form(action="#")
+            .row
+              .col-4
+                .form-group
+                  +field-text({
+                    title: 'Имя Фамилия',
+                    hasJs: false,
+                    isTextarea: false,
+                    hasError: false,
+                    helpText: '',
+                    mods: '',
+                    val: '',
+                    attrs: {
+                      name: 'text',
+                      placeholder: 'Введите ваше имя'
+                    }
+                  })
+                .form-group
+                  +field-text({
+                    title: 'Номер телефона',
+                    hasJs: false,
+                    isTextarea: false,
+                    hasError: false,
+                    helpText: '',
+                    mods: '',
+                    val: '',
+                    attrs: {
+                      name: 'text',
+                      placeholder: '+380 ХХ ХХХ ХХХ'
+                    }
+                  })
+                .form-group
+                  +field-text({
+                    title: 'Электронная почта',
+                    hasJs: false,
+                    isTextarea: false,
+                    hasError: false,
+                    helpText: '',
+                    mods: '',
+                    val: '',
+                    attrs: {
+                      name: 'text',
+                      placeholder: 'Прмер@gmail.com'
+                    }
+                  })
+                
+                .clear16
+                +btn('Далее').--block.--xl
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

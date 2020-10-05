@@ -31,7 +31,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 }
 
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   &__name {
     color: $color-dark;
     font-size: .875rem;
@@ -115,11 +115,11 @@ legend {
   $this: &;
   &__name {
     color: $color-dark;
-    font-size: rem(14px);
+    font-size: rem(16px);
     line-height: 1.6;
     cursor: text;
     display: block;
-    margin-bottom: 0px;
+    margin-bottom: 8px;
     font-weight: 600;
     sup {
       color: $color-red;
@@ -142,9 +142,9 @@ legend {
   &__input {
     display: block;
     width: 100%;
-    height: 50px;
+    height: 46px;
     padding: 6px 16px;
-    font-size: rem(24px);
+    font-size: rem(16px);
     line-height: 1.42857143;
     color: $color-dark;
     background: {
