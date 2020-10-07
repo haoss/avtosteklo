@@ -76,8 +76,7 @@ $(document).on('ready', function(){
     arrow: true
   });
 
-  tabMobile();
-  headerScroll();
+  // headerScroll();
 
   // тестовые функции
   cartCountTest();
@@ -100,7 +99,7 @@ $(window).on('load', function() {
 });
 
 $(window).on('scroll', function() {
-  headerScroll();
+  // headerScroll();
 });
 $(window).on('resize', function() { });
 
@@ -125,28 +124,6 @@ function cartCountTest() {
       input.val(value);
     });
   })
-}
-
-function tabMobile() {
-  var tab = $('.j-tab-mobile');
-  tab.each(function(){
-    var _this = $(this);
-    var btn = _this.find('.nav__button button');
-    var item = _this.find('.nav__item');
-
-    btn.on('click', function(){
-      if (_this.hasClass('is-show')) {
-        _this.removeClass('is-show');
-      } else {
-        _this.addClass('is-show');
-      }
-    });
-    item.on('click', function(){
-      if (_this.hasClass('is-show')) {
-        _this.removeClass('is-show');
-      }
-    });
-  });
 }
 
 function filterBtnTest() {
@@ -174,7 +151,7 @@ function headerScroll() {
   var header = $('.header');
   var width = $(window).width();
 
-  if ($(window).scrollTop() > header.height() + 100) {
+  if ($(window).scrollTop() > header.height() + 200) {
     header.addClass('is-scroll');
   } else {
     header.removeClass('is-scroll');

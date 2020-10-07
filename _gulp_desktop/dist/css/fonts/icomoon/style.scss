@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('./fonts/icomoon/fonts/icomoon.eot?b83p28');
-  src:  url('./fonts/icomoon/fonts/icomoon.eot?b83p28#iefix') format('embedded-opentype'),
-    url('./fonts/icomoon/fonts/icomoon.woff2?b83p28') format('woff2'),
-    url('./fonts/icomoon/fonts/icomoon.ttf?b83p28') format('truetype'),
-    url('./fonts/icomoon/fonts/icomoon.woff?b83p28') format('woff'),
-    url('./fonts/icomoon/fonts/icomoon.svg?b83p28#icomoon') format('svg');
+  src:  url('./fonts/icomoon/fonts/icomoon.eot?t78oxd');
+  src:  url('./fonts/icomoon/fonts/icomoon.eot?t78oxd#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon/fonts/icomoon.woff2?t78oxd') format('woff2'),
+    url('./fonts/icomoon/fonts/icomoon.ttf?t78oxd') format('truetype'),
+    url('./fonts/icomoon/fonts/icomoon.woff?t78oxd') format('woff'),
+    url('./fonts/icomoon/fonts/icomoon.svg?t78oxd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -28,6 +28,9 @@
 
 .icon-play:before {
   content: "\e911";
+}
+.icon-arrow-right-2:before {
+  content: "\e912";
 }
 .icon-resize:before {
   content: "\e910";

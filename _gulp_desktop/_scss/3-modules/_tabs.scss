@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  font-size: rem(14px);
+  font-size: rem(16px);
   &__wrapper {
     border-bottom: 1px solid #E2E3FF;
     margin-bottom: 24px;
@@ -19,7 +19,7 @@
     border-bottom: 1px solid #E2E3FF;
     justify-content: flex-start;
     margin-bottom: 10px;
-    background: $color-white;
+    background: none;
     &.j-tab-mobile {
       #{$this} {
         &__link {
@@ -65,8 +65,8 @@
   }
   &__link {
     border: 1px solid transparent;
-    height: 40px;
-    line-height: 39px;
+    height: 54px;
+    line-height: 50px;
     display: block;
     background: $color-blue-light;
     text-align: center;
@@ -75,7 +75,7 @@
     color: $color-white;
     border-radius: 15px 15px 0 0;
     font-weight: 400;
-    min-width: 120px;
+    min-width: 169px;
     position: relative;
     z-index: 5;
     margin-right: 4px;
@@ -135,6 +135,21 @@
       overflow: visible;
       opacity: 1;
       visibility: visible;
+    }
+  }
+  &__container {
+    background: $color-white;
+    &.--product {
+      margin-top: -24px;
+      padding-top: 24px;
+      margin-bottom: -80px;
+      padding-bottom: 80px;
+    }
+    &.--catalog {
+      margin-top: -24px;
+      padding-top: 24px;
+      margin-bottom: -80px;
+      padding-bottom: 80px;
     }
   }
 }

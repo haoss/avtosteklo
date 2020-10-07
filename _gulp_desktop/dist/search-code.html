@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Регистрация - Avtosteklo</title>
+        <title>Карточка товара - Avtosteklo</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="format-detection" content="telephone=no">
@@ -254,7 +254,7 @@
         </div>
         <div class="base">
             <!-- Header-->
-            <header class="header">
+            <header class="header --logged">
                 <div class="header__top">
                     <div class="container header__top-container">
                         <div class="header__top-wrapper">
@@ -277,10 +277,11 @@
                             <nav class="navigation" role="navigation">
                                 <ul>
                                     <li><a href="#!">О компании</a></li>
-                                    <li><a href="#!">Каталог</a></li>
+                                    <li><a href="#!">Поиск по каталогу</a></li>
+                                    <li><a href="#!">Поиск по коду</a></li>
                                     <li><a href="#!">Полезная информация</a></li>
-                                    <li><a href="#!">Новости</a></li>
                                     <li><a href="#!">Контакты</a></li>
+                                    <li><a href="#!">Новости</a></li>
                                     <li><a href="#!">О доставке и оплате</a></li>
                                 </ul>
                             </nav>
@@ -298,64 +299,269 @@
                                 </li>
                         </ol>
                     <div class="content__head">
-                        <h1>Регистрация</h1>
+                        <h1>Поиск по коду</h1>
                     </div>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Фамилия Имя Отчество</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите ваше имя"></span>
-                                        </label>
+                </div>
+                <div class="nav__wrapper">
+                    <div class="container">
+                        <ul class="nav nav__tabs" id="tabContent" role="tablist">
+                            <li class="nav__item" role="presentation"><a class="nav__link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Автостекла</a></li>
+                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Автохимия</a></li>
+                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Молдинги</a></li>
+                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab5-tab" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5" aria-selected="false">Инструменты</a></li>
+                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab6-tab" data-toggle="tab" href="#tab6" role="tab" aria-controls="tab6" aria-selected="false">Люки</a></li>
+                            <li class="nav__button">
+                                <button type="button"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab__container --catalog">
+                    <div class="container">
+                        <div class="tab-content">
+                            <div class="tab__pane active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <div class="form-group__name">Поиск по</div>
+                                            <div class="filter__btns j-filter-btns">
+                                                <button class="filter__btns-btn active" type="button">Коду</button>
+                                                <button class="filter__btns-btn" type="button">Каталогу</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <div class="field-text"><span class="field-text__name">Марка</span>
+                                                <select class="selectize" placeholder="Марка вашего авто">
+                                                    <option value>Марка вашего авто</option>
+                                                    <option value="1">Марка 1</option>
+                                                    <option value="2">Марка 2</option>
+                                                    <option value="3">Марка 3</option>
+                                                    <option value="4">Марка 4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                                <label class="field-text"><span class="field-text__name">Год выпуска</span><span class="field-text__input-wrap">
+                                                        <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Год выпуска вашего авто"></span>
+                                                </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                                <label class="field-text"><span class="field-text__name">Тип кузова</span><span class="field-text__input-wrap">
+                                                        <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Тип кузова вашего авто"></span>
+                                                </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                                <label class="field-text"><span class="field-text__name">Тип стелка</span><span class="field-text__input-wrap">
+                                                        <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Тип вашего кузова"></span>
+                                                </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                                <label class="field-text"><span class="field-text__name">Код</span><span class="field-text__input-wrap">
+                                                        <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Код товара"></span>
+                                                </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">&nbsp;</div>
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            <div class="form-group__name">&nbsp;</div>
+                                            <div class="filter__bottom">
+                                                <div class="first">
+                                                        <button class="btn --md --clear" type="button"><span>Очистить поиск</span>
+                                                        </button>
+                                                </div>
+                                                <div class="last">
+                                                        <button class="btn --mw110 --md" type="button">Найти
+                                                        </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                    <div class="field-text"><span class="field-text__name">Город</span>
-                                        <select class="selectize" placeholder="Выберете ваш город">
-                                            <option value>Выберете ваш город</option>
-                                            <option value="1">Киев</option>
-                                            <option value="2">Харьков</option>
-                                            <option value="3">Днепр</option>
-                                            <option value="4">Кировоград</option>
-                                        </select>
+                            <div class="tab__pane" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                                <p>tab3</p>
+                            </div>
+                            <div class="tab__pane" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                                <p>tab4</p>
+                            </div>
+                            <div class="tab__pane" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+                                <p>tab5</p>
+                            </div>
+                            <div class="tab__pane" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
+                                <p>tab6</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="sorting">
+                                    <div class="sorting__label">Сортировка по: </div>
+                                    <div class="sorting__row">
+                                        <div class="first">
+                                            <select class="selectize --sorting" placeholder="Алфавиту">
+                                                <option value>Алфавиту</option>
+                                                <option value="1">От А до Я</option>
+                                                <option value="2">От Я до А</option>
+                                            </select>
+                                        </div>
+                                        <div class="last">
+                                            <select class="selectize --sorting" placeholder="Цене">
+                                                <option value>Цене</option>
+                                                <option value="1">По возрастанию</option>
+                                                <option value="2">По убыванию</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="+380 ХХ ХХХ ХХХ"></span>
-                                        </label>
+                        <div class="catalog">
+                            <div class="row catalog__row">
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="catalog__code">
+                                        <div class="catalog__code-head"><a class="catalog__code-link j-image-popup" href="./tmp/product-img-288-288.png"></a><span>Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)</span></div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Еврокод</b></div>
+                                            <div class="last"><span class="--fs12">4003/ 39B2AGNBLMV1P</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Размер</b></div>
+                                            <div class="last"><span>1317*690</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Производитель</b></div>
+                                            <div class="last"><span>BENSON</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Цена</b></div>
+                                            <div class="last"><a href="#!">цена</a></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Код</b></div>
+                                            <div class="last"><span>000001177</span></div>
+                                        </div>
+                                        <div class="catalog__code-description">
+                                            <div class="first"><b>Описание</b></div>
+                                            <div class="last">
+                                                <p>зеленое, крепление зеркало</p>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__code-number">
+                                            <div class="cart-count --mb0 j-cart-count">
+                                                <button class="cart-count__minus" type="button"></button>
+                                                <button class="cart-count__plus" type="button"></button>
+                                                <input class="cart-count__input" type="text" value="2">
+                                            </div>
+                                        </div>
+                                        <div class="catalog__code-footer">
+                                                <button class="btn" type="button">Добавить в Корзину
+                                                </button>
+                                                <button class="btn --border" type="button">В избранное
+                                                </button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Название компании</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Название компании(если есть)"></span>
-                                        </label>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="catalog__code --even">
+                                        <div class="catalog__code-head"><a class="catalog__code-link j-image-popup" href="./tmp/product-img-288-288.png"></a><span>Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)</span></div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Еврокод</b></div>
+                                            <div class="last"><span class="--fs12">4003/ 39B2AGNBLMV1P</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Размер</b></div>
+                                            <div class="last"><span>1317*690</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Производитель</b></div>
+                                            <div class="last"><span>BENSON</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Цена</b></div>
+                                            <div class="last"><a href="#!">цена</a></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Код</b></div>
+                                            <div class="last"><span>000001177</span></div>
+                                        </div>
+                                        <div class="catalog__code-description">
+                                            <div class="first"><b>Описание</b></div>
+                                            <div class="last">
+                                                <p>зеленое, крепление зеркалозеленое, крепление зеркалокрепление ркалозеленое</p>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__code-number">
+                                            <div class="cart-count --mb0 j-cart-count">
+                                                <button class="cart-count__minus" type="button"></button>
+                                                <button class="cart-count__plus" type="button"></button>
+                                                <input class="cart-count__input" type="text" value="2">
+                                            </div>
+                                        </div>
+                                        <div class="catalog__code-footer">
+                                                <button class="btn" type="button">Добавить в Корзину
+                                                </button>
+                                                <button class="btn --border" type="button">В избранное
+                                                </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                                    <div class="catalog__code">
+                                        <div class="catalog__code-head"><a class="catalog__code-link j-image-popup" href="./tmp/product-img-288-288.png"></a><span>Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)</span></div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Еврокод</b></div>
+                                            <div class="last"><span class="--fs12">4003/ 39B2AGNBLMV1P</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Размер</b></div>
+                                            <div class="last"><span>1317*690</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Производитель</b></div>
+                                            <div class="last"><span>BENSON</span></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Цена</b></div>
+                                            <div class="last"><a href="#!">цена</a></div>
+                                        </div>
+                                        <div class="catalog__code-row">
+                                            <div class="first"><b>Код</b></div>
+                                            <div class="last"><span>000001177</span></div>
+                                        </div>
+                                        <div class="catalog__code-description">
+                                            <div class="first"><b>Описание</b></div>
+                                            <div class="last">
+                                                <p>зеленое, крепление зеркало</p>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__code-number">
+                                            <div class="cart-count --mb0 j-cart-count">
+                                                <button class="cart-count__minus" type="button"></button>
+                                                <button class="cart-count__plus" type="button"></button>
+                                                <input class="cart-count__input" type="text" value="2">
+                                            </div>
+                                        </div>
+                                        <div class="catalog__code-footer">
+                                                <button class="btn" type="button">Добавить в Корзину
+                                                </button>
+                                                <button class="btn --border" type="button">В избранное
+                                                </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Электронная почта</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Прмер@gmail.com"></span>
-                                        </label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                    <div class="clear15"></div>
-                                        <button class="btn --block --xl" type="button">Зарегистрироваться
-                                        </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </main>
             <!-- Footer-->

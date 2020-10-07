@@ -20,12 +20,12 @@ html(lang="ru")
       main.content
 
         // Top
-        section.section.s-top
-          .s-top__wrapper
-            .container
-              .s-top__title Акция на стекла Mercedes
-            img(src="./tmp/s-top-img.png", alt="").s-top__img
-          +btn('В каталог')(href="#!").--block.--xl
+        section.section.s-top(style="background-image: url('./tmp/s-top-img.png');")
+          .container
+            .s-top__title Акция на стекла Mercedes
+            .s-top__content
+              p Акция на стекла Mercedes
+            +btn('В каталог')(href="#!").--xl
 
         // About
         section.section.s-about

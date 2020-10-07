@@ -1,0 +1,297 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Карточка товара' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Карточка товара' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Поиск по коду
+
+        .nav__wrapper
+          .container
+            ul.nav.nav__tabs#tabContent(role='tablist')
+              li.nav__item(role='presentation')
+                a.nav__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true') Автостекла
+              li.nav__item(role='presentation')
+                a.nav__link#tab3-tab(data-toggle='tab' href='#tab3' role='tab' aria-controls='tab3' aria-selected='false') Автохимия
+              li.nav__item(role='presentation')
+                a.nav__link#tab4-tab(data-toggle='tab' href='#tab4' role='tab' aria-controls='tab4' aria-selected='false') Молдинги
+              li.nav__item(role='presentation')
+                a.nav__link#tab5-tab(data-toggle='tab' href='#tab5' role='tab' aria-controls='tab5' aria-selected='false') Инструменты
+              li.nav__item(role='presentation')
+                a.nav__link#tab6-tab(data-toggle='tab' href='#tab6' role='tab' aria-controls='tab6' aria-selected='false') Люки
+              li.nav__button
+                button(type="button")
+
+        .tab__container.--catalog
+          .container
+            .tab-content
+              .tab__pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
+                .row
+                  .col-3
+                    .form-group
+                      .form-group__name Поиск по
+                      .filter__btns.j-filter-btns
+                        button(type="button").filter__btns-btn.active Коду
+                        button(type="button").filter__btns-btn Каталогу
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Марка
+                        select(placeholder='Марка вашего авто').selectize
+                          option(value) Марка вашего авто
+                          option(value='1') Марка 1
+                          option(value='2') Марка 2
+                          option(value='3') Марка 3
+                          option(value='4') Марка 4
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Год выпуска',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Год выпуска вашего авто'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Тип кузова',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Тип кузова вашего авто'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Тип стелка',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Тип вашего кузова'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Код',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Код товара'
+                        }
+                      })
+                  .col-3 &nbsp;
+                  .col-3
+                    .form-group
+                      .form-group__name &nbsp;
+                      .filter__bottom
+                        .first
+                          +btn('<span>Очистить поиск</span>').--md.--clear
+                        .last
+                          +btn('Найти').--mw110.--md
+              .tab__pane#tab3(role='tabpanel' aria-labelledby='tab3-tab')
+                p tab3
+              .tab__pane#tab4(role='tabpanel' aria-labelledby='tab4-tab')
+                p tab4
+              .tab__pane#tab5(role='tabpanel' aria-labelledby='tab5-tab')
+                p tab5
+              .tab__pane#tab6(role='tabpanel' aria-labelledby='tab6-tab')
+                p tab6
+
+            .row
+              .col-6
+                .sorting
+                  .sorting__label Сортировка по: 
+                  .sorting__row
+                    .first
+                      select(placeholder='Алфавиту').selectize.--sorting
+                        option(value) Алфавиту
+                        option(value='1') От А до Я
+                        option(value='2') От Я до А
+                    .last
+                      select(placeholder='Цене').selectize.--sorting
+                        option(value) Цене
+                        option(value='1') По возрастанию
+                        option(value='2') По убыванию
+
+            .catalog
+              .row.catalog__row
+                .col-12.col-md-6.col-lg-4.col-xl-3
+                  .catalog__code
+                    .catalog__code-head
+                      a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                    .catalog__code-row
+                      .first
+                        b Еврокод
+                      .last
+                        span.--fs12 4003/ 39B2AGNBLMV1P
+                    .catalog__code-row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .catalog__code-row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .catalog__code-row
+                      .first
+                        b Цена
+                      .last
+                        a(href="#!") цена
+                    .catalog__code-row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .catalog__code-description
+                      .first
+                        b Описание
+                      .last
+                        p зеленое, крепление зеркало
+                    .catalog__code-number
+                      .cart-count.--mb0.j-cart-count
+                        button.cart-count__minus(type='button')
+                        button.cart-count__plus(type='button')
+                        input.cart-count__input(type='text' value='2')
+                    .catalog__code-footer
+                      +btn('Добавить в Корзину')
+                      +btn('В избранное').--border
+                .col-12.col-md-6.col-lg-4.col-xl-3
+                  .catalog__code.--even
+                    .catalog__code-head
+                      a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                    .catalog__code-row
+                      .first
+                        b Еврокод
+                      .last
+                        span.--fs12 4003/ 39B2AGNBLMV1P
+                    .catalog__code-row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .catalog__code-row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .catalog__code-row
+                      .first
+                        b Цена
+                      .last
+                        a(href="#!") цена
+                    .catalog__code-row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .catalog__code-description
+                      .first
+                        b Описание
+                      .last
+                        p зеленое, крепление зеркалозеленое, крепление зеркалокрепление ркалозеленое
+                    .catalog__code-number
+                      .cart-count.--mb0.j-cart-count
+                        button.cart-count__minus(type='button')
+                        button.cart-count__plus(type='button')
+                        input.cart-count__input(type='text' value='2')
+                    .catalog__code-footer
+                      +btn('Добавить в Корзину')
+                      +btn('В избранное').--border
+                .col-12.col-md-6.col-lg-4.col-xl-3
+                  .catalog__code
+                    .catalog__code-head
+                      a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                    .catalog__code-row
+                      .first
+                        b Еврокод
+                      .last
+                        span.--fs12 4003/ 39B2AGNBLMV1P
+                    .catalog__code-row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .catalog__code-row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .catalog__code-row
+                      .first
+                        b Цена
+                      .last
+                        a(href="#!") цена
+                    .catalog__code-row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .catalog__code-description
+                      .first
+                        b Описание
+                      .last
+                        p зеленое, крепление зеркало
+                    .catalog__code-number
+                      .cart-count.--mb0.j-cart-count
+                        button.cart-count__minus(type='button')
+                        button.cart-count__plus(type='button')
+                        input.cart-count__input(type='text' value='2')
+                    .catalog__code-footer
+                      +btn('Добавить в Корзину')
+                      +btn('В избранное').--border
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

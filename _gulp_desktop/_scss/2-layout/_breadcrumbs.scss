@@ -29,6 +29,9 @@
     }
     &>a {
       color: $color-gray;
+      &:hover {
+        color: $color-blue;
+      }
     }
     &:first-child {
       font-weight: 700;

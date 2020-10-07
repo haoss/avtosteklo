@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Регистрация - Avtosteklo</title>
+        <title>Карточка товара - Avtosteklo</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="format-detection" content="telephone=no">
@@ -254,7 +254,7 @@
         </div>
         <div class="base">
             <!-- Header-->
-            <header class="header">
+            <header class="header --logged">
                 <div class="header__top">
                     <div class="container header__top-container">
                         <div class="header__top-wrapper">
@@ -277,10 +277,11 @@
                             <nav class="navigation" role="navigation">
                                 <ul>
                                     <li><a href="#!">О компании</a></li>
-                                    <li><a href="#!">Каталог</a></li>
+                                    <li><a href="#!">Поиск по каталогу</a></li>
+                                    <li><a href="#!">Поиск по коду</a></li>
                                     <li><a href="#!">Полезная информация</a></li>
-                                    <li><a href="#!">Новости</a></li>
                                     <li><a href="#!">Контакты</a></li>
+                                    <li><a href="#!">Новости</a></li>
                                     <li><a href="#!">О доставке и оплате</a></li>
                                 </ul>
                             </nav>
@@ -296,66 +297,108 @@
                         <ol class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
                                 <li class="breadcrumbs__item"><a href="./index.html">Главная</a>
                                 </li>
+                                <li class="breadcrumbs__item"><a href="#!">Товары и услуги</a>
+                                </li>
                         </ol>
-                    <div class="content__head">
-                        <h1>Регистрация</h1>
+                    <div class="content__head --product-card">
+                        <h1>Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)</h1>
                     </div>
-                    <form action="#">
+                    <div class="product">
                         <div class="row">
                             <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Фамилия Имя Отчество</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите ваше имя"></span>
-                                        </label>
+                                <div class="product__gallery">
+                                    <div class="j-product-gallery j-gallery">
+                                        <div class="product__gallery-block"><a class="j-gallery-item" href="./tmp/product-img-288-288.png"><img src="./tmp/product-img-288-288.png" alt=""></a></div>
+                                        <div class="product__gallery-block"><a class="j-gallery-item" href="./tmp/product-img-288-288.png"><img src="./tmp/product-img-288-288.png" alt=""></a></div>
+                                        <div class="product__gallery-block"><a class="j-gallery-item" href="./tmp/product-img-288-288.png"><img src="./tmp/product-img-288-288.png" alt=""></a></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                    <div class="field-text"><span class="field-text__name">Город</span>
-                                        <select class="selectize" placeholder="Выберете ваш город">
-                                            <option value>Выберете ваш город</option>
-                                            <option value="1">Киев</option>
-                                            <option value="2">Харьков</option>
-                                            <option value="3">Днепр</option>
-                                            <option value="4">Кировоград</option>
-                                        </select>
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="product__description">
+                                            <div class="product__th">
+                                                <div class="product__th-row">
+                                                    <div class="first"><b>Производитель:</b></div>
+                                                    <div class="last"><span>SafeGlass</span></div>
+                                                </div>
+                                                <div class="product__th-row">
+                                                    <div class="first"><b>Еврокод:</b></div>
+                                                    <div class="last"><span>000016037</span></div>
+                                                </div>
+                                                <div class="product__th-row">
+                                                    <div class="first"><b>Код:</b></div>
+                                                    <div class="last"><span>000016037</span></div>
+                                                </div>
+                                                <div class="product__th-row">
+                                                    <div class="first"><b>Размер:</b></div>
+                                                    <div class="last"><span>1475*908</span></div>
+                                                </div>
+                                                <div class="product__th-row">
+                                                    <div class="first"><b>Цена:</b></div>
+                                                    <div class="last"><span>469.6 грн</span></div>
+                                                </div>
+                                            </div>
+                                            <div class="product__number">
+                                                <div class="cart-count --mb0 j-cart-count">
+                                                    <button class="cart-count__minus" type="button"></button>
+                                                    <button class="cart-count__plus" type="button"></button>
+                                                    <input class="cart-count__input" type="text" value="1">
+                                                </div>
+                                                <div class="product__price">939.2 грн</div>
+                                            </div>
+                                                <button class="btn product__buy-btn" type="button">Купить
+                                                </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="+380 ХХ ХХХ ХХХ"></span>
-                                        </label>
+                    </div>
+                </div>
+                <div class="nav__wrapper">
+                    <div class="container">
+                        <ul class="nav nav__tabs" id="tabContent" role="tablist">
+                            <li class="nav__item" role="presentation"><a class="nav__link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Описание</a></li>
+                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Видеообзоры</a></li>
+                            <li class="nav__button">
+                                <button type="button"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab__container --product">
+                    <div class="container">
+                        <div class="tab-content">
+                            <div class="tab__pane active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. </p>
+                                        <p>Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Название компании</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Название компании(если есть)"></span>
-                                        </label>
+                            <div class="tab__pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                                <div class="video">
+                                    <div class="row video__row">
+                                        <div class="col-3">
+                                            <div class="video__block">
+                                                <div class="video__block-thumb"><a class="video__block-link j-popup-youtube" href="https://www.youtube.com/watch?v=0-7IHOXkiV8"><img src="./tmp/video-img-1.png" alt=""></a></div>
+                                                <div class="video__block-title">Видеообзор 1 </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="video__block">
+                                                <div class="video__block-thumb"><a class="video__block-link j-popup-youtube" href="https://www.youtube.com/watch?v=0-7IHOXkiV8"><img src="./tmp/video-img-2.png" alt=""></a></div>
+                                                <div class="video__block-title">Видеообзор 2 </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Электронная почта</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Прмер@gmail.com"></span>
-                                        </label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                    <div class="clear15"></div>
-                                        <button class="btn --block --xl" type="button">Зарегистрироваться
-                                        </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </main>
             <!-- Footer-->

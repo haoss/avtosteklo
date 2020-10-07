@@ -1,79 +1,83 @@
 #modal1.modal.mfp-hide
   .modal__wrapper
-    .modal__close.hidden
+    button(type="button").modal__close.d-none
     .modal__header Связаться с менеджером
     .modal__content
-      form(action="#!")
-        .form-group
-          +field-text({
-            title: 'Имя',
-            hasJs: false,
-            isTextarea: false,
-            hasError: false,
-            helpText: '',
-            mods: 'md',
-            val: '',
-            attrs: {
-              name: 'text',
-              placeholder: 'Введите ваше имя'
-            }
-          })
-        .form-group
-          +field-text({
-            title: 'Номер телефона',
-            hasJs: false,
-            isTextarea: false,
-            hasError: false,
-            helpText: '',
-            mods: 'md',
-            val: '',
-            attrs: {
-              name: 'text',
-              placeholder: 'Введите ваш номер телефона'
-            }
-          })
-        .clear8
-        +btn('Связаться').--block.--xl
+      .modal__content-center
+        form(action="#!")
+          .form-group
+            +field-text({
+              title: 'Имя',
+              hasJs: false,
+              isTextarea: false,
+              hasError: false,
+              helpText: '',
+              mods: '',
+              val: '',
+              attrs: {
+                name: 'text',
+                placeholder: 'Введите ваше имя'
+              }
+            })
+          .form-group
+            +field-text({
+              title: 'Номер телефона',
+              hasJs: false,
+              isTextarea: false,
+              hasError: false,
+              helpText: '',
+              mods: '',
+              val: '',
+              attrs: {
+                name: 'text',
+                placeholder: 'Введите ваш номер телефона'
+              }
+            })
+          +btn('Связаться').--xl.btn-block-center
 
 #modal2.modal.mfp-hide
   .modal__wrapper
-    .modal__close.hidden
+    button(type="button").modal__close.d-none
     .modal__header Заявка на регистрацию принята
     .modal__content
-      .text-center
-        p.--fs16 Ваш менеджер вскоре перезвонит вам
-      +btn('Связаться').--block.--xl
+      .modal__content-center
+        p После обработки вам прийдет смс с паролем и логином, а наш менеджер позвонит и проинформирует вас
+        .clear8
+        +btn('Связаться').--xl.btn-block-center
 
 #modal3.modal.mfp-hide
   .modal__wrapper
-    .modal__close.hidden
+    button(type="button").modal__close.d-none
     .modal__header Узнать цену
     .modal__content
       .text-center
-        p.--fs16 Ваш менеджер вскоре перезвонит вам
-      +btn('Связаться').--block.--xl
+        p Ваш менеджер вскоре перезвонит вам
+      .clear8
+      +btn('Связаться').--xl.btn-block-center
 
 #modal4.modal.mfp-hide
   .modal__wrapper
-    .modal__close.hidden
+    button(type="button").modal__close.d-none
     .modal__header Заказ оформлен
     .modal__content
       .text-center
-        p.--fs16 Свободный менеджер свяжется с вами в ближайшее время
-      +btn('На главную')(href='#!').--block.--xl
+        p Свободный менеджер свяжется с вами в ближайшее время
+      .clear8
+      +btn('На главную')(href='#!').--xl.btn-block-center
 
 #modal5.modal.mfp-hide
   .modal__wrapper
-    .modal__close.hidden
+    button(type="button").modal__close.d-none
     .modal__header Заявка принята
     .modal__content
       .text-center
-        p.--fs16 Ваш менеджер свяжется с вами в ближайшее время
-      +btn('На главную')(href='#!').--block.--xl
+        p Ваш менеджер свяжется с вами в ближайшее время
+      .clear8
+      +btn('На главную')(href='#!').--xl.btn-block-center
 
 #modal6.modal.--cart.mfp-hide
   .modal__wrapper
-    .modal__close.hidden
+    button(type="button").modal__close.d-none
     .modal__header Корзина
     .modal__cart
       .modal__cart-wrapper
@@ -212,7 +216,7 @@
 
 #modal7.modal.--toCart.mfp-hide
   .modal__wrapper
-    .modal__close.hidden
+    button(type="button").modal__close
     .modal__header Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)
     .modal__content
       .modal__product
@@ -229,9 +233,7 @@
             button.cart-count__plus(type='button')
             input.cart-count__input(type='text' value='1')
           .modal__product-price 939.2 грн
-      +btn('Оформить заказ')(href="#!").--block
+          +btn('Оформить заказ')(href="#!").modal__product-btn
       button(type="button").modal__btn-to-cart 
-        span Добавить в корзину
-          br
-          | и продолжить покупки
+        span Добавить в корзину и продолжить покупки
         i.icon-arrow-right-2

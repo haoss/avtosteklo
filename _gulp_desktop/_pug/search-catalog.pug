@@ -1,0 +1,561 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Карточка товара' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Карточка товара' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Поиск по каталогу
+
+        .nav__wrapper
+          .container
+            ul.nav.nav__tabs#tabContent(role='tablist')
+              li.nav__item(role='presentation')
+                a.nav__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true') Автостекла
+              li.nav__item(role='presentation')
+                a.nav__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false') Автотовары
+              li.nav__item(role='presentation')
+                a.nav__link#tab3-tab(data-toggle='tab' href='#tab3' role='tab' aria-controls='tab3' aria-selected='false') Автохимия
+              li.nav__item(role='presentation')
+                a.nav__link#tab4-tab(data-toggle='tab' href='#tab4' role='tab' aria-controls='tab4' aria-selected='false') Молдинги
+              li.nav__item(role='presentation')
+                a.nav__link#tab5-tab(data-toggle='tab' href='#tab5' role='tab' aria-controls='tab5' aria-selected='false') Инструменты
+              li.nav__item(role='presentation')
+                a.nav__link#tab6-tab(data-toggle='tab' href='#tab6' role='tab' aria-controls='tab6' aria-selected='false') Люки
+              li.nav__button
+                button(type="button")
+
+        .tab__container.--catalog
+          .container
+            .tab-content
+              .tab__pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
+                .row
+                  .col-3
+                    .form-group
+                      .form-group__name Поиск по
+                      .filter__btns.j-filter-btns
+                        button(type="button").filter__btns-btn Коду
+                        button(type="button").filter__btns-btn.active Каталогу
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Марка
+                        select(placeholder='Марка вашего авто').selectize
+                          option(value) Марка вашего авто
+                          option(value='1') Марка 1
+                          option(value='2') Марка 2
+                          option(value='3') Марка 3
+                          option(value='4') Марка 4
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Модель',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Модель вашего кузова'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Тип кузова',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Тип кузова вашего авто'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Год выпуска',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Год выпуска вашего авто'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Тип стекла',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Тип вашего стекла'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Код',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Код товара'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      .form-group__name &nbsp;
+                      .filter__bottom
+                        .first
+                          +btn('<span>Очистить поиск</span>').--clear
+                        .last
+                          +btn('Найти').--mw110.--md
+              .tab__pane#tab2(role='tabpanel' aria-labelledby='tab2-tab')
+                .row
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Наименование 
+                        select(placeholder='Название товара').selectize
+                          option(value) Название товара
+                          option(value='1') Наименование 1
+                          option(value='2') Наименование 2
+                          option(value='3') Наименование 3
+                          option(value='4') Наименование 4
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Код
+                        select(placeholder='Код').selectize
+                          option(value) Код
+                          option(value='1') Код 1
+                          option(value='2') Код 2
+                          option(value='3') Код 3
+                          option(value='4') Код 4
+                  .col-3 &nbsp;
+                  .col-3
+                    .form-group
+                      .form-group__name &nbsp;
+                      .filter__bottom
+                        .first
+                          +btn('<span>Очистить поиск</span>').--clear
+                        .last
+                          +btn('Найти').--mw110.--md
+              .tab__pane#tab3(role='tabpanel' aria-labelledby='tab3-tab')
+                .row
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Наименование 
+                        select(placeholder='Название товара').selectize
+                          option(value) Название товара
+                          option(value='1') Наименование 1
+                          option(value='2') Наименование 2
+                          option(value='3') Наименование 3
+                          option(value='4') Наименование 4
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Код
+                        select(placeholder='Код').selectize
+                          option(value) Код
+                          option(value='1') Код 1
+                          option(value='2') Код 2
+                          option(value='3') Код 3
+                          option(value='4') Код 4
+                  .col-3 &nbsp;
+                  .col-3
+                    .form-group
+                      .form-group__name &nbsp;
+                      .filter__bottom
+                        .first
+                          +btn('<span>Очистить поиск</span>').--clear
+                        .last
+                          +btn('Найти').--mw110.--md
+              .tab__pane#tab4(role='tabpanel' aria-labelledby='tab4-tab')
+                .row
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Марка
+                        select(placeholder='Марка вашего авто').selectize
+                          option(value) Марка вашего авто
+                          option(value='1') Марка 1
+                          option(value='2') Марка 2
+                          option(value='3') Марка 3
+                          option(value='4') Марка 4
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Модель',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Модель'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Год выпуска',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Год выпуска'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Вид стекла',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Вид стекла'
+                        }
+                      })
+                  .col-3 &nbsp;
+                  .col-3 &nbsp;
+                  .col-3 &nbsp;
+                  .col-3
+                    .form-group
+                      .form-group__name &nbsp;
+                      .filter__bottom
+                        .first
+                          +btn('<span>Очистить поиск</span>').--clear
+                        .last
+                          +btn('Найти').--mw110.--md
+              .tab__pane#tab5(role='tabpanel' aria-labelledby='tab5-tab')
+                .row
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Наименование 
+                        select(placeholder='Название товара').selectize
+                          option(value) Название товара
+                          option(value='1') Наименование 1
+                          option(value='2') Наименование 2
+                          option(value='3') Наименование 3
+                          option(value='4') Наименование 4
+                  .col-3
+                    .form-group
+                      .field-text
+                        span.field-text__name Код
+                        select(placeholder='Код').selectize
+                          option(value) Код
+                          option(value='1') Код 1
+                          option(value='2') Код 2
+                          option(value='3') Код 3
+                          option(value='4') Код 4
+                  .col-3 &nbsp;
+                  .col-3
+                    .form-group
+                      .form-group__name &nbsp;
+                      .filter__bottom
+                        .first
+                          +btn('<span>Очистить поиск</span>').--clear
+                        .last
+                          +btn('Найти').--mw110.--md
+              .tab__pane#tab6(role='tabpanel' aria-labelledby='tab6-tab')
+                .row
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Наименование',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Наименование товара'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Код',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Код товара'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Марка',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Марка'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Модель',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Модель'
+                        }
+                      })
+                  .col-3
+                    .form-group
+                      +field-text({
+                        title: 'Год выпуска',
+                        hasJs: false,
+                        isTextarea: false,
+                        hasError: false,
+                        helpText: '',
+                        mods: '',
+                        val: '',
+                        attrs: {
+                          name: 'text',
+                          placeholder: 'Год выпуска'
+                        }
+                      })
+                  .col-3 &nbsp;
+                  .col-3 &nbsp;
+                  .col-3
+                    .form-group
+                      .form-group__name &nbsp;
+                      .filter__bottom
+                        .first
+                          +btn('<span>Очистить поиск</span>').--clear
+                        .last
+                          +btn('Найти').--mw110.--md
+            .row
+              .col-6
+                .sorting
+                  .sorting__label Сортировка по: 
+                  .sorting__row
+                    .first
+                      select(placeholder='Алфавиту').selectize.--sorting
+                        option(value) Алфавиту
+                        option(value='1') От А до Я
+                        option(value='2') От Я до А
+                    .last
+                      select(placeholder='Цене').selectize.--sorting
+                        option(value) Цене
+                        option(value='1') По возрастанию
+                        option(value='2') По убыванию
+
+            .catalog
+              .row.catalog__row
+                .col-3
+                  .catalog__block
+                    .catalog__block-logos
+                      div
+                        img(src="./tmp/logos-img-1.png", alt="")
+                      div
+                        img(src="./tmp/logos-img-2.png", alt="")
+                      div
+                        img(src="./tmp/logos-img-3.png", alt="")
+                    .catalog__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/product-img-288-288.png", alt="")
+                    button(type="button").btn-favourites.catalog__block-favourites.j-favourites
+                    .catalog__block-title
+                      a(href="#!") Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)
+                    .catalog__block-description
+                      p зеленое, крепление зеркало
+                    .catalog__block-row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .catalog__block-row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .catalog__block-row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .catalog__block-footer
+                      .catalog__block-price 2060.87 грн
+                      +btn('Купить').--block
+                .col-3
+                  .catalog__block
+                    .catalog__block-logos
+                      div
+                        img(src="./tmp/logos-img-1.png", alt="")
+                      div
+                        img(src="./tmp/logos-img-2.png", alt="")
+                      div
+                        img(src="./tmp/logos-img-3.png", alt="")
+                    .catalog__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/product-img-288-288.png", alt="")
+                    button(type="button").btn-favourites.catalog__block-favourites.j-favourites
+                    .catalog__block-title
+                      a(href="#!") Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)
+                    .catalog__block-description
+                      p зеленое, крепление зеркало
+                      p зеленое, крепление зеркало
+                      p зеленое, крепление зеркало
+                    .catalog__block-row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .catalog__block-row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .catalog__block-row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .catalog__block-footer
+                      .catalog__block-price 2060.87 грн
+                      +btn('Купить').--block
+                .col-3
+                  .catalog__block
+                    .catalog__block-logos
+                      div
+                        img(src="./tmp/logos-img-1.png", alt="")
+                    .catalog__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/product-img-288-288.png", alt="")
+                    button(type="button").btn-favourites.catalog__block-favourites.j-favourites.is-favourites
+                    .catalog__block-title
+                      a(href="#!") Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)
+                    .catalog__block-description
+                      p зеленое, крепление зеркало
+                    .catalog__block-row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .catalog__block-row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .catalog__block-row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .catalog__block-footer
+                      .catalog__block-price 2060.87 грн
+                      +btn('Купить').--block
+                .col-3
+                  .catalog__block
+                    .catalog__block-logos
+                      div
+                        img(src="./tmp/logos-img-1.png", alt="")
+                      div
+                        img(src="./tmp/logos-img-2.png", alt="")
+                      div
+                        img(src="./tmp/logos-img-3.png", alt="")
+                    .catalog__block-thumb
+                      a(href="#!")
+                        img(src="./tmp/product-img-288-288.png", alt="")
+                    button(type="button").btn-favourites.catalog__block-favourites.j-favourites
+                    .catalog__block-title
+                      a(href="#!") Dacia Nova /SuperNova /Solenza (Седан) (1995-2005)
+                    .catalog__block-description
+                      p зеленое, крепление зеркало
+                    .catalog__block-row
+                      .first
+                        b Производитель
+                      .last
+                        span BENSON
+                    .catalog__block-row
+                      .first
+                        b Размер
+                      .last
+                        span 1317*690
+                    .catalog__block-row
+                      .first
+                        b Код
+                      .last
+                        span 000001177
+                    .catalog__block-footer
+                      .catalog__block-price 2060.87 грн
+                      +btn('Купить').--block
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

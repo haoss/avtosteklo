@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Регистрация - Avtosteklo</title>
+        <title>Профиль - Avtosteklo</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="format-detection" content="telephone=no">
@@ -254,7 +254,7 @@
         </div>
         <div class="base">
             <!-- Header-->
-            <header class="header">
+            <header class="header --logged">
                 <div class="header__top">
                     <div class="container header__top-container">
                         <div class="header__top-wrapper">
@@ -277,10 +277,11 @@
                             <nav class="navigation" role="navigation">
                                 <ul>
                                     <li><a href="#!">О компании</a></li>
-                                    <li><a href="#!">Каталог</a></li>
+                                    <li><a href="#!">Поиск по каталогу</a></li>
+                                    <li><a href="#!">Поиск по коду</a></li>
                                     <li><a href="#!">Полезная информация</a></li>
-                                    <li><a href="#!">Новости</a></li>
                                     <li><a href="#!">Контакты</a></li>
+                                    <li><a href="#!">Новости</a></li>
                                     <li><a href="#!">О доставке и оплате</a></li>
                                 </ul>
                             </nav>
@@ -297,65 +298,56 @@
                                 <li class="breadcrumbs__item"><a href="./index.html">Главная</a>
                                 </li>
                         </ol>
-                    <div class="content__head">
-                        <h1>Регистрация</h1>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="content__head">
+                                <h1>Профиль</h1>
+                            </div>
+                            <form action="#">
+                                <div class="form-group">
+                                        <label class="field-text  --sm --custom"><span class="field-text__name">Имя</span><span class="field-text__input-wrap">
+                                                <input class="field-text__input" type="text" value="Иванов Иван Иванович" autocomplete="off" name="text" placeholder="Имя"></span>
+                                        </label>
+                                </div>
+                                <div class="form-group">
+                                        <label class="field-text  --sm --custom"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
+                                                <input class="field-text__input" type="text" value="+380 95 138 56 78" autocomplete="off" name="text" placeholder="Номер телефона"></span>
+                                        </label>
+                                </div>
+                                <div class="form-group">
+                                        <label class="field-text  --sm --custom"><span class="field-text__name">Электронная почта</span><span class="field-text__input-wrap">
+                                                <input class="field-text__input" type="text" value="IvanIvanovich@gmail.com" autocomplete="off" name="text" placeholder="Электронная почта"></span>
+                                        </label>
+                                </div>
+                                <div class="clear10"></div>
+                                    <button class="btn --block --xl" type="button">Выйти из аккаунта
+                                    </button>
+                            </form>
+                        </div>
+                        <div class="col-4">
+                            <div class="content__head">
+                                <h1>Ваш менеджер</h1>
+                            </div>
+                            <form action="#">
+                                <div class="form-group">
+                                        <label class="field-text  --sm --custom"><span class="field-text__name">Имя</span><span class="field-text__input-wrap">
+                                                <input class="field-text__input" type="text" value="Иванов Иван Иванович" autocomplete="off" name="text" placeholder="Имя"></span>
+                                        </label>
+                                </div>
+                                <div class="form-group">
+                                        <label class="field-text  --sm --custom"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
+                                                <input class="field-text__input" type="text" value="+380 95 138 56 78" autocomplete="off" name="text" placeholder="Номер телефона"></span>
+                                        </label>
+                                </div>
+                                <div class="form-group">
+                                        <label class="field-text  --sm --custom"><span class="field-text__name">Электронная почта</span><span class="field-text__input-wrap">
+                                                <input class="field-text__input" type="text" value="IvanIvanovich@gmail.com" autocomplete="off" name="text" placeholder="Электронная почта"></span>
+                                        </label>
+                                </div>
+                                <div class="clear10"></div><a class="btn --block --xl j-open-popup-link" href="#modal1">Связаться с менеджером</a>
+                            </form>
+                        </div>
                     </div>
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Фамилия Имя Отчество</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите ваше имя"></span>
-                                        </label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                    <div class="field-text"><span class="field-text__name">Город</span>
-                                        <select class="selectize" placeholder="Выберете ваш город">
-                                            <option value>Выберете ваш город</option>
-                                            <option value="1">Киев</option>
-                                            <option value="2">Харьков</option>
-                                            <option value="3">Днепр</option>
-                                            <option value="4">Кировоград</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Номер телефона</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="+380 ХХ ХХХ ХХХ"></span>
-                                        </label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Название компании</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Название компании(если есть)"></span>
-                                        </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Электронная почта</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Прмер@gmail.com"></span>
-                                        </label>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="form-group">
-                                    <div class="clear15"></div>
-                                        <button class="btn --block --xl" type="button">Зарегистрироваться
-                                        </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </main>
             <!-- Footer-->
