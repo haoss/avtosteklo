@@ -1,0 +1,161 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Избранное' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Избранное' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Избранное
+
+        .catalog-code
+          .catalog-code__container
+            .catalog-code__row-head
+              .div1 Товар
+              .div2 Еврокод
+              .div3 Размер
+              .div4 Производитель
+              .div5 Код
+              .div6 Цена
+              .div7 Количество
+          .catalog-code__row
+            .catalog-code__container
+              .catalog-code__row-wrapper
+                .div1
+                  .catalog-code__product
+                    a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                .div2 4003/ 39B2AGNBLMV1P
+                .div3 1317*690
+                .div4 BENSON
+                .div5 000001177
+                .div6
+                  a(href="#!").catalog-code__price цена
+                .div7
+                  .cart-count.--mb0.j-cart-count
+                    button.cart-count__minus(type='button')
+                    button.cart-count__plus(type='button')
+                    input.cart-count__input(type='text' value='2')
+                .div8
+                  button(type="button").catalog-code__btn.text.--gray Удалить
+            .catalog-code__bottom
+              .catalog-code__container
+                .catalog-code__bottom-wrapper
+                  .first
+                    p
+                      b Описание: 
+                      | зеленое, крепление зеркало
+                  .last
+                    button(type="button").catalog-code__btn-favourites.text.--blue-light Добавить в корзину
+          .catalog-code__row.--color
+            .catalog-code__container
+              .catalog-code__row-wrapper
+                .div1
+                  .catalog-code__product
+                    a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                .div2 4003/ 39B2AGNBLMV1P
+                .div3 1317*690
+                .div4 BENSON
+                .div5 000001177
+                .div6
+                  a(href="#!").catalog-code__price цена
+                .div7
+                  .cart-count.--mb0.j-cart-count
+                    button.cart-count__minus(type='button')
+                    button.cart-count__plus(type='button')
+                    input.cart-count__input(type='text' value='2')
+                .div8
+                  button(type="button").catalog-code__btn.text.--gray Удалить
+            .catalog-code__bottom
+              .catalog-code__container
+                .catalog-code__bottom-wrapper
+                  .first
+                    p
+                      b Описание: 
+                      | зеленое, крепление зеркало
+                  .last
+                    button(type="button").catalog-code__btn-favourites.text.--blue-light Добавить в корзину
+          .catalog-code__row
+            .catalog-code__container
+              .catalog-code__row-wrapper
+                .div1
+                  .catalog-code__product
+                    a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                .div2 4003/ 39B2AGNBLMV1P
+                .div3 1317*690
+                .div4 BENSON
+                .div5 000001177
+                .div6
+                  a(href="#!").catalog-code__price цена
+                .div7
+                  .cart-count.--mb0.j-cart-count
+                    button.cart-count__minus(type='button')
+                    button.cart-count__plus(type='button')
+                    input.cart-count__input(type='text' value='2')
+                .div8
+                  button(type="button").catalog-code__btn.text.--gray Удалить
+            .catalog-code__bottom
+              .catalog-code__container
+                .catalog-code__bottom-wrapper
+                  .first
+                    p
+                      b Описание: 
+                      | зеленое, крепление зеркало
+                  .last
+                    button(type="button").catalog-code__btn-favourites.text.--blue-light Добавить в корзину
+          .catalog-code__row.--color
+            .catalog-code__container
+              .catalog-code__row-wrapper
+                .div1
+                  .catalog-code__product
+                    a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                .div2 4003/ 39B2AGNBLMV1P
+                .div3 1317*690
+                .div4 BENSON
+                .div5 000001177
+                .div6
+                  a(href="#!").catalog-code__price цена
+                .div7
+                  .cart-count.--mb0.j-cart-count
+                    button.cart-count__minus(type='button')
+                    button.cart-count__plus(type='button')
+                    input.cart-count__input(type='text' value='2')
+                .div8
+                  button(type="button").catalog-code__btn.text.--gray Удалить
+            .catalog-code__bottom
+              .catalog-code__container
+                .catalog-code__bottom-wrapper
+                  .first
+                    p
+                      b Описание: 
+                      | зеленое, крепление зеркало
+                  .last
+                    button(type="button").catalog-code__btn-favourites.text.--blue-light Добавить в корзину
+
+      //- include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

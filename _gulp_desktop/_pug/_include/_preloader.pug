@@ -78,141 +78,122 @@
 #modal6.modal.--cart.mfp-hide
   .modal__wrapper
     button(type="button").modal__close.d-none
-    .modal__header Корзина
     .modal__cart
-      .modal__cart-wrapper
-        .cart-block
-          .cart-block__head
-            a(href="./tmp/product-img-288-288.png").cart-block__link.j-image-popup
-            span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
-          .cart-block__row
-            .first
-              b Еврокод
-            .last
-              span.--fs12 4003/ 39B2AGNBLMV1P
-          .cart-block__row
-            .first
-              b Размер
-            .last
-              span 1317*690
-          .cart-block__row
-            .first
-              b Производитель
-            .last
-              span BENSON
-          .cart-block__row
-            .first
-              b Цена
-            .last
-              a(href="#!") цена
-          .cart-block__row
-            .first
-              b Код
-            .last
-              span 000001177
-          .cart-block__description
-            .first
-              b Описание
-            .last
-              p зеленое, крепление зеркало
-          .cart-block__number
-            .cart-count.--mb0.j-cart-count
-              button.cart-count__minus(type='button')
-              button.cart-count__plus(type='button')
-              input.cart-count__input(type='text' value='2')
-          .cart-block__footer
-            +btn('Убрать из корзины').--border
-            
-        .cart-block
-          .cart-block__head
-            a(href="./tmp/product-img-288-288.png").cart-block__link.j-image-popup
-            span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
-          .cart-block__row
-            .first
-              b Еврокод
-            .last
-              span.--fs12 4003/ 39B2AGNBLMV1P
-          .cart-block__row
-            .first
-              b Размер
-            .last
-              span 1317*690
-          .cart-block__row
-            .first
-              b Производитель
-            .last
-              span BENSON
-          .cart-block__row
-            .first
-              b Цена
-            .last
-              a(href="#!") цена
-          .cart-block__row
-            .first
-              b Код
-            .last
-              span 000001177
-          .cart-block__description
-            .first
-              b Описание
-            .last
-              p зеленое, крепление зеркалозеленое, крепление зеркалокрепление ркалозеленое
-          .cart-block__number
-            .cart-count.--mb0.j-cart-count
-              button.cart-count__minus(type='button')
-              button.cart-count__plus(type='button')
-              input.cart-count__input(type='text' value='2')
-          .cart-block__footer
-            +btn('Убрать из корзины').--border
-            
-        .cart-block
-          .cart-block__head
-            a(href="./tmp/product-img-288-288.png").cart-block__link.j-image-popup
-            span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
-          .cart-block__row
-            .first
-              b Еврокод
-            .last
-              span.--fs12 4003/ 39B2AGNBLMV1P
-          .cart-block__row
-            .first
-              b Размер
-            .last
-              span 1317*690
-          .cart-block__row
-            .first
-              b Производитель
-            .last
-              span BENSON
-          .cart-block__row
-            .first
-              b Цена
-            .last
-              a(href="#!") цена
-          .cart-block__row
-            .first
-              b Код
-            .last
-              span 000001177
-          .cart-block__description
-            .first
-              b Описание
-            .last
-              p зеленое, крепление зеркало
-          .cart-block__number
-            .cart-count.--mb0.j-cart-count
-              button.cart-count__minus(type='button')
-              button.cart-count__plus(type='button')
-              input.cart-count__input(type='text' value='2')
-          .cart-block__footer
-            +btn('Убрать из корзины').--border
-    .modal__cart-footer
-      .modal__cart-total
-        .first
-          b Итого
-        .last
-          span 5600.48 грн
-      +btn('Оформить заказ').--block.--xl
+      .container
+        .content__head
+          .h1 Корзина
+
+      .catalog-cart
+        table.catalog-cart__table
+          thead.catalog-cart__thead
+            tr
+              th Товар
+              th Размер
+              th Производитель
+              th Код
+              th Цена
+              th Количество
+          tbody.catalog-cart__body
+            tr.catalog-cart__tr
+              td
+                .catalog-cart__product
+                  a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                  span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+              td 1317*690
+              td BENSON
+              td 000001177
+              td
+                a(href="#!").catalog-cart__price.text.--blue цена
+              td
+                .cart-count.--mb0.j-cart-count
+                  button.cart-count__minus(type='button')
+                  button.cart-count__plus(type='button')
+                  input.cart-count__input(type='text' value='2')
+              td(align="right")
+                button(type="button").catalog-cart__btn.text.--gray Удалить
+            tr.catalog-cart__tr.--bottom
+              td(colspan="5")
+                .catalog-cart__tr-line
+                b Описание: 
+                | зеленое, крепление зеркало
+              td(colspan="3" align="right") &nbsp;
+            tr.catalog-cart__tr.--color
+              td
+                .catalog-cart__product
+                  a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                  span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+              td 1317*690
+              td BENSON
+              td 000001177
+              td
+                a(href="#!").catalog-cart__price.text.--blue цена
+              td
+                .cart-count.--mb0.j-cart-count
+                  button.cart-count__minus(type='button')
+                  button.cart-count__plus(type='button')
+                  input.cart-count__input(type='text' value='2')
+              td(align="right")
+                button(type="button").catalog-cart__btn.text.--gray Удалить
+            tr.catalog-cart__tr.--bottom.--color
+              td(colspan="5")
+                .catalog-cart__tr-line
+                b Описание: 
+                | зеленое, крепление зеркало
+              td(colspan="3" align="right") &nbsp;
+            tr.catalog-cart__tr
+              td
+                .catalog-cart__product
+                  a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                  span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+              td 1317*690
+              td BENSON
+              td 000001177
+              td
+                a(href="#!").catalog-cart__price.text.--blue цена
+              td
+                .cart-count.--mb0.j-cart-count
+                  button.cart-count__minus(type='button')
+                  button.cart-count__plus(type='button')
+                  input.cart-count__input(type='text' value='2')
+              td(align="right")
+                button(type="button").catalog-cart__btn.text.--gray Удалить
+            tr.catalog-cart__tr.--bottom
+              td(colspan="5")
+                .catalog-cart__tr-line
+                b Описание: 
+                | зеленое, крепление зеркало
+              td(colspan="3" align="right") &nbsp;
+            tr.catalog-cart__tr.--color
+              td
+                .catalog-cart__product
+                  a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                  span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+              td 1317*690
+              td BENSON
+              td 000001177
+              td
+                a(href="#!").catalog-cart__price.text.--blue цена
+              td
+                .cart-count.--mb0.j-cart-count
+                  button.cart-count__minus(type='button')
+                  button.cart-count__plus(type='button')
+                  input.cart-count__input(type='text' value='2')
+              td(align="right")
+                button(type="button").catalog-cart__btn.text.--gray Удалить
+            tr.catalog-cart__tr.--bottom.--color
+              td(colspan="5")
+                .catalog-cart__tr-line
+                b Описание: 
+                | зеленое, крепление зеркало
+              td(colspan="3" align="right") &nbsp;
+        .container
+          .catalog-cart__total
+            .catalog-cart__total-row
+              .first
+                b Итого
+              .last
+                span 5600.48 грн
+            +btn('Оформить заказ').--block.--xl
 
 #modal7.modal.--toCart.mfp-hide
   .modal__wrapper

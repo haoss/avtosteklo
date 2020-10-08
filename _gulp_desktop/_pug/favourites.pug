@@ -1,0 +1,122 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Избранное' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Избранное' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Избранное
+
+        .catalog-code
+          table.catalog-code__table
+            thead.catalog-code__thead
+              tr
+                th Товар
+                th Еврокод
+                th Размер
+                th Производитель
+                th Код
+                th Цена
+                th Количество
+            tbody.catalog-code__body
+              tr.catalog-code__tr
+                td
+                  .catalog-code__product
+                    a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                td 4003/ 39B2AGNBLMV1P
+                td 1317*690
+                td BENSON
+                td 000001177
+                td
+                  a(href="#!").catalog-code__price цена
+                td
+                  .cart-count.--mb0.j-cart-count
+                    button.cart-count__minus(type='button')
+                    button.cart-count__plus(type='button')
+                    input.cart-count__input(type='text' value='2')
+                td(align="right")
+                  button(type="button").catalog-code__btn.text.--gray Удалить
+              tr.catalog-code__tr.--bottom
+                td(colspan="5")
+                  .catalog-code__tr-line
+                  b Описание: 
+                  | зеленое, крепление зеркало
+                td(colspan="3" align="right")
+                  button(type="button").catalog-code__btn.text.--blue-light Добавить в корзину
+              tr.catalog-code__tr.--color
+                td
+                  .catalog-code__product
+                    a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                td 4003/ 39B2AGNBLMV1P
+                td 1317*690
+                td BENSON
+                td 000001177
+                td
+                  a(href="#!").catalog-code__price цена
+                td
+                  .cart-count.--mb0.j-cart-count
+                    button.cart-count__minus(type='button')
+                    button.cart-count__plus(type='button')
+                    input.cart-count__input(type='text' value='2')
+                td(align="right")
+                  button(type="button").catalog-code__btn.text.--gray Удалить
+              tr.catalog-code__tr.--bottom.--color
+                td(colspan="5")
+                  .catalog-code__tr-line
+                  b Описание: 
+                  | зеленое, крепление зеркало
+                td(colspan="3" align="right")
+                  button(type="button").catalog-code__btn.text.--blue-light Добавить в корзину
+              tr.catalog-code__tr
+                td
+                  .catalog-code__product
+                    a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                td 4003/ 39B2AGNBLMV1P
+                td 1317*690
+                td BENSON
+                td 000001177
+                td
+                  a(href="#!").catalog-code__price цена
+                td
+                  .cart-count.--mb0.j-cart-count
+                    button.cart-count__minus(type='button')
+                    button.cart-count__plus(type='button')
+                    input.cart-count__input(type='text' value='2')
+                td(align="right")
+                  button(type="button").catalog-code__btn.text.--gray Удалить
+              tr.catalog-code__tr.--bottom
+                td(colspan="5")
+                  .catalog-code__tr-line
+                  b Описание: 
+                  | зеленое, крепление зеркало
+                td(colspan="3" align="right")
+                  button(type="button").catalog-code__btn.text.--blue-light Добавить в корзину
+
+      //- include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

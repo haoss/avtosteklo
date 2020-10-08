@@ -2,8 +2,8 @@ doctype
 
 html(lang="ru")
 
-  -var active = 'Карточка товара' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Карточка товара' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var active = 'Поиск по коду' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Поиск по коду' + ' - Avtosteklo' //title страницы для генерации верстки
   -var loggined = true;
 
   include ./_include/_head
@@ -42,9 +42,9 @@ html(lang="ru")
                 button(type="button")
 
         .tab__container.--catalog
-          .container
-            .tab-content
-              .tab__pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
+          .tab-content
+            .tab__pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
+              .container
                 .row
                   .col-3
                     .form-group
@@ -131,162 +131,123 @@ html(lang="ru")
                           +btn('<span>Очистить поиск</span>').--md.--clear
                         .last
                           +btn('Найти').--mw110.--md
-              .tab__pane#tab3(role='tabpanel' aria-labelledby='tab3-tab')
+                .row
+                  .col-6
+                    .sorting
+                      .sorting__label Сортировка по: 
+                      .sorting__row
+                        .first
+                          select(placeholder='Алфавиту').selectize.--sorting
+                            option(value) Алфавиту
+                            option(value='1') От А до Я
+                            option(value='2') От Я до А
+                        .last
+                          select(placeholder='Цене').selectize.--sorting
+                            option(value) Цене
+                            option(value='1') По возрастанию
+                            option(value='2') По убыванию
+
+              .catalog-code
+                table.catalog-code__table
+                  thead.catalog-code__thead
+                    tr
+                      th Товар
+                      th Еврокод
+                      th Размер
+                      th Производитель
+                      th Код
+                      th Цена
+                      th Количество
+                  tbody.catalog-code__body
+                    tr.catalog-code__tr
+                      td
+                        .catalog-code__product
+                          a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                          span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                      td 4003/ 39B2AGNBLMV1P
+                      td 1317*690
+                      td BENSON
+                      td 000001177
+                      td
+                        a(href="#!").catalog-code__price цена
+                      td
+                        .cart-count.--mb0.j-cart-count
+                          button.cart-count__minus(type='button')
+                          button.cart-count__plus(type='button')
+                          input.cart-count__input(type='text' value='2')
+                      td(align="right")
+                        button(type="button").catalog-code__btn В корзину
+                    tr.catalog-code__tr.--bottom
+                      td(colspan="5")
+                        .catalog-code__tr-line
+                        b Описание: 
+                        | зеленое, крепление зеркало
+                      td(colspan="3" align="right")
+                        button(type="button").catalog-code__btn.text.--gray Добавить в избранное
+                    tr.catalog-code__tr.--color
+                      td
+                        .catalog-code__product
+                          a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                          span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                      td 4003/ 39B2AGNBLMV1P
+                      td 1317*690
+                      td BENSON
+                      td 000001177
+                      td
+                        a(href="#!").catalog-code__price цена
+                      td
+                        .cart-count.--mb0.j-cart-count
+                          button.cart-count__minus(type='button')
+                          button.cart-count__plus(type='button')
+                          input.cart-count__input(type='text' value='2')
+                      td(align="right")
+                        button(type="button").catalog-code__btn В корзину
+                    tr.catalog-code__tr.--bottom.--color
+                      td(colspan="5")
+                        .catalog-code__tr-line
+                        b Описание: 
+                        | зеленое, крепление зеркало
+                      td(colspan="3" align="right")
+                        button(type="button").catalog-code__btn.text.--gray Добавить в избранное
+                    tr.catalog-code__tr
+                      td
+                        .catalog-code__product
+                          a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
+                          span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                      td 4003/ 39B2AGNBLMV1P
+                      td 1317*690
+                      td BENSON
+                      td 000001177
+                      td
+                        a(href="#!").catalog-code__price цена
+                      td
+                        .cart-count.--mb0.j-cart-count
+                          button.cart-count__minus(type='button')
+                          button.cart-count__plus(type='button')
+                          input.cart-count__input(type='text' value='2')
+                      td(align="right")
+                        button(type="button").catalog-code__btn В корзину
+                    tr.catalog-code__tr.--bottom
+                      td(colspan="5")
+                        .catalog-code__tr-line
+                        b Описание: 
+                        | зеленое, крепление зеркало
+                      td(colspan="3" align="right")
+                        button(type="button").catalog-code__btn.text.--gray Добавить в избранное
+                        
+            .tab__pane#tab3(role='tabpanel' aria-labelledby='tab3-tab')
+              .container
                 p tab3
-              .tab__pane#tab4(role='tabpanel' aria-labelledby='tab4-tab')
+            .tab__pane#tab4(role='tabpanel' aria-labelledby='tab4-tab')
+              .container
                 p tab4
-              .tab__pane#tab5(role='tabpanel' aria-labelledby='tab5-tab')
+            .tab__pane#tab5(role='tabpanel' aria-labelledby='tab5-tab')
+              .container
                 p tab5
-              .tab__pane#tab6(role='tabpanel' aria-labelledby='tab6-tab')
+            .tab__pane#tab6(role='tabpanel' aria-labelledby='tab6-tab')
+              .container
                 p tab6
 
-            .row
-              .col-6
-                .sorting
-                  .sorting__label Сортировка по: 
-                  .sorting__row
-                    .first
-                      select(placeholder='Алфавиту').selectize.--sorting
-                        option(value) Алфавиту
-                        option(value='1') От А до Я
-                        option(value='2') От Я до А
-                    .last
-                      select(placeholder='Цене').selectize.--sorting
-                        option(value) Цене
-                        option(value='1') По возрастанию
-                        option(value='2') По убыванию
-
-            .catalog
-              .row.catalog__row
-                .col-12.col-md-6.col-lg-4.col-xl-3
-                  .catalog__code
-                    .catalog__code-head
-                      a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
-                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
-                    .catalog__code-row
-                      .first
-                        b Еврокод
-                      .last
-                        span.--fs12 4003/ 39B2AGNBLMV1P
-                    .catalog__code-row
-                      .first
-                        b Размер
-                      .last
-                        span 1317*690
-                    .catalog__code-row
-                      .first
-                        b Производитель
-                      .last
-                        span BENSON
-                    .catalog__code-row
-                      .first
-                        b Цена
-                      .last
-                        a(href="#!") цена
-                    .catalog__code-row
-                      .first
-                        b Код
-                      .last
-                        span 000001177
-                    .catalog__code-description
-                      .first
-                        b Описание
-                      .last
-                        p зеленое, крепление зеркало
-                    .catalog__code-number
-                      .cart-count.--mb0.j-cart-count
-                        button.cart-count__minus(type='button')
-                        button.cart-count__plus(type='button')
-                        input.cart-count__input(type='text' value='2')
-                    .catalog__code-footer
-                      +btn('Добавить в Корзину')
-                      +btn('В избранное').--border
-                .col-12.col-md-6.col-lg-4.col-xl-3
-                  .catalog__code.--even
-                    .catalog__code-head
-                      a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
-                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
-                    .catalog__code-row
-                      .first
-                        b Еврокод
-                      .last
-                        span.--fs12 4003/ 39B2AGNBLMV1P
-                    .catalog__code-row
-                      .first
-                        b Размер
-                      .last
-                        span 1317*690
-                    .catalog__code-row
-                      .first
-                        b Производитель
-                      .last
-                        span BENSON
-                    .catalog__code-row
-                      .first
-                        b Цена
-                      .last
-                        a(href="#!") цена
-                    .catalog__code-row
-                      .first
-                        b Код
-                      .last
-                        span 000001177
-                    .catalog__code-description
-                      .first
-                        b Описание
-                      .last
-                        p зеленое, крепление зеркалозеленое, крепление зеркалокрепление ркалозеленое
-                    .catalog__code-number
-                      .cart-count.--mb0.j-cart-count
-                        button.cart-count__minus(type='button')
-                        button.cart-count__plus(type='button')
-                        input.cart-count__input(type='text' value='2')
-                    .catalog__code-footer
-                      +btn('Добавить в Корзину')
-                      +btn('В избранное').--border
-                .col-12.col-md-6.col-lg-4.col-xl-3
-                  .catalog__code
-                    .catalog__code-head
-                      a(href="./tmp/product-img-288-288.png").catalog__code-link.j-image-popup
-                      span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
-                    .catalog__code-row
-                      .first
-                        b Еврокод
-                      .last
-                        span.--fs12 4003/ 39B2AGNBLMV1P
-                    .catalog__code-row
-                      .first
-                        b Размер
-                      .last
-                        span 1317*690
-                    .catalog__code-row
-                      .first
-                        b Производитель
-                      .last
-                        span BENSON
-                    .catalog__code-row
-                      .first
-                        b Цена
-                      .last
-                        a(href="#!") цена
-                    .catalog__code-row
-                      .first
-                        b Код
-                      .last
-                        span 000001177
-                    .catalog__code-description
-                      .first
-                        b Описание
-                      .last
-                        p зеленое, крепление зеркало
-                    .catalog__code-number
-                      .cart-count.--mb0.j-cart-count
-                        button.cart-count__minus(type='button')
-                        button.cart-count__plus(type='button')
-                        input.cart-count__input(type='text' value='2')
-                    .catalog__code-footer
-                      +btn('Добавить в Корзину')
-                      +btn('В избранное').--border
 
       include ./_include/_footer
       //- div(style="height: 1000px; background-color: #000")
