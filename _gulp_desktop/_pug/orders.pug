@@ -1,0 +1,97 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Мои заказы' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Мои заказы' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head
+            h1 Мои заказы
+
+        .orders
+          table.orders__table
+            thead.orders__thead
+              tr
+                th Дата заказа
+                th Номер заказа
+                th Сумма заказа
+                th Статус заказа
+                th &nbsp;
+            tbody.orders__body
+              tr.orders__tr
+                td
+                  span 10.09.2019
+                td 5445
+                td 15558,45 грн
+                td В обработке
+                td 000001177
+                td(align="right")
+                  a(href="#!")
+                    b Полная информация о заказе
+              tr.orders__tr.--separator
+                td(colspan="6")
+                  .orders__tr-line
+              tr.orders__tr.--color
+                td
+                  span 10.09.2019
+                td 5445
+                td 15558,45 грн
+                td В обработке
+                td 000001177
+                td(align="right")
+                  a(href="#!")
+                    b Полная информация о заказе
+              tr.orders__tr.--color.--separator
+                td(colspan="6")
+                  .orders__tr-line
+              tr.orders__tr
+                td
+                  span 10.09.2019
+                td 5445
+                td 15558,45 грн
+                td В обработке
+                td 000001177
+                td(align="right")
+                  a(href="#!")
+                    b Полная информация о заказе
+              tr.orders__tr.--separator
+                td(colspan="6")
+                  .orders__tr-line
+              tr.orders__tr.--color
+                td
+                  span 10.09.2019
+                td 5445
+                td 15558,45 грн
+                td В обработке
+                td 000001177
+                td(align="right")
+                  a(href="#!")
+                    b Полная информация о заказе
+              tr.orders__tr.--color.--separator
+                td(colspan="6")
+                  .orders__tr-line
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

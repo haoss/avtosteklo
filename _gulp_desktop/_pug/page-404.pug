@@ -1,0 +1,31 @@
+doctype
+
+html(lang="ru")
+
+  -var active = 'Ошибка 404' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Ошибка 404' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = false;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content.--page404
+        .container-fluid
+
+          .page404
+            h1 Упс... что-то пошло не так
+            .page404__b 404
+            +btn('На главную')(href="./index.html").--block.--xl
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+

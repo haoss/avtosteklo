@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Вход - Avtosteklo</title>
+        <title>Мои заказы - Avtosteklo</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="format-detection" content="telephone=no">
@@ -254,7 +254,7 @@
         </div>
         <div class="base">
             <!-- Header-->
-            <header class="header">
+            <header class="header --logged">
                 <div class="header__top">
                     <div class="container header__top-container">
                         <div class="header__top-wrapper">
@@ -277,10 +277,11 @@
                             <nav class="navigation" role="navigation">
                                 <ul>
                                     <li><a href="#!">О компании</a></li>
-                                    <li><a href="#!">Каталог</a></li>
+                                    <li><a href="#!">Поиск по каталогу</a></li>
+                                    <li><a href="#!">Поиск по коду</a></li>
                                     <li><a href="#!">Полезная информация</a></li>
-                                    <li><a href="#!">Новости</a></li>
                                     <li><a href="#!">Контакты</a></li>
+                                    <li><a href="#!">Новости</a></li>
                                     <li><a href="#!">О доставке и оплате</a></li>
                                 </ul>
                             </nav>
@@ -298,48 +299,75 @@
                                 </li>
                         </ol>
                     <div class="content__head">
-                        <h1>Вход</h1>
+                        <h1>Мои заказы</h1>
                     </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <form action="#">
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Фамилия Имя Отчество</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите ваше имя"></span>
-                                        </label>
-                                </div>
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Логин или электронная почта</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="+380 ХХ ХХХ ХХХ"></span>
-                                        </label>
-                                </div>
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Электронная почта</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Прмер@gmail.com"></span>
-                                        </label>
-                                </div>
-                                <div class="form-group">
-                                    <div class="field-text"><span class="field-text__name">Город</span>
-                                        <select class="selectize" placeholder="Выберете ваш город">
-                                            <option value>Выберете ваш город</option>
-                                            <option value="1">Киев</option>
-                                            <option value="2">Харьков</option>
-                                            <option value="3">Днепр</option>
-                                            <option value="4">Кировоград</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                        <label class="field-text"><span class="field-text__name">Название компании</span><span class="field-text__input-wrap">
-                                                <input class="field-text__input" type="text" value="" autocomplete="off" name="text" placeholder="Введите название компании"></span>
-                                        </label>
-                                </div>
-                                <div class="clear10"></div>
-                                    <button class="btn --block --xl" type="button">Войти
-                                    </button>
-                            </form>
-                        </div>
-                    </div>
+                </div>
+                <div class="orders">
+                    <table class="orders__table">
+                        <thead class="orders__thead">
+                            <tr>
+                                <th>Дата заказа</th>
+                                <th>Номер заказа</th>
+                                <th>Сумма заказа</th>
+                                <th>Статус заказа</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody class="orders__body">
+                            <tr class="orders__tr">
+                                <td><span>10.09.2019</span></td>
+                                <td>5445</td>
+                                <td>15558,45 грн</td>
+                                <td>В обработке</td>
+                                <td>000001177</td>
+                                <td align="right"><a href="#!"><b>Полная информация о заказе</b></a></td>
+                            </tr>
+                            <tr class="orders__tr --separator">
+                                <td colspan="6">
+                                    <div class="orders__tr-line"></div>
+                                </td>
+                            </tr>
+                            <tr class="orders__tr --color">
+                                <td><span>10.09.2019</span></td>
+                                <td>5445</td>
+                                <td>15558,45 грн</td>
+                                <td>В обработке</td>
+                                <td>000001177</td>
+                                <td align="right"><a href="#!"><b>Полная информация о заказе</b></a></td>
+                            </tr>
+                            <tr class="orders__tr --color --separator">
+                                <td colspan="6">
+                                    <div class="orders__tr-line"></div>
+                                </td>
+                            </tr>
+                            <tr class="orders__tr">
+                                <td><span>10.09.2019</span></td>
+                                <td>5445</td>
+                                <td>15558,45 грн</td>
+                                <td>В обработке</td>
+                                <td>000001177</td>
+                                <td align="right"><a href="#!"><b>Полная информация о заказе</b></a></td>
+                            </tr>
+                            <tr class="orders__tr --separator">
+                                <td colspan="6">
+                                    <div class="orders__tr-line"></div>
+                                </td>
+                            </tr>
+                            <tr class="orders__tr --color">
+                                <td><span>10.09.2019</span></td>
+                                <td>5445</td>
+                                <td>15558,45 грн</td>
+                                <td>В обработке</td>
+                                <td>000001177</td>
+                                <td align="right"><a href="#!"><b>Полная информация о заказе</b></a></td>
+                            </tr>
+                            <tr class="orders__tr --color --separator">
+                                <td colspan="6">
+                                    <div class="orders__tr-line"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </main>
             <!-- Footer-->

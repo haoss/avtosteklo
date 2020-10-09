@@ -8,6 +8,20 @@
     &.--center {
       text-align: center;
     }
+    &.--one-order {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 40px;
+      justify-content: space-between;
+      .h1, h1 {
+        margin-bottom: -10px;
+      }
+      &>div {
+        &+div {
+          padding-left: 10px;
+        }
+      }
+    }
   }
   &__document {
     font-size: 16px;
@@ -68,7 +82,7 @@
     align-items: center;
     justify-content: center;
     background: {
-      image: url('../img/page-404.png');
+      image: url('../img/page-404.jpeg');
       position: bottom center;
       repeat: no-repeat;
     };
@@ -734,106 +748,6 @@
   }
 }
 
-.orders {
-  $this: &;
-  &__block {
-    background: #FAFAFA;
-    margin-bottom: 16px;
-    padding: 8px 16px;
-    font-size: 14px;
-    &-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 8px;
-      font-weight: 700;
-      b {
-        font-size: 24px;
-        font-weight: 800;
-        font-family: $font-gilroy;
-        color: $color-blue-light;
-      }
-      span {
-        display: block;
-        line-height: 1;
-      }
-    }
-    &-row {
-      display: flex;
-      align-items: flex-end;
-      line-height: 24px;
-      .first {
-        flex-grow: 1;
-        padding-right: 0px;
-        position: relative;
-        b {
-          display: inline;
-          z-index: 1;
-          position: relative;
-          padding-right: 5px;
-          background:#FAFAFA;
-          color: $color-dark;
-        }
-        &::before {
-          content: '....................................................................................................................................................................................................................................................................................';
-          display: block;
-          white-space: nowrap;
-          overflow: hidden;
-          position: absolute;
-          width: calc(100% - 0px);
-          bottom: 0;
-          color: $color-black;
-        }
-      }
-      .last {
-        padding-left: 5px;
-        white-space: nowrap;
-      }
-    }
-    &-btn {
-      margin: 5px -16px -8px -16px;
-      border-radius: 0;
-      border-color: $color-blue-light !important;
-      width: calc(100% + 32px);
-      font-weight: 600;
-      font-size: 12px;
-    }
-    &-number {
-      display: flex;
-      align-items: center;
-      color: $color-black;
-      font-size: 14px;
-      margin-left: -16px;
-      margin-bottom: 16px;
-      .last {
-        flex-grow: 1;
-      }
-      .first {
-        flex-shrink: 0;
-        width: 42px;
-        text-align: center;
-        color: $color-blue-light;
-        font-size: 24px;
-        font-weight: 800;
-        font-family: $font-gilroy;
-      }
-    }
-    &.--even {
-      background: #DBE7F6;
-      #{$this} {
-        &__block {
-          &-row {
-            .first {
-              b {
-                background: #DBE7F6;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
 .checkout-sum {
   background: $color-white;
@@ -1670,20 +1584,25 @@
 }
 
 .page404 {
-  max-width: 600px;
+  max-width: 991px;
   margin: 0 auto;
   text-align: center;
   color: $color-dark;
   h1 {
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 56px;
+    margin-bottom: 0px;
   }
   &__b {
-    line-height: 1;
+    line-height: 250px;
     font-weight: 800;
     font-family: $font-gilroy;
-    font-size: 80px;
-    margin-bottom: 16px;
+    font-size: 200px;
+    margin-bottom: 0px;
+  }
+  .btn {
+    max-width: 255px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -1704,8 +1623,7 @@
     tr {
       &>th {
         font-weight: 700;
-        padding-bottom: 16px;
-        padding-right: 10px;
+        padding: 0 10px 16px 0;
         &:last-child {
           padding-right: 0;
         }
@@ -1804,8 +1722,7 @@
     tr {
       &>th {
         font-weight: 700;
-        padding-bottom: 16px;
-        padding-right: 10px;
+        padding: 0 10px 16px 0;
         &:last-child {
           padding-right: 0;
         }
@@ -1909,5 +1826,119 @@
         color: $color-blue;
       }
     }
+  }
+}
+
+.orders {
+  font-size: 14px;
+  &__table {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__thead {
+    color: $color-dark;
+    font-size: 16px;
+    tr {
+      &>th {
+        font-weight: 700;
+        padding: 0 10px 16px 0;
+        padding-right: 10px;
+        border: 0;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  &__tr {
+    background: #F5F5F5;
+    box-shadow: 1110px 0 0 #F5F5F5,-1110px 0 0 #F5F5F5;
+    &.--color {
+      background: #DBE7F6;
+      box-shadow: 1110px 0 0 #DBE7F6,-1110px 0 0 #DBE7F6;
+    }
+    &.--separator {
+      &>td {
+        height: 0px;
+        padding: 0;
+      }
+    }
+    &>td {
+      padding: 5px 10px 5px 0;
+      height: 38px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    &-line {
+      position: absolute;
+      margin-top: 0;
+      height: 1px;
+      background: #C2C2C2;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.one-order {
+  font-size: 14px;
+  &__table {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__thead {
+    color: $color-dark;
+    font-size: 16px;
+    tr {
+      &>th {
+        font-weight: 700;
+        padding: 0 10px 16px 0;
+        padding-right: 10px;
+        border: 0;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  &__tr {
+    background: #F5F5F5;
+    box-shadow: 1110px 0 0 #F5F5F5,-1110px 0 0 #F5F5F5;
+    &.--color {
+      background: #DBE7F6;
+      box-shadow: 1110px 0 0 #DBE7F6,-1110px 0 0 #DBE7F6;
+    }
+    &.--separator {
+      &>td {
+        height: 0px;
+        padding: 0;
+      }
+    }
+    &>td {
+      padding: 5px 10px 5px 0;
+      height: 95px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    &-line {
+      position: absolute;
+      margin-top: 0;
+      height: 1px;
+      background: #C2C2C2;
+      left: 0;
+      right: 0;
+    }
+  }
+  &__product {
+    color: $color-black;
+    max-width: 260px;
+  }
+  &__number {
+    font-size: 24px;
+    min-width: 50px;
   }
 }

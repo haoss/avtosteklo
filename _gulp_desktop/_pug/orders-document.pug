@@ -1,0 +1,129 @@
+doctype
+
+html(lang="ru")
+
+  -var active = '1 заказ' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 заказ' + ' - Avtosteklo' //title страницы для генерации верстки
+  -var loggined = true;
+
+  include ./_include/_head
+
+  body
+
+    // Preloader
+    include ./_include/_preloader
+    
+    .base
+      include ./_include/_header
+
+      // Content
+      main.content
+        .container
+          +breadcrumbs()
+            +breadcrumbs-item('Главная', './index.html')
+
+          .content__head.--one-order
+            div
+              .h1 Заказ номер 5445
+            div
+              b Дата заказа 
+              | 10.09.2019
+            div
+              b Сумма заказа 
+              | 15558,45 грн
+            div
+              b Статус заказа 
+              | В обработке
+          
+        .one-order
+          table.one-order__table
+            thead.one-order__thead
+              tr
+                th N
+                th Товар
+                th Еврокод
+                th Размер
+                th Производитель
+                th Артикул
+                th Цена за 1шт
+                th Сумма
+            tbody.one-order__body
+              tr.one-order__tr
+                td
+                  .one-order__number 1
+                td
+                  .one-order__product
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                td 4003/39B2AGNBLMV1P	
+                td 1317*690	
+                td BENSON
+                td 000001177
+                td 
+                  b.text.--blue 900 грн
+                td 
+                  b.text.--blue 5шт = 4500 грн
+              tr.orders__tr.--separator
+                td(colspan="6")
+                  .one-order__tr-line
+              tr.one-order__tr.--color
+                td
+                  .one-order__number 2
+                td
+                  .one-order__product
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                td 4003/39B2AGNBLMV1P	
+                td 1317*690	
+                td BENSON
+                td 000001177
+                td 
+                  b.text.--blue 900 грн
+                td 
+                  b.text.--blue 5шт = 4500 грн
+              tr.orders__tr.--separator
+                td(colspan="6")
+                  .one-order__tr-line
+              tr.one-order__tr
+                td
+                  .one-order__number 1
+                td
+                  .one-order__product
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                td 4003/39B2AGNBLMV1P	
+                td 1317*690	
+                td BENSON
+                td 000001177
+                td 
+                  b.text.--blue 900 грн
+                td 
+                  b.text.--blue 5шт = 4500 грн
+              tr.orders__tr.--separator
+                td(colspan="6")
+                  .one-order__tr-line
+              tr.one-order__tr.--color
+                td
+                  .one-order__number 2
+                td
+                  .one-order__product
+                    span Dacia Nova /SuperNova/ Solenza (Седан) (1995-2005)
+                td 4003/39B2AGNBLMV1P	
+                td 1317*690	
+                td BENSON
+                td 000001177
+                td 
+                  b.text.--blue 900 грн
+                td 
+                  b.text.--blue 5шт = 4500 грн
+              tr.orders__tr.--separator
+                td(colspan="6")
+                  .one-order__tr-line
+
+        .container
+          .clear30
+          a(href="#!").--fs14 Вернуться ко всем заказам
+
+      include ./_include/_footer
+      //- div(style="height: 1000px; background-color: #000")
+
+    // Load Scripts
+    include ./_include/_footer-js
+    script(src="./js/common.js")
