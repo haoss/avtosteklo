@@ -43,7 +43,7 @@
                 <button class="modal__close d-none" type="button"></button>
                 <div class="modal__header">Заявка на регистрацию принята</div>
                 <div class="modal__content">
-                    <div class="modal__content-center">
+                    <div class="modal__content-center text-center">
                         <p>После обработки вам прийдет смс с паролем и логином, а наш менеджер позвонит и проинформирует вас</p>
                         <div class="clear8"></div>
                             <button class="btn --xl btn-block-center" type="button">Связаться
@@ -492,6 +492,15 @@
                                 <div class="row">
                                     <div class="col-3">
                                         <div class="form-group">
+                                            <div class="form-group__name">Поиск по</div>
+                                            <div class="filter__btns j-filter-btns">
+                                                <button class="filter__btns-btn" type="button">Коду</button>
+                                                <button class="filter__btns-btn active" type="button">Каталогу</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="form-group">
                                             <div class="field-text"><span class="field-text__name">Марка</span>
                                                 <select class="selectize" placeholder="Марка вашего авто">
                                                     <option value>Марка вашего авто</option>
@@ -524,7 +533,6 @@
                                                 </label>
                                         </div>
                                     </div>
-                                    <div class="col-3">&nbsp;</div>
                                     <div class="col-3">&nbsp;</div>
                                     <div class="col-3">&nbsp;</div>
                                     <div class="col-3">
@@ -650,17 +658,17 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="sorting">
-                                    <div class="sorting__label">Сортировка по: </div>
+                                    <div class="sorting__label">Сортировка по:</div>
                                     <div class="sorting__row">
                                         <div class="first">
-                                            <select class="selectize --sorting" placeholder="Алфавиту">
+                                            <select class="--sorting" placeholder="Алфавиту">
                                                 <option value>Алфавиту</option>
                                                 <option value="1">От А до Я</option>
                                                 <option value="2">От Я до А</option>
                                             </select>
                                         </div>
                                         <div class="last">
-                                            <select class="selectize --sorting" placeholder="Цене">
+                                            <select class="--sorting" placeholder="Цене">
                                                 <option value>Цене</option>
                                                 <option value="1">По возрастанию</option>
                                                 <option value="2">По убыванию</option>

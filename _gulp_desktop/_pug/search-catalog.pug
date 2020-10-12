@@ -213,6 +213,12 @@ html(lang="ru")
                 .row
                   .col-3
                     .form-group
+                      .form-group__name Поиск по
+                      .filter__btns.j-filter-btns
+                        button(type="button").filter__btns-btn Коду
+                        button(type="button").filter__btns-btn.active Каталогу
+                  .col-3
+                    .form-group
                       .field-text
                         span.field-text__name Марка
                         select(placeholder='Марка вашего авто').selectize
@@ -266,7 +272,6 @@ html(lang="ru")
                           placeholder: 'Вид стекла'
                         }
                       })
-                  .col-3 &nbsp;
                   .col-3 &nbsp;
                   .col-3 &nbsp;
                   .col-3
@@ -398,15 +403,15 @@ html(lang="ru")
             .row
               .col-6
                 .sorting
-                  .sorting__label Сортировка по: 
+                  .sorting__label Сортировка по:
                   .sorting__row
                     .first
-                      select(placeholder='Алфавиту').selectize.--sorting
+                      select(placeholder='Алфавиту').--sorting
                         option(value) Алфавиту
                         option(value='1') От А до Я
                         option(value='2') От Я до А
                     .last
-                      select(placeholder='Цене').selectize.--sorting
+                      select(placeholder='Цене').--sorting
                         option(value) Цене
                         option(value='1') По возрастанию
                         option(value='2') По убыванию
