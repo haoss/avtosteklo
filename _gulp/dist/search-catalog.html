@@ -299,17 +299,22 @@
                 </div>
                 <div class="nav__wrapper">
                     <div class="container">
-                        <ul class="nav nav__tabs j-tab-mobile" id="tabContent" role="tablist">
-                            <li class="nav__item" role="presentation"><a class="nav__link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Автостекла</a></li>
-                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Автотовары</a></li>
-                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Автохимия</a></li>
-                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Молдинги</a></li>
-                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab5-tab" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5" aria-selected="false">Инструменты</a></li>
-                            <li class="nav__item" role="presentation"><a class="nav__link" id="tab6-tab" data-toggle="tab" href="#tab6" role="tab" aria-controls="tab6" aria-selected="false">Люки</a></li>
-                            <li class="nav__button">
-                                <button type="button"></button>
-                            </li>
-                        </ul>
+                        <div class="nav__wrapper-body">
+                            <div class="nav__wrapper-active"><span>Автостекла</span></div>
+                            <div class="nav__wrapper-scroll">
+                                <ul class="nav nav__tabs j-tab-mobile" id="tabContent" role="tablist">
+                                    <li class="nav__item" role="presentation"><a class="nav__link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Автостекла</a></li>
+                                    <li class="nav__item" role="presentation"><a class="nav__link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Автотовары</a></li>
+                                    <li class="nav__item" role="presentation"><a class="nav__link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Автохимия</a></li>
+                                    <li class="nav__item" role="presentation"><a class="nav__link" id="tab4-tab" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Молдинги</a></li>
+                                    <li class="nav__item" role="presentation"><a class="nav__link" id="tab5-tab" data-toggle="tab" href="#tab5" role="tab" aria-controls="tab5" aria-selected="false">Инструменты</a></li>
+                                    <li class="nav__item" role="presentation"><a class="nav__link" id="tab6-tab" data-toggle="tab" href="#tab6" role="tab" aria-controls="tab6" aria-selected="false">Люки</a></li>
+                                    <li class="nav__button">
+                                        <button type="button"></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="container">
@@ -555,14 +560,14 @@
                         <div class="sorting__label">Сортировка по: </div>
                         <div class="sorting__row">
                             <div class="first">
-                                <select class="selectize --sorting" placeholder="Алфавиту">
+                                <select class="--sorting" placeholder="Алфавиту">
                                     <option value>Алфавиту</option>
                                     <option value="1">От А до Я</option>
                                     <option value="2">От Я до А</option>
                                 </select>
                             </div>
                             <div class="last">
-                                <select class="selectize --sorting" placeholder="Цене">
+                                <select class="--sorting" placeholder="Цене">
                                     <option value>Цене</option>
                                     <option value="1">По возрастанию</option>
                                     <option value="2">По убыванию</option>

@@ -27,21 +27,25 @@ html(lang="ru")
 
         .nav__wrapper
           .container
-            ul.nav.nav__tabs#tabContent(role='tablist').j-tab-mobile
-              li.nav__item(role='presentation')
-                a.nav__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true') Автостекла
-              li.nav__item(role='presentation')
-                a.nav__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false') Автотовары
-              li.nav__item(role='presentation')
-                a.nav__link#tab3-tab(data-toggle='tab' href='#tab3' role='tab' aria-controls='tab3' aria-selected='false') Автохимия
-              li.nav__item(role='presentation')
-                a.nav__link#tab4-tab(data-toggle='tab' href='#tab4' role='tab' aria-controls='tab4' aria-selected='false') Молдинги
-              li.nav__item(role='presentation')
-                a.nav__link#tab5-tab(data-toggle='tab' href='#tab5' role='tab' aria-controls='tab5' aria-selected='false') Инструменты
-              li.nav__item(role='presentation')
-                a.nav__link#tab6-tab(data-toggle='tab' href='#tab6' role='tab' aria-controls='tab6' aria-selected='false') Люки
-              li.nav__button
-                button(type="button")
+            .nav__wrapper-body
+              .nav__wrapper-active
+                span Автостекла
+              .nav__wrapper-scroll
+                ul.nav.nav__tabs#tabContent(role='tablist').j-tab-mobile
+                  li.nav__item(role='presentation')
+                    a.nav__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true') Автостекла
+                  li.nav__item(role='presentation')
+                    a.nav__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false') Автотовары
+                  li.nav__item(role='presentation')
+                    a.nav__link#tab3-tab(data-toggle='tab' href='#tab3' role='tab' aria-controls='tab3' aria-selected='false') Автохимия
+                  li.nav__item(role='presentation')
+                    a.nav__link#tab4-tab(data-toggle='tab' href='#tab4' role='tab' aria-controls='tab4' aria-selected='false') Молдинги
+                  li.nav__item(role='presentation')
+                    a.nav__link#tab5-tab(data-toggle='tab' href='#tab5' role='tab' aria-controls='tab5' aria-selected='false') Инструменты
+                  li.nav__item(role='presentation')
+                    a.nav__link#tab6-tab(data-toggle='tab' href='#tab6' role='tab' aria-controls='tab6' aria-selected='false') Люки
+                  li.nav__button
+                    button(type="button")
 
         .container
           .tab-content
@@ -336,12 +340,12 @@ html(lang="ru")
             .sorting__label Сортировка по: 
             .sorting__row
               .first
-                select(placeholder='Алфавиту').selectize.--sorting
+                select(placeholder='Алфавиту').--sorting
                   option(value) Алфавиту
                   option(value='1') От А до Я
                   option(value='2') От Я до А
               .last
-                select(placeholder='Цене').selectize.--sorting
+                select(placeholder='Цене').--sorting
                   option(value) Цене
                   option(value='1') По возрастанию
                   option(value='2') По убыванию

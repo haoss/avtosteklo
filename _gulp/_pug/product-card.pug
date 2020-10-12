@@ -78,13 +78,17 @@ html(lang="ru")
 
         .nav__wrapper
           .container
-            ul.nav.nav__tabs#tabContent(role='tablist').j-tab-mobile
-              li.nav__item(role='presentation')
-                a.nav__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true') Описание
-              li.nav__item(role='presentation')
-                a.nav__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false') Видеообзоры
-              li.nav__button
-                button(type="button")
+            .nav__wrapper-body
+              .nav__wrapper-active
+                span Описание
+              .nav__wrapper-scroll
+                ul.nav.nav__tabs#tabContent(role='tablist').j-tab-mobile
+                  li.nav__item(role='presentation')
+                    a.nav__link.active#tab1-tab(data-toggle='tab' href='#tab1' role='tab' aria-controls='tab1' aria-selected='true') Описание
+                  li.nav__item(role='presentation')
+                    a.nav__link#tab2-tab(data-toggle='tab' href='#tab2' role='tab' aria-controls='tab2' aria-selected='false') Видеообзоры
+                  li.nav__button
+                    button(type="button")
 
         .container
           .tab-content

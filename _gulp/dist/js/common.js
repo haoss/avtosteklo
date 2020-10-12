@@ -147,6 +147,7 @@ function cartCountTest() {
 
 function tabMobile() {
   var tab = $('.j-tab-mobile');
+  var tabActive = $('.nav__wrapper-active span');
   tab.each(function(){
     var _this = $(this);
     var btn = _this.find('.nav__button button');
@@ -163,6 +164,8 @@ function tabMobile() {
       if (_this.hasClass('is-show')) {
         _this.removeClass('is-show');
       }
+      var textItem = $(this).find('a').text();
+      tabActive.text(textItem);
     });
   });
 }
