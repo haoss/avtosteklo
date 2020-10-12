@@ -9,7 +9,7 @@
   z-index: 100;
   box-shadow: 0px 8px 33px rgba(#000,.1);
   flex-shrink: 0;
-  font-size: 14px;
+  font-size: rem(14px);
   &__top {
     position: relative;
     border-bottom: 1px solid rgba(#071739,.2);
@@ -53,7 +53,7 @@
     flex-shrink: 0;
     display: none;
     [class*="icon-"] {
-      font-size: 18px;
+      font-size: rem(18px);
       margin-right: 5px;
       vertical-align: -3px;
     }
@@ -180,13 +180,13 @@
   &::before {
     content: '\e90b';
     font-family: $font-icomoon;
-    font-size: 24px;
+    font-size: rem(24px);
     // background: red;
   }
   &.is-active {
     &::before {
       content: '\e903';
-      font-size: 20px;
+      font-size: rem(20px);
     }
   }
 }

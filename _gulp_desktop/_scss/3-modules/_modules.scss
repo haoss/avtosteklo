@@ -24,7 +24,7 @@
     }
   }
   &__document {
-    font-size: 16px;
+    font-size: rem(16px);
     img {
       display: block;
       margin: 0 auto;
@@ -51,7 +51,7 @@
       top: 8px;
       left: 24px;
       line-height: 24px;
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 400;
       position: absolute;
     }
@@ -97,10 +97,10 @@
 }
 
 .table {
-  font-size: 16px;
+  font-size: rem(16px);
   thead {
     th {
-      font-size: 14px;
+      font-size: rem(14px);
       text-transform: uppercase;
       font-weight: 700;
       padding: 5px 0 25px 0;
@@ -122,7 +122,7 @@
 .selectize-control.single {
   .selectize {
     &-dropdown, &-input, &-input input {
-      font-size: 16px;
+      font-size: rem(16px);
       color: $color-dark;
     }
     &-input {
@@ -239,7 +239,7 @@
     pointer-events: auto;
     position: relative;
     &-content {
-      font-size: 16px;
+      font-size: rem(16px);
     }
   }
   &__header {
@@ -281,7 +281,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 8px;
-      font-size: 16px;
+      font-size: rem(16px);
       border-bottom: 1px dashed #8F8F8F;
       .first {
         color: $color-dark;
@@ -291,7 +291,7 @@
       }
     }
     &-price {
-      font-size: 24px;
+      font-size: rem(24px);
       font-weight: 800;
       font-family: $font-gilroy;
       letter-spacing: 0.01em;
@@ -311,7 +311,7 @@
     height: auto;
     text-align: left;
     padding: 8px 32px;
-    font-size: 16px;
+    font-size: rem(16px);
     color: $color-gray;
     display: flex;
     align-items: center;
@@ -320,7 +320,7 @@
     }
     [class*="icon-"] {
       margin-left: 5px;
-      font-size: 24px;
+      font-size: rem(24px);
     }
     &:hover {
       color: $color-blue;
@@ -330,7 +330,7 @@
     #{$this} {
       &__header {
         text-align: left;
-        font-size: 18px;
+        font-size: rem(18px);
         margin-bottom: 16px;
       }
       &__wrapper {
@@ -367,11 +367,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: bold;
       margin-bottom: 10px;
       .last {
-        font-size: 16px;
+        font-size: rem(16px);
         color: $color-blue;
       }
     }
@@ -394,7 +394,7 @@
   &__block {
     background: $color-white;
     box-shadow: 0px 8px 33px rgba($color-black,.1);
-    font-size: 16px;
+    font-size: rem(16px);
     color: #525252;
     font-weight: bold;
     padding: 16px 24px;
@@ -525,7 +525,7 @@
     }
     &-title {
       text-align: center;
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 500;
       padding: 0 10px;
     }
@@ -548,7 +548,7 @@
   &__block {
     background: $color-white;
     box-shadow: 0px 8px 33px rgba($color-black,.1);
-    font-size: 16px;
+    font-size: rem(16px);
     color: #525252;
     font-weight: bold;
     padding: 10px 24px;
@@ -644,7 +644,7 @@
       left: 24px;
     }
     p {
-      font-size: 18px;
+      font-size: rem(18px);
       font-family: $font-gilroy;
       font-weight: 800;
       line-height: 1.2;
@@ -652,7 +652,7 @@
     }
     &-link {
       color: $color-blue;
-      font-size: 14px;
+      font-size: rem(14px);
     }
     &:hover {
       #{$this} {
@@ -703,7 +703,7 @@
 
 .contacts {
   &__title {
-    font-size: 24px;
+    font-size: rem(24px);
     font-weight: 800;
     font-family: $font-gilroy;
     color: $color-blue;
@@ -712,7 +712,7 @@
   &__list {
     margin: 0 -15px;
     padding: 0;
-    font-size: 16px;
+    font-size: rem(16px);
     display: flex;
     flex-wrap: wrap;
     &>li {
@@ -754,7 +754,7 @@
   box-shadow: 0px 8px 33px rgba(0, 0, 0, 0.1);
   margin-bottom: 16px;
   padding: 16px 8px;
-  font-size: 14px;
+  font-size: rem(14px);
   &__row {
     display: flex;
     align-items: center;
@@ -767,7 +767,7 @@
       color: $color-white;
       background: $color-blue-light;
       border-radius: 50%;
-      font-size: 12px;
+      font-size: rem(12px);
       width: 20px;
       height: 20px;
       display: inline-block;
@@ -782,7 +782,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: rem(16px);
   margin-bottom: 24px;
 }
 
@@ -791,7 +791,7 @@
   margin-bottom: 32px;
   text-align: center;
   background: #FFE8ED;
-  font-size: 24px;
+  font-size: rem(24px);
   font-weight: 800;
   font-family: $font-gilroy;
   color: $color-blue;
@@ -814,7 +814,7 @@
     width: 100%;
     padding: 0 36px;
     text-align: center;
-    font-size: 16px;
+    font-size: rem(16px);
     color: $color-dark;
     background: #F5F6F8;
     border: 1px solid #f5f6f8;
@@ -832,7 +832,7 @@
     color: $color-white;
     text-align: center;
     line-height: 36px;
-    font-size: 12px;
+    font-size: rem(12px);
     border: 1px solid $color-blue-light;
     cursor: pointer;
     padding: 0;
@@ -869,7 +869,7 @@
       height: 40px;
       line-height: 40px;
       width: 40px;
-      font-size: 18px;
+      font-size: rem(18px);
     }
     #{$this} {
       &__input {
@@ -887,7 +887,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 15px;
-      font-size: 16px;
+      font-size: rem(16px);
       border-bottom: 1px dashed #8F8F8F;
       .first {
         color: $color-dark;
@@ -910,7 +910,7 @@
     color: $primary-color;
     font-weight: 800;
     font-family: $font-gilroy;
-    font-size: 24px;
+    font-size: rem(24px);
   }
   &__gallery {
     position: relative;
@@ -985,7 +985,7 @@
       &::before {
         font-family: $font-icomoon;
         opacity: 1;
-        font-size: 16px;
+        font-size: rem(16px);
         font-weight: 400;
       }
     }
@@ -1023,7 +1023,7 @@
       }
     }
     &-title {
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 600;
     }
     &-link {
@@ -1046,7 +1046,7 @@
         color: $color-white;
         font-family: $font-icomoon;
         content: '\e911';
-        font-size: 24px;
+        font-size: rem(24px);
         margin-left: 2px;
       }
     }
@@ -1069,7 +1069,7 @@
       background: $color-blue-light;
       border: 1px solid $color-blue-light;
       min-width: 120px;
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 400;
       text-decoration: none;
       display: block;
@@ -1098,7 +1098,7 @@
   margin-bottom: 46px;
   &__label {
     color: $color-dark;
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1.6;
     cursor: text;
     display: block;
@@ -1139,7 +1139,7 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 24px;
-    font-size: 14px;
+    font-size: rem(14px);
     z-index: 5;
     &-thumb {
       overflow: hidden;
@@ -1167,7 +1167,7 @@
     }
     &-price {
       padding-left: 10px;
-      font-size: 16px;
+      font-size: rem(16px);
       color: $color-dark;
       font-weight: 700;
       white-space: nowrap;
@@ -1178,7 +1178,7 @@
       margin-bottom: 4px;
       align-items: center;
       justify-content: space-between;
-      font-size: 14px;
+      font-size: rem(14px);
       font-weight: 400;
       .first {
         b {
@@ -1310,7 +1310,7 @@
       }
       .btn {
         border-radius: 0;
-        font-size: 12px;
+        font-size: rem(12px);
         margin: 0 !important;
         font-weight: 600;
         min-width: auto;
@@ -1355,7 +1355,7 @@
       margin-right: 9px;
       text-decoration: none;
       color: $color-blue-light;
-      font-size: 24px;
+      font-size: rem(24px);
       &::before {
         content: '\e910';
         font-family: $font-icomoon;
@@ -1386,7 +1386,7 @@
   background: $color-white;
   text-align: center;
   line-height: 32px;
-  font-size: 16px;
+  font-size: rem(16px);
   border: 0;
   padding: 0;
   color: $color-blue-light;
@@ -1414,10 +1414,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: bold;
     .last {
-      font-size: 16px;
+      font-size: rem(16px);
       color: $color-blue;
     }
   }
@@ -1520,7 +1520,7 @@
     display: flex;
     .btn {
       border-radius: 0;
-      font-size: 12px;
+      font-size: rem(12px);
       margin: 0 !important;
       font-weight: 600;
       min-width: auto;
@@ -1561,7 +1561,7 @@
     margin-right: 9px;
     text-decoration: none;
     color: $color-blue-light;
-    font-size: 24px;
+    font-size: rem(24px);
     &::before {
       content: '\e910';
       font-family: $font-icomoon;
@@ -1596,7 +1596,7 @@
     line-height: 250px;
     font-weight: 800;
     font-family: $font-gilroy;
-    font-size: 200px;
+    font-size: rem(200px);
     margin-bottom: 0px;
   }
   .btn {
@@ -1611,7 +1611,7 @@
 }
 
 .catalog-code {
-  font-size: 14px;
+  font-size: rem(14px);
   &__table {
     max-width: 1110px;
     width: 100%;
@@ -1619,7 +1619,7 @@
   }
   &__thead {
     color: $color-dark;
-    font-size: 16px;
+    font-size: rem(16px);
     tr {
       &>th {
         font-weight: 700;
@@ -1699,7 +1699,7 @@
     font-weight: 600;
     color: #8F8F8F;
     text-decoration: underline;
-    font-size: 14px;
+    font-size: rem(14px);
     &:hover {
       text-decoration: none;
     }
@@ -1710,7 +1710,7 @@
 }
 
 .catalog-cart {
-  font-size: 14px;
+  font-size: rem(14px);
   &__table {
     max-width: 1110px;
     width: 100%;
@@ -1718,7 +1718,7 @@
   }
   &__thead {
     color: $color-dark;
-    font-size: 16px;
+    font-size: rem(16px);
     tr {
       &>th {
         font-weight: 700;
@@ -1802,7 +1802,7 @@
     font-weight: 600;
     color: #8F8F8F;
     text-decoration: underline;
-    font-size: 14px;
+    font-size: rem(14px);
     &:hover {
       text-decoration: none;
     }
@@ -1817,12 +1817,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 14px;
+      font-size: rem(14px);
       color: $color-dark;
       font-weight: 700;
       margin-bottom: 5px;
       .last {
-        font-size: 16px;
+        font-size: rem(16px);
         color: $color-blue;
       }
     }
@@ -1830,7 +1830,7 @@
 }
 
 .orders {
-  font-size: 14px;
+  font-size: rem(14px);
   &__table {
     max-width: 1110px;
     width: 100%;
@@ -1838,7 +1838,7 @@
   }
   &__thead {
     color: $color-dark;
-    font-size: 16px;
+    font-size: rem(16px);
     tr {
       &>th {
         font-weight: 700;
@@ -1883,7 +1883,7 @@
 }
 
 .one-order {
-  font-size: 14px;
+  font-size: rem(14px);
   &__table {
     max-width: 1110px;
     width: 100%;
@@ -1891,7 +1891,7 @@
   }
   &__thead {
     color: $color-dark;
-    font-size: 16px;
+    font-size: rem(16px);
     tr {
       &>th {
         font-weight: 700;
@@ -1938,7 +1938,7 @@
     max-width: 260px;
   }
   &__number {
-    font-size: 24px;
+    font-size: rem(24px);
     min-width: 50px;
   }
 }

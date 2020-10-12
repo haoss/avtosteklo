@@ -34,7 +34,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   margin-bottom: 24px;
   &__name {
     color: $color-dark;
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 1.6;
     cursor: text;
     display: block;
