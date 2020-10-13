@@ -51,13 +51,13 @@ html(lang="ru")
           .tab-content
             .tab__pane.active#tab1(role='tabpanel' aria-labelledby='tab1-tab')
               .row
-                .col-12.col-lg-6
+                .col-12
                   .form-group
                     .form-group__name Поиск по
                     .filter__btns.j-filter-btns
                       button(type="button").filter__btns-btn Коду
                       button(type="button").filter__btns-btn.active Каталогу
-                .col-12.col-lg-6
+                .col-12
                   .form-group
                     .field-text
                       span.field-text__name Марка
@@ -67,7 +67,7 @@ html(lang="ru")
                         option(value='2') Марка 2
                         option(value='3') Марка 3
                         option(value='4') Марка 4
-                .col-12.col-lg-6
+                .col-12
                   .form-group
                     +field-text({
                       title: 'Год выпуска',
@@ -82,7 +82,7 @@ html(lang="ru")
                         placeholder: 'Год выпуска вашего авто'
                       }
                     })
-                .col-12.col-lg-6
+                .col-12
                   .form-group
                     +field-text({
                       title: 'Тип кузова',
@@ -97,7 +97,7 @@ html(lang="ru")
                         placeholder: 'Тип кузова вашего авто'
                       }
                     })
-                .col-12.col-lg-6
+                .col-12
                   .form-group
                     +field-text({
                       title: 'Тип стелка',
@@ -112,7 +112,7 @@ html(lang="ru")
                         placeholder: 'Тип вашего кузова'
                       }
                     })
-                .col-12.col-lg-6
+                .col-12
                   .form-group
                     +field-text({
                       title: 'Код',
@@ -127,7 +127,7 @@ html(lang="ru")
                         placeholder: 'Код товара'
                       }
                     })
-                .col-12.col-lg-6
+                .col-12
                   .form-group
                     .form-group__name.d-none.d-lg-block &nbsp;
                     .filter__bottom
@@ -181,6 +181,12 @@ html(lang="ru")
                         option(value='4') Код 4
             .tab__pane#tab4(role='tabpanel' aria-labelledby='tab4-tab')
               .row
+                .col-12.col-lg-6
+                  .form-group
+                    .form-group__name Поиск по
+                    .filter__btns.j-filter-btns
+                      button(type="button").filter__btns-btn.active Коду
+                      button(type="button").filter__btns-btn Каталогу
                 .col-12
                   .form-group
                     .field-text

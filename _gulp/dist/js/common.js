@@ -172,11 +172,13 @@ function tabMobile() {
 
 function filterBtnTest() {
   var block = $('.j-filter-btns');
-  var btn = block.find('button');
-  btn.on('click', function(){
-    btn.removeClass('active');
-    $(this).addClass('active');
-  });
+  block.each(function(){
+    var btn = $(this).find('button');
+    btn.on('click', function(){
+      btn.removeClass('active');
+      $(this).addClass('active');
+    });
+  })
 }
 
 function favouritesTest() {

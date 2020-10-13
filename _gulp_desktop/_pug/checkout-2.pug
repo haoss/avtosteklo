@@ -8,7 +8,7 @@ html(lang="ru")
 
   include ./_include/_head
 
-  body
+  body.--bg-white
 
     // Preloader
     include ./_include/_preloader
@@ -102,7 +102,8 @@ html(lang="ru")
                       span.text.--blue 75 грн
 
                 .checkout-total
-                  .first &nbsp;
+                  .first 
+                    b Итого
                   .last
                     b.text.--blue 5600.48 грн
             .row

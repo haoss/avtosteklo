@@ -195,6 +195,8 @@ legend {
         font-weight: 800;
         font-family: $font-gilroy;
         color: $color-blue;
+        margin-bottom: 0;
+        line-height: 1.4;
       }
       &__input {
         font-weight: 500;
@@ -204,6 +206,7 @@ legend {
         border-color: #FBFBFB;
         border-bottom-color: $color-blue-light;
         background-color: #FBFBFB;
+        height: 32px;
       }
     }
   }

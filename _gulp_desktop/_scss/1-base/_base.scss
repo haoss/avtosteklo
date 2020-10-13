@@ -31,6 +31,9 @@ body {
   &.is-fixed {
     overflow: hidden;
   }
+  &.--bg-white {
+    background: #fff;;
+  }
 }
 
 .base {
